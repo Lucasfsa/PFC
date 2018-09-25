@@ -1,0 +1,258 @@
+
+
+body,html{
+	background-color:#999999;   
+}
+
+@font-face {
+    font-family: Quinone;
+   src: url(/font/Quinone.otf);
+
+}
+@font-face{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
+                                           /* navbar */
+.navbar{
+	background-color:#3c5baa ;
+	border-radius: 1px;
+    margin-bottom: 1%;
+
+}
+#menu ul li a{
+    color: white;
+    font-family: Quinone;
+    font-size: 1.1em;
+}
+
+#menu ul li a:hover{
+    text-shadow: 1px 1px 1px black;
+    background-color: transparent;
+
+}
+
+
+.icon-bar {
+ 	margin-top: 20px;
+  	background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+
+}
+                                             /* sidebar */
+#sidebar {
+    width: 17%;
+    height: 100%;
+    background: #3c5baa;
+    color: white;
+    margin-bottom: 10px;
+    position: fixed;
+}
+
+p {
+   
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+#sidebarCollapse{
+	background-color: #3c5baa;
+	color: white;
+
+}
+#sidebarCollapse:hover{
+	background-color: #4265bd;
+	color: white;
+
+}
+#imgheader{
+	width: 85%;
+	height: 80%;
+    margin-bottom: -20px;
+}
+
+#sidebar .sidebar-header {
+   
+    background:#3c5baa;
+    
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #black;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.15em;
+    display: block;
+    font-family: Quinone;
+    color: white;
+}
+#sidebar ul li a:hover {
+    color: #3c5baa;
+    background:  white;
+    
+}
+                                                 /* sidebar button */
+.botaomenu{
+	background-color: #355197;
+	margin-top: 6px;
+
+}
+
+ 
+
+
+                                                 /* sidebar button */
+#corpo{
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    margin-left: 18%;
+    margin-right: 1%;
+    position: fixed;
+}
+
+
+#titlepesquisa{
+    color: #3c5baa;
+    font-family:Comforta;
+    font-size: 170%;
+    margin-top: 20px;
+    margin-left: 25%;
+
+}
+
+.fontfrontpage{
+    font-family:Quinone;
+    font-size:16px;
+    color: #3c5baa;
+}
+
+#subcorpo{
+    width: 50%;
+    height: 50%;
+    margin-left: 20%;
+    margin-top: 6%;
+    font-family: Comforta;
+
+}
+
+/*                                                       Checkbox */
+
+
+.label01{
+    margin-top: 3%;
+    color: #3c5baa;
+}
+.input01{
+    width: 70%;
+}
+
+
+#labelsolo{
+    margin-left: 20%;
+    font-family: Comforta;
+    color: #3c5baa;
+}
+.inputmargin{
+    margin-left: 2.3%;
+}
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+#checkbusca{
+    
+    color: #3c5baa;
+    font-family: Comforta;
+    margin-left: 20%;
+    margin-top: 0.2%;
+    
+}
+
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon{
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr {
+    opacity: .5;
+}
+/*                                                              Checkbox */
+
+#buttonpesquisar{
+    background-color: white;
+    color:  #4265bd;
+    margin-left: 20%;
+    margin-top: 2%;
+    font-family: Comforta;
+    border-color: #cccccc;
+
+}
+
+#buttonpesquisar:hover{
+    background-color:#355197 ;
+    color: white;
+}
