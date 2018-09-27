@@ -16,6 +16,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -24,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color:transparent; height: 50px;" >
             <div class="container">
                 <a class="navbar-brand " href="{{ url('/') }}">
-                 <p style="color: white; margin-top: 8px;">Voltar</p> 
+                 <p id="link" style="color: white; margin-top: 8px;">Voltar</p> 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
