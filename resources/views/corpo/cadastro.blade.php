@@ -31,7 +31,11 @@
             <ul class="nav navbar-nav navbar-right">
       
               <li> <a  href="">Configurações</a> </li>
-              <li> <a  href="">Sair</a> </li>  
+              <li> <a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a></li> 
+
+               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>  
              
             </ul>   
 
