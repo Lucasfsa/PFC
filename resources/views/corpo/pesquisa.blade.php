@@ -79,15 +79,15 @@
          <div>
                 <p id="titlepesquisa">Pesquisa de Clientes</p>
             
-                <form>
+                <form method="POST" action="{{ route('cliente.index') }}" aria-label="{{ __('Pesquisa') }}>
                   
                   <div class="form-group" id="subcorpo" >
                       
                       <label class="label01" for="razaosocial">Razão Social </label>           
-                      <input  type="text" class="form-control input01" placeholder=" Digite a razão social..." /> 
+                      <input  name="rzsocial" type="text" class="form-control input01" placeholder=" Digite a razão social..." /> 
                       
                       <label class="label01"  for="cnpj">CNPJ</label>         
-                      <input  type="text" class="form-control input01" placeholder=" Digite o cnpj..." /> 
+                      <input name="cnpj" type="text" class="form-control input01" placeholder=" Digite o cnpj..." /> 
                       
                   </div>
 

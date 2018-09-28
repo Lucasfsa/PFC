@@ -15,6 +15,7 @@ Route::get('/', ['uses' => 'Controller@homepage']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 Route::get('/pesquisa', ['uses' => 'Controller@pesquisa']);
 Route::resource('cliente', 'ClientesController');
+Route::resource('cliente', 'PesquisaController');
 
 
 
