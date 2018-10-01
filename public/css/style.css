@@ -59,19 +59,6 @@ body{
   	background-color: white;
 }
 
-.modal-content{
-	background-color: #4265bd ;
-	color: white;
-}
-#modalbutton{
-	color:white;
-	background-color:#2e4784; 
-}
-#modalbutton:hover{
-	background-color: white;
-	color:#5353c6;
-	
-}
 #icon{
 	
 	color: white;
@@ -81,16 +68,13 @@ body{
 	font-family: Comforta;
 }
 
-#logoimg{
+
+#logo{
+	width: 50%;
 	background-color: transparent;
 	border:0px;
 	width: 185px;
 	height: 135px;
-
-}
-
-#logo{
-	width: 50%;
 }
 .grow { transition: all .1s ease-in-out; 
 }
