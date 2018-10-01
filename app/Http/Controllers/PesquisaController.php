@@ -11,6 +11,6 @@ class PesquisaController extends Controller
     }
 
     public function consulta(){
-
+    	
     }
 }

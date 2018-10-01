@@ -4,8 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card corpo" style="background-color: rgba(255,255,255,0.7);
-            ">
+            <div class="card corpo">
                 <img id="imgmenu" src="imagem/img001.png">
                 <div class="card-body"  >
                     <form method="POST" action="{{ route('login') }}">

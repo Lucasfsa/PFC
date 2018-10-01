@@ -1,0 +1,34 @@
+body
+{
+
+background-color: #d9d9d9;
+
+}
+
+@font-face
+{
+
+    font-family: Quinone;
+    src: url(/font/Quinone.otf);
+
+}
+
+@font-face
+{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
+.navbar
+{
+background-color: #3c5baa;
+border-radius: 1px;
+margin-bottom: 1%;	
+}
+
+#item_nav
+{
+	color: white;
+	margin-left: 1%;
+}
+

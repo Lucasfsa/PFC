@@ -7,7 +7,7 @@
     
     <title>Cadastro</title>
   
-    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/cadastro.css') }}">
 
   </head>
