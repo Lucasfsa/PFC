@@ -22,13 +22,39 @@
 <body>
 
 	<div>
-			<div class="menu">
-				
-				<a class="btn" href="">Entrar <span><i class="glyphicon glyphicon-arrow-right"></i></span></a>
+			
+      <div class="imagem">
+        
+        <img align="center" src="{{ asset('imagem/img001.png') }}">
 
-			</div>
+      </div>
+
+        <div class="titulo">
+        
+        <ul>
+          <li>
+            <h2>Seja bem-vindo</h2>
+          </li>
+
+         <li> 
+          
+          <a class="btn" href=""><span><i class="glyphicon glyphicon-arrow-right"></i></span></a>
+          
+         </li>
+        </ul>
+
+        </div>
+
+          
+    				
+    				
+
+    			
+
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    <script src="bootstrap/js/bootstrap.min.js"></script>	
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+  <script src="bootstrap/js/bootstrap.min.js"></script>	
+
 </body>
 </html>

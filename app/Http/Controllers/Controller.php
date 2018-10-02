@@ -12,7 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function homepage(){
-    	return view ('corpo/inicio');
+    	return view ('corpo/homepage');
     }
 
     public function pesquisa (){
@@ -25,6 +25,9 @@ class Controller extends BaseController
     	return view ('corpo/cadastro');
     }
     
+    public function inicio (){
+        return view('corpo/inicio');
+    }
      
 
 }

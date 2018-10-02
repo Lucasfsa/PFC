@@ -1,13 +1,46 @@
 body
 {
-background-color: #3c5baa;
+	background-image: url("/imagem/bg-laravel.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
-
-.menu
+@font-face
 {
-	margin-top: 20%;
-	margin-left: 45%;
-}
-.menu .a{
+
+    font-family: Quinone;
+    src: url(/font/Quinone.otf);
 
 }
+
+@font-face
+{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
+.imagem{
+	width: 50%;
+	height: 50%;
+	margin-left: 37%;
+	margin-top: 15%;
+	margin-bottom: -2%;
+}
+.imagem img{
+	width: 55%;
+	height: 60%;
+}	
+
+.titulo{
+	margin-left: 38%;
+	margin-top: 2%;
+	width: 50%;
+	height: 50%;
+	
+}
+.titulo h2{
+	font-size: 220%;
+	font-family: Comforta;
+	color: white;
+}
+

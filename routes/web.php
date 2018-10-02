@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', ['uses' => 'Controller@homepage']); 
-Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
-Route::get('/pesquisa', ['uses' => 'Controller@pesquisa']);
+Route::get('/', 'Controller@homepage'); 
+Route::get('/cadastro', 'Controller@cadastrar');
+Route::get('/pesquisa', 'Controller@pesquisa');
+Route::get('/inicio', 'Controller@inicio'); 
 Route::resource('cliente', 'ClientesController');
 
 
