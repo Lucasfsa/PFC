@@ -20,27 +20,30 @@ body
 }
 
 .imagem{
-	width: 50%;
+	width: 100%;
 	height: 50%;
-	margin-left: 37%;
-	margin-top: 15%;
-	margin-bottom: -2%;
+	margin-top: 10%;
+	margin-bottom: -3%;
 }
-.imagem img{
-	width: 55%;
-	height: 60%;
-}	
 
-.titulo{
-	margin-left: 38%;
-	margin-top: 2%;
-	width: 50%;
-	height: 50%;
-	
-}
+
+
 .titulo h2{
-	font-size: 220%;
+	font-size: 190%;
 	font-family: Comforta;
 	color: white;
 }
+
+
+span{
+	color: white;
+	font-size: 130%;
+	font-family: Comforta;
+
+}
+span:hover{
+	color:#6884ca;
+}
+
+
 

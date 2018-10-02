@@ -21,35 +21,31 @@
   </head>
 <body>
 
-	<div>
+	<div class="row">
 			
-      <div class="imagem">
+      <div class="imagem col-md-12" align="center">
         
-        <img align="center" src="{{ asset('imagem/img001.png') }}">
+        <img src="{{ asset('imagem/img001.png') }}">
 
       </div>
 
-        <div class="titulo">
-        
-        <ul>
-          <li>
-            <h2>Seja bem-vindo</h2>
-          </li>
-
-         <li> 
+          <div class="col-md-12 titulo" align="center">
           
-          <a class="btn" href=""><span><i class="glyphicon glyphicon-arrow-right"></i></span></a>
+              <h2>Seja bem-vindo</h2>
+
+          </div>
+            
+              <div class="col-md-12 icon" align="center">
           
-         </li>
-        </ul>
+                  <a  class="btn" href="{{ asset('pesquisa') }}">
 
-        </div>
+                    <span> Acessar <i class="glyphicon glyphicon-arrow-right"></i> </span>
+                      
+                  </a>
 
-          
-    				
-    				
-
+              </div>
     			
+          
 
 	</div>
 	

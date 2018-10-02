@@ -47,7 +47,7 @@
           </nav> 
 
       <main class="py-4">
-        @yield('escopo')
+        @yield('base')
   </main>
 	</nav>
 
