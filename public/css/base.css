@@ -1,8 +1,10 @@
 body
 {
 
-background-color: #d9d9d9;
-
+background-image: url("/imagem/bg-laravel.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
 }
 
 @font-face
@@ -21,7 +23,7 @@ background-color: #d9d9d9;
 
 .navbar
 {
-background-color: #3c5baa;
+background-color: transparent;
 border-radius: 1px;
 margin-bottom: 1%;	
 }

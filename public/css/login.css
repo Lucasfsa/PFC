@@ -1,0 +1,41 @@
+@font-face
+{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
+.container{
+
+
+}
+.card{
+	background-color: rgb(255,255,255, .8);
+	border-radius: 3px;
+	width: 40%;
+	height: 60%;
+	font-family: Comforta;
+	color: #3c5baa;
+	margin-left: 30%;
+	margin-top: 7%;
+}
+.card-body{
+	margin-left: 6%;
+	margin-right: 8%;
+}
+
+#imgmenu{
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+}
+
+#buttoncadastrar{
+	margin-bottom: 4%;
+	border-radius: 1px;
+	
+}
+
+#buttoncadastrar:hover{
+	background-color: #3c5baa;
+	color: white;
+}

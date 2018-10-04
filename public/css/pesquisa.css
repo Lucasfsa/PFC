@@ -24,28 +24,27 @@
 }
 
 #subcorpo{
-    width: 50%;
+    width: 30%;
     height: 50%;
-    margin-left: 20%;
-    margin-top: 6%;
+    margin-left: 14%;
+    margin-top: 4%;
     font-family: Comforta;
 
 }
 
 /*                                                       Checkbox */
 
-
 .label01{
     margin-top: 3%;
     color: #3c5baa;
 }
 .input01{
-    width: 70%;
+    width: 40%;
 }
 
 
 #labelsolo{
-    margin-left: 20%;
+    margin-left: 14%;
     font-family: Comforta;
     color: #3c5baa;
 }
@@ -62,7 +61,7 @@
     
     color: #3c5baa;
     font-family: Comforta;
-    margin-left: 20%;
+    margin-left: 14%;
     margin-top: 0.2%;
     
 }
@@ -117,7 +116,7 @@
 #buttonpesquisar{
     background-color: white;
     color:  #4265bd;
-    margin-left: 20%;
+    margin-left: 14%;
     margin-top: 2%;
     font-family: Comforta;
     border-color: #cccccc;
