@@ -9,7 +9,7 @@
 
 }
 .card{
-	background-color: rgb(255,255,255, .8);
+	background-color: rgb(255,255,255, .6);
 	border-radius: 3px;
 	width: 40%;
 	height: 60%;
@@ -32,6 +32,7 @@
 #buttoncadastrar{
 	margin-bottom: 4%;
 	border-radius: 1px;
+	background-color: white;
 	
 }
 
