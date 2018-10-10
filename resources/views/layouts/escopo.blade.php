@@ -15,6 +15,9 @@
             <link rel="icon" href="imagem/icon.png">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/escopo.css') }}">
+            <script src="{{ asset('js/app.js') }}" defer></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
 
   </head>
   

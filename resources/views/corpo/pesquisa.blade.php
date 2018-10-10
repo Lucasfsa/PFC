@@ -15,7 +15,7 @@
     
     @extends('layouts.escopo')
     @section('escopo')
-    <div id="corpo">
+    <div class="pr-5" id="corpo">
           
          <div>
                 
@@ -28,8 +28,8 @@
               <form id="searchForm" action="{{ url('resultado')}}" method="POST" class="pt-5 px-5">
         @csrf
 
-        <div class="input-group ">
-            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search">
+        <div class="input-group  ">
+            <input type="search" class="mr-1 pesquisa" name="busca" role="search">
 
             <div id="formButton">
                 <button type="submit" class="btn">
@@ -37,6 +37,7 @@
                 </button>
             </div>
         </div>
+
 
     </form>
 
@@ -62,7 +63,7 @@
             <thead>
                 <tr>
                     <th class="th-sm">Id<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">Nome<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">Razão Social<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                     <th class="th-sm">Cnpj<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                     <th class="th-sm">Email<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                     <th class="th-sm">Telefone<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
@@ -71,8 +72,8 @@
             <tbody>
                 @foreach ($details as $user)
                     <tr>
-                        <td>{{ $user->id_cliente }}</td>
-                        <td>{{ $user->nome }}</td>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->rz_social }}</td>
                         <td>{{ $user->cnpj }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->telefone }}</td>

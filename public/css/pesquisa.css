@@ -51,3 +51,23 @@
     color: white;
 }
 
+.form-group { margin: 0 auto; }
+
+.form-group > label { font-weight: 700; }
+
+#formButton {
+    display: flex;
+    justify-content: center;
+}
+
+#formButton > button {
+    margin: 0 auto;
+    color: #3c5baa;
+    background-color: #fff;
+}
+#formButton > button:hover {
+    margin: 0 auto;
+    color: #fff;
+    background-color: #3c5baa;
+}
+
