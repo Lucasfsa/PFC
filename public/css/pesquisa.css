@@ -51,6 +51,12 @@
     color: white;
 }
 
+.pesquisa{
+    width: 80%;
+    border-radius: 3px;
+    border-color: transparent;
+}
+
 .form-group { margin: 0 auto; }
 
 .form-group > label { font-weight: 700; }

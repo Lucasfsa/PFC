@@ -27,7 +27,6 @@ class ClientesController extends Controller{
 		return redirect('cadastro')->with('msg', 'cliente cadastrado');		
 	}
 
-	
 		
 	}
 

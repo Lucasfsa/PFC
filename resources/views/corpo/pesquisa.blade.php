@@ -28,8 +28,8 @@
               <form id="searchForm" action="{{ url('resultado')}}" method="POST" class="pt-5 px-5">
         @csrf
 
-        <div class="input-group  ">
-            <input type="search" class="mr-1 pesquisa" name="busca" role="search">
+        <div class="input-group">
+            <input type="search" class="form-control-lg mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
             <div id="formButton">
                 <button type="submit" class="btn">
