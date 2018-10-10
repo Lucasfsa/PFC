@@ -7,8 +7,9 @@
     
     <title>Cadastro</title>
   
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/cadastro.css') }}">
+
 
   </head>
   
@@ -83,8 +84,7 @@
         @endsection
 
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    <script src="bootstrap/js/bootstrap.min.js"></script>    
+ 
   
   </body>
 

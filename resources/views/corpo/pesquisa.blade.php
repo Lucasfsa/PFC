@@ -6,8 +6,7 @@
   
   <title> Pesquisa </title>
 
-
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/pesquisa.css') }}">
 
 </head>
@@ -25,108 +24,80 @@
                   <p id="titlepesquisa">Pesquisa de Clientes</p>
 
               </div>
-                
-            
-                <form>
-                  
-                    <div class="form-group" id="subcorpo" >
-                        
-                        <label class="label01" for="razaosocial">Razão Social </label>           
-                        <input  type="text" class="form-control input01" placeholder=" Digite a razão social..." /> 
-                        
-                        <label class="label01"  for="cnpj">CNPJ</label>         
-                        
-                        <input  type="text" class="form-control input01" placeholder=" Digite o cnpj..." /> 
-                        
-                    </div>
 
-                    <div id="labelsolo">
-                          
-                          <label>Sistema</label>
+              <form id="searchForm" action="{{ url('resultado')}}" method="POST" class="pt-5 px-5">
+        @csrf
 
-                    </div>
-                  
-                  <div id="checkbusca" class="checkbox" >                
-                      
-                  
-                      <div>     
-                        
-                        <label>
-                          
-                          <input type="checkbox">
+        <div class="input-group ">
+            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search">
 
-                            <span class="cr">
+            <div id="formButton">
+                <button type="submit" class="btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
 
-                              <i class="cr-icon glyphicon glyphicon-ok"></i>
+    </form>
 
-                            </span> 
+    <div id="resultados" class="px-5">
 
-                            Syspdv
+    @if(isset($details))
+        <p>Resultados de pesquisa para <b> {{ $query }} </b> são: </p>
 
-                        </label>
+        {{-- <div class="dataTables_length bs-select" id="dtBasicExample_length">
+            <label>
+                Show 
+                <select name="dtBasicExample_length" aria-controls="dtBasicExample" class="custom-select custom-select-sm form-control form-control-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select> 
+                entries
+            </label>
+        </div> --}}
 
-                      </div>
-                      
-                          <div class="checkbox">
-                                
-                                <label>
-                                  
-                                  <input type="checkbox" > 
-                                  
-                                    <span class="cr">
-                                    
-                                      <i class="cr-icon glyphicon glyphicon-ok"></i>
-                                  
-                                    </span>
-                                  
-                                    Eclética
+        <table id="tabelaDados" class="table table-striped table-bordered" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="th-sm">Id<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">Nome<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">Cnpj<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">Email<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">Telefone<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($details as $user)
+                    <tr>
+                        <td>{{ $user->id_cliente }}</td>
+                        <td>{{ $user->nome }}</td>
+                        <td>{{ $user->cnpj }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->telefone }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
 
-                                </label>
+    @elseif(isset($message))
+        <p> {{ $message }} </p>
 
-                          </div>
-                      
-                              <div class="checkbox">
-                                
-                                <label>
+    @endif
 
-                                    <input type="checkbox" >
-                                      
-                                      <span class="cr">
-                                        
-                                        <i class="cr-icon glyphicon glyphicon-ok"></i>
-                                    
-                                    </span>
-                                  
-                                  ACSN
-                                
-                                </label>
+    </div>
 
-                              </div>
-           
-                  </div>
-    
-                      <div>
-                                
-                        <button class="btn" id="buttonpesquisar" type="submit">Pesquisar 
-                          
-                          <i class="glyphicon glyphicon-search"></i>
-
-                        </button>
-
-                      </div>
-                
-                </form>
-
-              </div>
+</div>
+             
+        </div>
               
-          </div>
+    </div>
 
 
    @endsection
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    <script src="bootstrap/js/bootstrap.min.js"></script>    
-  
+    
   </body>
   
 </html>

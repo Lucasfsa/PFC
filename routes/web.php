@@ -13,9 +13,11 @@
 
 Route::get('/', 'Controller@homepage'); 
 Route::get('/cadastro', 'Controller@cadastrar');
-Route::get('/pesquisa', 'Controller@pesquisa');
+Route::get('/pesquisa', 'PesquisaController@index');
 Route::get('/inicio', 'Controller@inicio'); 
+
 Route::resource('cliente', 'ClientesController');
+Route::POST('resultado', 'PesquisaController@resultadosPesquisa');
 
 
 

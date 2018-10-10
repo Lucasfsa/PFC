@@ -13,10 +13,8 @@
           <meta name="csrf-token" content="{{ csrf_token() }}">
     
             <link rel="icon" href="imagem/icon.png">
-
-               <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        
-                  <link rel="stylesheet" type="text/css" href="{{ asset('css/escopo.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/escopo.css') }}">
 
   </head>
   
@@ -24,42 +22,40 @@
 
       <div>
 
-          <nav class="navbar navbar-custom">
-           
-              <div class="container-fluid">
-             
-                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">   
+           <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
 
-                    <span class="icon-bar"></span>
+                <ul class="navbar-nav ml-auto">
 
-                    <span class="icon-bar"></span>
+                    <li class="nav-item dropdown">
+                        <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
-                    <span class="icon-bar"></span>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                Configurações
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                <i class="fas fa-sign-out-alt"></i>
+                                {{ __('Sair') }}
+                            </a>
 
-                 </button>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
 
-                    <div id="menu" class="navbar-collapse collapse">
-                         
-                       <ul class="nav navbar-nav navbar-right">
-                      
-                          <li> <a  href="">Configurações</a></li>
-                          
-                          <li> <a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a>
-                          </li>  
+                </ul>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST">                       
-                              @csrf
-
-
-                            </form> 
-                             
-                        </ul>   
-
-                    </div> 
-
-              </div>
-
-          </nav>      
+            </div>
+          </nav>    
+          
 
               <div class="wrapper">
 
@@ -74,9 +70,9 @@
 
                      <ul class="list-unstyled components">
                                   
-                         <li> <a class="botaomenu" href="pesquisa">Pesquisar Cliente</a> </li>
+                         <li> <a class="botaomenu" href="pesquisa"><i>Pesquisar Cliente</i></a> </li>
                          
-                         <li> <a class="botaomenu" href="cadastro">Cadastrar Cliente</a> </li>                                            
+                         <li> <a class="botaomenu" href="cadastro"><i>Cadastrar Cliente</i></a> </li>                                            
                      </ul>    
 
                  </nav>
@@ -90,10 +86,6 @@
 
       </div>  
 
- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    
-      <script src="bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 

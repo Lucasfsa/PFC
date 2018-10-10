@@ -5,13 +5,15 @@
     margin-left: 18%;
     margin-right: 1%;
     position: fixed;
+    margin-top: -24px;
+  
 }
 
 
 #titlepesquisa{
     color: #3c5baa;
     font-family:Comforta;
-    font-size: 170%;
+    font-size:180%;
     margin-top: 20px;
     margin-left: 25%;
 
@@ -32,86 +34,7 @@
 
 }
 
-/*                                                       Checkbox */
 
-.label01{
-    margin-top: 3%;
-    color: #3c5baa;
-}
-.input01{
-    width: 40%;
-}
-
-
-#labelsolo{
-    margin-left: 14%;
-    font-family: Comforta;
-    color: #3c5baa;
-}
-.inputmargin{
-    margin-left: 2.3%;
-}
-
-.checkbox label:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-#checkbusca{
-    
-    color: #3c5baa;
-    font-family: Comforta;
-    margin-left: 14%;
-    margin-top: 0.2%;
-    
-}
-
-.checkbox .cr {
-    position: relative;
-    display: inline-block;
-    border: 1px solid #a9a9a9;
-    border-radius: .25em;
-    width: 1.3em;
-    height: 1.3em;
-    float: left;
-    margin-right: .5em;
-}
-
-.cr {
-    border-radius: 50%;
-}
-
-.checkbox .cr .cr-icon{
-    position: absolute;
-    font-size: .8em;
-    line-height: 0;
-    top: 50%;
-    left: 20%;
-}
-
-.cr .cr-icon {
-    margin-left: 0.04em;
-}
-
-.checkbox label input[type="checkbox"] {
-    display: none;
-}
-
-.checkbox label input[type="checkbox"] + .cr > .cr-icon{
-    transform: scale(3) rotateZ(-20deg);
-    opacity: 0;
-    transition: all .3s ease-in;
-}
-
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
-    transform: scale(1) rotateZ(0deg);
-    opacity: 1;
-}
-
-.checkbox label input[type="checkbox"]:disabled + .cr {
-    opacity: .5;
-}
-/*                                                              Checkbox */
 
 #buttonpesquisar{
     background-color: white;
@@ -127,3 +50,4 @@
     background-color:#355197 ;
     color: white;
 }
+

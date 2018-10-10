@@ -1,4 +1,10 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body,html
 {
 	background-color:#b3b3b3;   
@@ -45,14 +51,10 @@ body,html
 	background-color:#3c5baa ;
 	border-radius: 1px;
     margin-bottom: 1%;
+    font-size: 1.1em;
 
 }
 
-.icon-bar 
-{
- 	margin-top: 20px;
-  	background-color: white;
-}
 
 .wrapper 
 {
@@ -153,19 +155,10 @@ a, a:hover, a:focus
 	background-color: #355197;
 	margin-top: 6px;
 
+
 }
 
- 
-#menu ul li a
-{
-    color: white;
-    font-family: Quinone;
-    font-size: 1.1em;
-}
-
-#menu ul li a:hover
-{
-    text-shadow: 1px 1px 1px black;
-    background-color: transparent;
-}
+a i {
+    font-size: 100%;
+    font-style: normal;
 

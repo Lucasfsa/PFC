@@ -24,8 +24,8 @@ class ClientesController extends Controller{
 		$cliente->telefone = $request->input('telefone');
 		$cliente->save();
 			
-		return print "<script> alert('O CLIENTE FOI CADASTRADO COM SUCESSO!'); window.history.go(-1); </SCRIPT>\n";
-		}
+		return redirect('cadastro')->with('msg', 'cliente cadastrado');		
+	}
 
 	
 		
