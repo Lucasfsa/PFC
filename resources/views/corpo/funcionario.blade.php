@@ -28,53 +28,41 @@
               
               <div id="area">
 
-                <div  class="form-group inputform" >
-                    
-                    <label  class="fontfrontpage" for="razaosocial">Nome</label>           
-                    
-                    <input name="rz_social" type="text" class="form-control input00" placeholder="Digite o nome..." required autofocus />
-                                        
-                </div>
+                 <div class="form-group px-5 py-4">
+                   
+                    <br>
 
+                    <label>Nome</label> 
+                    <input placeholder="Digite o nome..." type="text" class="form-control" name="nome" required>
+                    <br>
+                    
+                    
+                    <label>E-mail</label>
+                    <input placeholder="Digite o E-mail..." type="email" class="form-control" name="email" required>
+                    <br>
 
-                     <div  class="form-group inputform" >
-                        
-                        <label  class="fontfrontpage" for="email">E-mail</label>           
-                        
-                        <input name="email" type="email" class="form-control input00" placeholder="Digite o e-mail..." required />
-                        
+                    <label>Senha</label>
+                     <input placeholder="Digite a senha..." type="password" class="form-control" name="senha" required>
+                    <br>
+                    
+                     <label>Repita a senha</label>
+                     <input placeholder="Digite a senha..." type="password" class="form-control" name="senha" required>
+                    <br>
+                 
+
+                    <br>
+                    
+                    <div >
+                        <button id="buttoncadastro" type="submit" class="btn">
+                           
+                          Cadastrar  <i class="fas fa-user-plus"></i>
+                        </button>
                     </div>
 
-
-                         <div  class="form-group inputform" >
-                            
-                            <label  class="fontfrontpage" for="cnpj">Senha</label>           
-                            
-                            <input name="cnpj" type="text" class="form-control  input01" placeholder="Digite a senha..." required />
-                            
-                        </div>
-
-                         <div  class="form-group inputform" >
-                            
-                            <label  class="fontfrontpage" for="cnpj">Repita a senha</label>           
-                            
-                            <input name="cnpj" type="text" class="form-control  input01" placeholder="Repita a senha..." required />
-                            
-                        </div>
-
-
-                             
+                </div>
                 
               </div>
             
-
-                      <div id="pesquisar"  >
-                       
-                        <button type="submit" id="buttoncadastrar" class="btn ">Cadastrar<i class="glyphicon glyphicon-ok"></i>
-
-                        </button>
-
-                      </div>
 
 
           </form>

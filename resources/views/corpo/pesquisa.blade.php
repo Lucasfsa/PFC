@@ -29,7 +29,7 @@
         @csrf
 
         <div class="input-group">
-            <input type="search" class="form-control-lg mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
+            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
             <div id="formButton">
                 <button type="submit" class="btn">

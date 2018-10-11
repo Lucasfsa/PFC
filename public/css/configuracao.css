@@ -1,5 +1,5 @@
 #corpo{
-    width: 100%;
+    width: 81%;
     height: 100%;
     background-color: #d9d9d9;
     margin-left: 18%;
@@ -14,12 +14,12 @@
     font-family:Comforta;
     font-size: 170%;
     margin-top: 20px;
-    margin-left: 30%;
+    margin-left: 35%;
     margin-bottom: 3%;
 }
 
 #buttonmenu{
-	width: 80%;
+	width: 100%;
 }
 
 .buttonstyle{

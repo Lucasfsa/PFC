@@ -26,66 +26,50 @@
 
             </div>
 
-            <form method="POST" action="{{ route('cliente.store') }}" aria-label="{{ __('Cadastro') }}">
-              @csrf
-              
-              <div id="area">
+           <div id="content">
 
-                <div  class="form-group inputform" >
+            <form action="{{ route('cliente.store') }}" method="post">
+                @csrf
+                <div class="form-group px-5 py-4">
+                   
+                    <br>
+
+                    <label>Razão Social</label> 
+                    <input placeholder="Digite a Razão Social" type="text" class="form-control" name="rz_social" required>
+                    <br>
                     
-                    <label  class="fontfrontpage" for="razaosocial">Razão Social</label>           
+                    <label>Cnpj</label>
+                    <input placeholder="Digite o Cnpj" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );" required>
+                    <br>
                     
-                    <input name="rz_social" type="text" class="form-control input00" placeholder="Digite a razao social..." required autofocus />
-                                        
-                </div>
+                    <label>E-mail</label>
+                    <input placeholder="Digite o E-mail" type="email" class="form-control" name="email" required>
+                    <br>
+                    
+                    <label>Telefone</label>
+                    <input placeholder="Digite o telefone..." type="text" class="form-control" name="telefone" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
 
-
-                     <div  class="form-group inputform" >
-                        
-                        <label  class="fontfrontpage" for="email">E-mail</label>           
-                        
-                        <input name="email" type="email" class="form-control input00" placeholder="Digite o e-mail..." required />
-                        
+                    <br>
+                    
+                    <div >
+                        <button id="buttoncadastro" type="submit" class="btn">
+                           
+                          Cadastrar  <i class="fas fa-user-plus"></i>
+                        </button>
                     </div>
 
+                </div>
 
-                         <div  class="form-group inputform" >
-                            
-                            <label  class="fontfrontpage" for="cnpj">CNPJ</label>           
-                            
-                            <input name="cnpj" type="text" class="form-control  input01" placeholder="Digite o cnpj..." required />
-                            
-                        </div>
+            </form>
 
+      </div>
 
-                             <div class="form-group inputform" >                    
-                              
-                                <label class="fontfrontpage" for="telefone">Telefone </label>          
-                              
-                                <input name="telefone" type="tel" class="form-control input01" placeholder="Digite o telefone..." required />                                                 
-                            </div>
-                
-              </div>
-            
-
-                      <div id="pesquisar"  >
-                       
-                        <button type="submit" id="buttoncadastrar" class="btn ">Cadastrar<i class="glyphicon glyphicon-ok"></i>
-
-                        </button>
-
-                      </div>
-
-
-          </form>
+      <script src="{{ asset('js/formatar-input.js') }}" defer></script>
            
         </div>
 
         @endsection
 
- 
- 
-  
   </body>
 
 </html>

@@ -1,5 +1,5 @@
 #corpo{
-    width: 100%;
+    width: 81%;
     height: 100%;
     background-color: #d9d9d9;
     margin-left: 18%;
@@ -13,8 +13,8 @@
     font-family:Comforta;
     font-size: 170%;
     margin-top: 20px;
-    margin-left: 25%;
-    margin-bottom: 7%;
+    margin-left: 35%;
+    margin-bottom: 1%;
 }
 
 .fontfrontpage{
@@ -39,18 +39,19 @@
     color: white;
 }
 
-.inputform .input00{
-    width: 55%;
-}
-.inputform .input01{
-    width: 40%;
-}
-.inputform{
-    margin-left: 15%;
 
-}
-#area{
-    width: 80%;
-    margin-left: 2%;
 
+label{
+    color: #3c5baa;
+    font-family:Comforta;
+}
+
+#buttoncadastro{
+    background-color: white;
+    color: #3c5baa;
+}
+
+#buttoncadastro:hover{
+    background-color: #3c5baa;
+    color: white;
 }
