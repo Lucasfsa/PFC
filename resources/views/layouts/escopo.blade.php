@@ -73,9 +73,17 @@
 
                      <ul class="list-unstyled components">
                                   
-                         <li> <a class="botaomenu" href="pesquisa"><i>Pesquisar Cliente</i></a> </li>
+                         <li> <a class="botaomenu" href="pesquisar"><i>Pesquisar Cliente</i></a> 
+                         </li>
                          
-                         <li> <a class="botaomenu" href="cadastro"><i>Cadastrar Cliente</i></a> </li>                                            
+                         <li> <a class="botaomenu" href="cadastrar"><i>Cadastrar Cliente</i></a> 
+                         </li>  
+
+                         <li> <a class="botaomenu" href="cadastrar"><i>Atualizar Dados</i></a> 
+                         </li> 
+
+                         <li> <a class="botaomenu" href="cadastrar"><i>Cadastrar Funcionário</i></a> 
+                         </li>                                               
                      </ul>    
 
                  </nav>

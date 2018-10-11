@@ -37,7 +37,7 @@
             
               <div class="col-md-12 icon" align="center">
           
-                  <a  class="btn" href="{{ asset('pesquisa') }}">
+                  <a  class="btn" href="{{ asset('pesquisar') }}">
 
                     <span> Acessar <i class="glyphicon glyphicon-arrow-right"></i> </span>
                       

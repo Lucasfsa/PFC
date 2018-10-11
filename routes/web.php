@@ -11,18 +11,30 @@
 |
 */
 
-Route::get('/', 'Controller@homepage'); 
-Route::get('/cadastro', 'Controller@cadastrar');
+//Página inicial do site
+Route::get('/', 'HomePageController@index'); 
 
-Route::get('/inicio', 'Controller@inicio'); 
+//Página inicial pós login
+Route::get('/inicio', 'InicioController@index'); 
 
-Route::resource('cliente', 'ClientesController');
+//Página de cadastro
+Route::get('/cadastrar', 'CadastroController@index');
+Route::resource('cliente', 'CadastroController');
 
-Route::get('/pesquisa', 'PesquisaController@index');
-Route::POST('resultado', 'PesquisaController@resultadosPesquisa');
+//Página de pesquisa
+Route::get('/pesquisar', 'PesquisaController@index');
+Route::POST('/resultado', 'PesquisaController@resultadosPesquisa');
 
+//Página de cadastro de funcionário
+Route::get('/cadastrar-funcionario', 'FuncionarioController@index');
 
+//Página de atualização de dados
+Route::get('/atualizar', 'AtualizacaoController@index');
 
+//Página de Configuração
+Route::get('/configurar', 'ConfiguracaoController@index');
+
+//Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

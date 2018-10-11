@@ -11,23 +11,5 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function homepage(){
-    	return view ('corpo/homepage');
-    }
-
-    public function pesquisa (){
-
-    	return view ('corpo/pesquisa');
-    }
-
-    public function cadastrar(){
-
-    	return view ('corpo/cadastro');
-    }
-    
-    public function inicio (){
-        return view('corpo/inicio');
-    }
-     
-
+   
 }

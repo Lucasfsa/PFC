@@ -6,14 +6,13 @@ use Illuminate\Http\Request;
 Use App\Cliente;
 Use DB;
 
-class ClientesController extends Controller{
+class CadastroController extends Controller{
 
 	public function __construct__(){}
 
 
-	public function index(Clientes $cliente){
-		$clientes = $cliente->all();
-		return view('cadastro');
+	public function index(){
+		return view('corpo/cadastro');
 	} 
 
 	public function store(Request $request){
@@ -24,7 +23,7 @@ class ClientesController extends Controller{
 		$cliente->telefone = $request->input('telefone');
 		$cliente->save();
 			
-		return redirect('cadastro')->with('msg', 'cliente cadastrado');		
+		return redirect('cadastrar')->with('msg', 'cliente cadastrado');		
 	}
 
 		
