@@ -17,8 +17,8 @@ Route::get('/', 'HomePageController@index');
 //Página inicial pós login
 Route::get('/inicio', 'InicioController@index'); 
 
-//Página de cadastro
-Route::get('/cadastrar', 'CadastroController@index');
+//Página de cadastro de cliente
+Route::get('/cadastrar-cliente', 'CadastroController@index');
 Route::resource('cliente', 'CadastroController');
 
 //Página de pesquisa

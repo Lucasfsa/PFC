@@ -13,9 +13,13 @@
           <meta name="csrf-token" content="{{ csrf_token() }}">
     
             <link rel="icon" href="imagem/icon.png">
+            
             <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+            
             <link rel="stylesheet" type="text/css" href="{{ asset('css/escopo.css') }}">
+            
             <script src="{{ asset('js/app.js') }}" defer></script>
+            
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 
@@ -36,7 +40,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="#" class="dropdown-item">
+                            <a href="configurar" class="dropdown-item">
                                 <i class="fas fa-cog"></i>
                                 Configurações
                             </a>
@@ -76,13 +80,13 @@
                          <li> <a class="botaomenu" href="pesquisar"><i>Pesquisar Cliente</i></a> 
                          </li>
                          
-                         <li> <a class="botaomenu" href="cadastrar"><i>Cadastrar Cliente</i></a> 
+                         <li> <a class="botaomenu" href="cadastrar-cliente"><i>Cadastrar Cliente</i></a> 
                          </li>  
 
-                         <li> <a class="botaomenu" href="cadastrar"><i>Atualizar Dados</i></a> 
+                         <li> <a class="botaomenu" href="cadastrar-funcionario"><i>Cadastrar Funcionário</i></a> 
                          </li> 
 
-                         <li> <a class="botaomenu" href="cadastrar"><i>Cadastrar Funcionário</i></a> 
+                         <li> <a class="botaomenu" href="atualizar"><i>Atualizar Dados</i></a> 
                          </li>                                               
                      </ul>    
 

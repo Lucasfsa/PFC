@@ -13,7 +13,7 @@ class AtualizacaoController extends Controller
      */
     public function index()
     {
-        return view('atualizacao');
+        return view('corpo/atualizacao');
     }
 
     /**

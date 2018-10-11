@@ -13,7 +13,7 @@ class ConfiguracaoController extends Controller
      */
     public function index()
     {
-        return view('corpo/atualizacao');
+        return view('corpo/configuracao');
     }
 
     /**
