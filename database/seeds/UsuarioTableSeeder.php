@@ -12,6 +12,8 @@ class UsuarioTableSeeder extends Seeder
      */
     public function run()
     {
+        /*
+        
         DB::table('users')->insert([
             'name' => 'Wan',
             'email' => 'wan@gmail.com',
@@ -27,5 +29,7 @@ class UsuarioTableSeeder extends Seeder
             'nivel_de_acesso'=> 1
         ]
     );
+
+    */
     }
 }

@@ -16,11 +16,11 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('rz_social');
-            $table->string('cnpj', 18)->unique();
+            $table->string('cnpj', 18);
             $table->string('email')->nullable();
             $table->string('telefone', 14);
-            $table->integer('id_funcionario')->unsigned();
-            $table->foreign('id_funcionario')->references('id')->on('users');
+            //$table->integer('id_funcionario')->unsigned();
+            //$table->foreign('id_funcionario')->references('id')->on('users');
             $table->timestamps();
         });
     }

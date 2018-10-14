@@ -30,3 +30,4 @@ class CreateSoftwareTable extends Migration
         Schema::dropIfExists('software');
     }
 }
+

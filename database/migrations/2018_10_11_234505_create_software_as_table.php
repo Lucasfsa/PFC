@@ -18,7 +18,7 @@ class CreateSoftwareAsTable extends Migration
             $table->integer('rede', 3);
             $table->string('senha', 15);
             $table->string('codigo', 45);
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
+            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente__softwares');
             $table->timestamps();
         });
     }

@@ -1,4 +1,4 @@
-<?php
+<?<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,9 +14,9 @@ class CreateSoftwareCsTable extends Migration
     public function up()
     {
         Schema::create('software_cs', function (Blueprint $table) {
-            $table->integer('id_ClienteSoftware')->unsigned();
             $table->integer('contrato', 5);
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
+            $table->integer('id_ClienteSoftware')->unsigned();
+            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente__softwares');
             $table->timestamps();
         });
     }

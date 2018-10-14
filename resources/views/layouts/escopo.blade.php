@@ -36,7 +36,7 @@
 
                     <li class="nav-item dropdown">
                         <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                           {{-- {{ Auth::user()->name }} <span class="caret"></span> --}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
