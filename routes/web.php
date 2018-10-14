@@ -26,7 +26,7 @@ Route::get('/pesquisar', 'PesquisaController@index');
 Route::POST('/resultado', 'PesquisaController@resultadosPesquisa');
 
 //Página de cadastro de funcionário
-Route::get('/cadastrar-funcionario', 'FuncionarioController@index');
+Route::get('/cadastrar-usuario', 'FuncionarioController@index');
 
 //Página de atualização de dados
 Route::get('/atualizar', 'AtualizacaoController@index');

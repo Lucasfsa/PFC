@@ -36,7 +36,7 @@
 
                     <li class="nav-item dropdown">
                         <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true">
-                           {{-- {{ Auth::user()->name }} <span class="caret"></span> --}}
+                           {{-- {{ Auth::user()->name}} <span class="caret"></span> --}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -44,7 +44,10 @@
                                 <i class="fas fa-cog"></i>
                                 Configurações
                             </a>
+                            
                             <div class="dropdown-divider"></div>
+                            
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
@@ -83,7 +86,7 @@
                          <li> <a class="botaomenu" href="cadastrar-cliente"><i>Cadastrar Cliente</i></a> 
                          </li>  
 
-                         <li> <a class="botaomenu" href="cadastrar-funcionario"><i>Cadastrar Funcionário</i></a> 
+                         <li> <a class="botaomenu" href="cadastrar-usuario"><i>Cadastrar Usuário</i></a> 
                          </li> 
 
                          <li> <a class="botaomenu" href="atualizar"><i>Atualizar Dados</i></a> 

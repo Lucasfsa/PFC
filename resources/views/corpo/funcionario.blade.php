@@ -3,7 +3,7 @@
 
 <head>
 	
-	<title>Cadastrar Funcionário</title>
+	<title>Cadastrar Usuário</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/funcionario.css') }}">
@@ -19,7 +19,7 @@
  	 
  	 <div>
               
-        <p id="titlepesquisa">Cadastro de Funcionários</p>
+        <p id="titlepesquisa">Cadastro de Usuários</p>
 
      </div>
 
