@@ -17,7 +17,7 @@
 
  <div id="corpo">
  	 
- 	 <div>
+ 	  <div align="center">
               
         <p id="titlepesquisa">Cadastro de Usuários</p>
 

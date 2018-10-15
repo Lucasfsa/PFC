@@ -14,7 +14,6 @@
     font-family:Comforta;
     font-size: 170%;
     margin-top: 20px;
-    margin-left: 35%;
     margin-bottom: 1%;
 }
 
@@ -33,6 +32,8 @@ label{
 #buttoncadastro{
     background-color: white;
     color: #3c5baa;
+    margin-top: 3.3%;
+
 }
 
 #buttoncadastro:hover{

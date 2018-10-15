@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
-
+	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
 
 </head>
 
@@ -21,36 +21,31 @@
 
   	<div id="divtitle">
               
-       <p id="titlepesquisa">Configurações</p>
+       <p align="center" id="titlepesquisa">Configurações</p>
 
     </div>
 
-    <div id="buttonmenu" align="center">
+    <div id="buttonmenu" >
+
+    		<div class="menuedit" align="center" >
+	    		
+		        <a class="btn buttonstyle" href="configurar/redefinir-senha"> Redefinir Senha</a>
 
 
-  			<button type="button" class="btn buttonstyle" data-toggle="modal" data-target="#">
-			  Alterar Nome 
-			</button>	
-			
-			<button type="button" class="btn buttonstyle" data-toggle="modal" data-target="#">
-			  Alterar Senha
-			</button>
+			    <a class="btn buttonstyle" href="configurar/redefinir-nome"> Redefinir Nome </a>
 
-			<button type="button" class="btn buttonstyle" data-toggle="modal" data-target="#">
-			  Alterar E-mail
-			</button>
+	
+				<a class="btn buttonstyle" href="configurar/redefinir-email"> Redefinir E-mail </a>
+
+				<a class="btn buttonstyle" href="configurar/desativar-conta"> Desativar Conta</a>	
 		
-			<button type="button" class="btn buttonstyle" data-toggle="modal" data-target="#">
-			  Alterar Idioma
-			</button>
-			
-			<button type="button" class="btn buttonstyle" data-toggle="modal" data-target="#">
-			  Excluir Conta
-			</button>
-
+			</div>
 
 	</div>		
 
+	  <main class="py-4">
+       @yield('config')
+      </main>
 
 
   </div>

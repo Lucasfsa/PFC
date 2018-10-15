@@ -16,6 +16,26 @@ class ConfiguracaoController extends Controller
         return view('corpo/configuracao');
     }
 
+    public function RedefinirSenha()
+    {
+
+        return view('corpo/redefinirSenha');
+    }
+
+    public function RedefinirNome(){
+
+        return view('corpo/redefinirNome');
+    }
+
+    public function RedefinirEmail (){
+
+        return view('corpo/redefinirEmail');
+    }
+    public function DesativarConta (){
+
+        return view('corpo/desativarConta');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

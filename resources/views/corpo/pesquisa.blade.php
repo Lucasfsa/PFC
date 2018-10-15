@@ -19,7 +19,7 @@
           
          <div>
                 
-              <div>
+              <div align="center">
                   
                   <p id="titlepesquisa">Pesquisa de Clientes</p>
 

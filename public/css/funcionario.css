@@ -13,7 +13,6 @@
     font-family:Comforta;
     font-size: 170%;
     margin-top: 20px;
-    margin-left: 35%;
     margin-bottom: 1%;
 }
 
@@ -24,22 +23,6 @@
     
 }
 
-#buttoncadastrar{
-    background-color: white;
-    color:  #4265bd;
-    margin-left: 14%;
-    margin-top: 2%;
-    font-family: Comforta;
-    border-color: #cccccc;
-    
-}
-
-#buttoncadastrar:hover{
-    background-color:#355197 ;
-    color: white;
-}
-
-
 
 label{
     color: #3c5baa;
@@ -49,6 +32,7 @@ label{
 #buttoncadastro{
     background-color: white;
     color: #3c5baa;
+
 }
 
 #buttoncadastro:hover{

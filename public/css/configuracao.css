@@ -1,3 +1,9 @@
+@font-face
+{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
 #corpo{
     width: 81%;
     height: 100%;
@@ -14,7 +20,7 @@
     font-family:Comforta;
     font-size: 170%;
     margin-top: 20px;
-    margin-left: 35%;
+    
     margin-bottom: 3%;
 }
 
@@ -26,12 +32,21 @@
 	color:#3c5baa;
 	font-family: Comforta;
 	background-color: white;
-	margin-left: 3%;
-	margin-top:4%;
-
+	
 }
 
 .buttonstyle:hover{
 	color: white;
 	background-color: #3c5baa
+}
+
+label{
+    font-family: Comforta;
+    color: #3c5baa;
+    
+
+}
+
+.menuedit{
+    margin-top: 6%;
 }

@@ -40,7 +40,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="configurar" class="dropdown-item">
+                            <a href="/configurar" class="dropdown-item">
                                 <i class="fas fa-cog"></i>
                                 Configurações
                             </a>
