@@ -40,3 +40,11 @@ label{
     background-color: #3c5baa;
     color: white;
 }
+
+#msg{
+    color: #009900;
+    background-color:#ccffcc;
+    border-radius: 3px;
+    width: 30%;
+    
+}

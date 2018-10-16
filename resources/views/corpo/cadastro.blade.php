@@ -9,6 +9,9 @@
   
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/cadastro.css') }}">
+    <link rel="icon" href="{{ asset('imagem/icon.png') }}">
+    
+
 
 
   </head>
@@ -23,6 +26,10 @@
             <div align="center">
               
               <p id="titlepesquisa">Cadastro de Clientes</p>
+
+                <div id="msg"> {{ Session::get('alert') }} </div>
+                
+
 
             </div>
 
@@ -54,11 +61,17 @@
                     <div >
                         <button id="buttoncadastro" type="submit" class="btn">
                            
-                          Cadastrar  <i class="fas fa-user-plus"></i>
+                          Cadastrar  <i class="fas fa-user-plus"></i> 
+
                         </button>
+
+
+
                     </div>
 
                 </div>
+
+              
 
             </form>
 

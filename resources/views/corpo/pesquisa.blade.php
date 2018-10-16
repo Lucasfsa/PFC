@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/pesquisa.css') }}">
+  <link rel="icon" href="{{ asset('imagem/icon.png') }}">
 
 </head>
 

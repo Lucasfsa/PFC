@@ -44,6 +44,7 @@
 	</div>		
 
 	  <main class="py-4">
+
        @yield('config')
       </main>
 

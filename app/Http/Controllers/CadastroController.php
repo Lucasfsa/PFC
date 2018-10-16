@@ -23,7 +23,7 @@ class CadastroController extends Controller{
 		$cliente->telefone = $request->input('telefone');
 		$cliente->save();
 			
-		return redirect('cadastrar-cliente')->with('msg', 'cliente cadastrado');		
+		return redirect('cadastrar-cliente')->with('alert', 'Cadastro realizado com sucesso!');		
 	}
 
 		
