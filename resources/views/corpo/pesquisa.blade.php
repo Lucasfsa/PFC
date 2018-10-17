@@ -65,8 +65,8 @@
                 <tr>
                     <th class="th-sm">Id<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                     <th class="th-sm">Razão Social<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">Cnpj<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">Email<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">CNPJ<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th class="th-sm">E-mail<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                     <th class="th-sm">Telefone<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
                 </tr>
             </thead>

@@ -44,21 +44,21 @@
 		
 			</div>
 
+		
 			<div  id="subcorpo">
 
 					<p align="center">Redefinir Nome</p>
 
+					<div id="legenda">
+						<label>Insira um endereço de e-mail e será enviado um link para redefinição do seu nome.</label>
+					</div>
+
 					
 					
-					<span>
-						<br>
-						<label>Nome: </label>
-						
-						<input class="inputredefinir" type="text" name="name" placeholder="Digite o novo nome...">
-						
-						<label>Comfirme o nome: </label>
-						<input class="inputredefinir" type="text" name="nameconfirme" placeholder="Digite o novo nome...">
-					</span>
+					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+					
+					<button class="buttonredefinir" type="submit" > Enviar </button>
+			
 
 			</div>
 

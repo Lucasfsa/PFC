@@ -37,7 +37,7 @@
 			    <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
 
 				<a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
-
+				
 				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
 		
 			</div>
@@ -48,17 +48,16 @@
 
 					<p align="center">Redefinir Senha</p>
 
-					<i>Insira um e-mail.</i>
-					<br>
-					<i>Enviaremos um link para redefinição.</i>
-				
+					<div id="legenda">
+						<label>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</label>
+					</div>
 
-					<span>
+					
 					
 					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
 					
-					<button class="buttonredefinir" type="submit" > Enviar link </button>
-				</span>
+					<button class="buttonredefinir" type="submit" > Enviar </button>
+			
 
 			</div>
 
