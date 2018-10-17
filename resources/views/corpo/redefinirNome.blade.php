@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/nome.css') }}">
 
 
 </head>
@@ -42,6 +43,25 @@
 				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
 		
 			</div>
+
+			<div  id="subcorpo">
+
+					<p align="center">Redefinir Nome</p>
+
+					
+					
+					<span>
+						<br>
+						<label>Nome: </label>
+						
+						<input class="inputredefinir" type="text" name="name" placeholder="Digite o novo nome...">
+						
+						<label>Comfirme o nome: </label>
+						<input class="inputredefinir" type="text" name="nameconfirme" placeholder="Digite o novo nome...">
+					</span>
+
+			</div>
+
 
 	</div>		
 

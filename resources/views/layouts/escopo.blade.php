@@ -36,7 +36,7 @@
 
                     <li class="nav-item dropdown">
                         <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true">
-                           {{-- {{ Auth::user()->name}} <span class="caret"></span> --}}
+                            {{ Auth::user()->name}} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -74,22 +74,22 @@
                      
                     <div class="sidebar-header" align="center">
                                   
-                        <img id="imgheader" src="imagem/img001.png">
+                        <img id="imgheader" src="../imagem/img001.png">
                   
                     </div>
 
                      <ul class="list-unstyled components">
                                   
-                         <li> <a class="botaomenu" href="pesquisar"><i>Pesquisar Cliente</i></a> 
+                         <li> <a class="botaomenu" href="/pesquisar"><i>Pesquisar Cliente</i></a> 
                          </li>
                          
-                         <li> <a class="botaomenu" href="cadastrar-cliente"><i>Cadastrar Cliente</i></a> 
+                         <li> <a class="botaomenu" href="/cadastrar-cliente"><i>Cadastrar Cliente</i></a> 
                          </li>  
 
-                         <li> <a class="botaomenu" href="cadastrar-usuario"><i>Cadastrar Usuário</i></a> 
+                         <li> <a class="botaomenu" href="/cadastrar-usuario"><i>Cadastrar Usuário</i></a> 
                          </li> 
 
-                         <li> <a class="botaomenu" href="atualizar"><i>Atualizar Dados</i></a> 
+                         <li> <a class="botaomenu" href="/atualizar"><i>Atualizar Dados</i></a> 
                          </li>                                               
                      </ul>    
 

@@ -1,0 +1,46 @@
+
+#subcorpo{
+    
+    margin-top: 8%;
+    width: 60%;
+    height: 28%;
+    background-color: #bfbfbf; 
+    margin-left: 20%;
+    border-radius: 3px;
+}
+
+
+#subcorpo i{
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    margin-left: 6%;
+    
+}
+
+#subcorpo p {
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    font-size: 120%;
+ 
+}
+
+
+#legenda{
+    margin-top: 3%;
+}
+
+.inputredefinir{
+   
+    width:30%;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-bottom: 10%;
+
+}
+
+#subcorpo label{
+    margin-left: 6%;
+    font-size: 85%;
+}

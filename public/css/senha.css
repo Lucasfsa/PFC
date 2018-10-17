@@ -1,0 +1,55 @@
+
+#subcorpo{
+    
+    margin-top: 8%;
+    width: 50%;
+    height: 28%;
+    background-color: #bfbfbf; 
+    margin-left: 25%;
+    border-radius: 3px;
+}
+
+.inputredefinir{
+   
+    width: 70%;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-left: 6%;
+
+ 
+}
+
+.buttonredefinir{
+    background-color: white;
+    color: #3c5baa;
+    margin-top: 6%;
+    border-color: transparent;
+    border-radius: 3px;
+
+ 
+}
+
+.buttonredefinir:hover{
+    background-color: #3c5baa;
+    color: white;
+}
+
+#subcorpo i{
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    margin-left: 6%;
+    
+}
+
+#subcorpo p {
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    font-size: 120%;
+ 
+}
+
+#legenda{
+    margin-top: 3%;
+}
