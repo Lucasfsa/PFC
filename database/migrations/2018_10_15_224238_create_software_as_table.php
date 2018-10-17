@@ -1,10 +1,10 @@
-<?<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSoftwareCsTable extends Migration
+class CreateSoftwareAsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateSoftwareCsTable extends Migration
      */
     public function up()
     {
-        Schema::create('software_cs', function (Blueprint $table) {
-            $table->integer('contrato', 5);
+        Schema::create('software_as', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('id_ClienteSoftware')->unsigned();
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente__softwares');
+            $table->integer('controle');
+            $table->integer('versao');
+            $table->integer('serie');
+            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateSoftwareCsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('software_cs');
+        Schema::dropIfExists('software_as');
     }
 }

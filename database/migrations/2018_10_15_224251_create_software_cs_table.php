@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSoftwareAsTable extends Migration
+class CreateSoftwareCsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateSoftwareAsTable extends Migration
      */
     public function up()
     {
-        Schema::create('software_as', function (Blueprint $table) {
+        Schema::create('software_cs', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('id_ClienteSoftware')->unsigned();
-            $table->integer('rede', 3);
-            $table->string('senha', 15);
-            $table->string('codigo', 45);
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente__softwares');
+            $table->integer('codigo_rede');
+            $table->string('codigo_loja');
+            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateSoftwareAsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('software_as');
+        Schema::dropIfExists('software_cs');
     }
 }
