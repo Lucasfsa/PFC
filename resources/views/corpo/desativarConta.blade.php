@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/desativarconta.css') }}">
 
 
 </head>
@@ -41,6 +42,23 @@
 
 				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
 		
+			</div>
+
+
+			<div  id="subcorpo">
+
+					<p align="center">Desativar Conta</p>
+
+					<div id="legenda">
+						<label>Após desativar sua conta, você não terá mais acesso ao sistema, para poder acessar novamente comunique ao administrador.</label>
+					</div>
+
+					
+					<div align="center">
+						<button class="buttonredefinir" type="submit" > Desativar </button>
+					</div>
+			
+
 			</div>
 
 	</div>		

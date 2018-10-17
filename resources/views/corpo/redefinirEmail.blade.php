@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
-
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/email.css') }}">
 
 </head>
 
@@ -41,6 +41,23 @@
 
 				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
 		
+			</div>
+
+			<div  id="subcorpo">
+
+					<p align="center">Redefinir E-mail</p>
+
+					<div id="legenda">
+						<label>Insira um endereço de e-mail e será enviado um link para redefinição do seu e-mail.</label>
+					</div>
+
+					
+					
+					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+					
+					<button class="buttonredefinir" type="submit" > Enviar </button>
+			
+
 			</div>
 
 	</div>		

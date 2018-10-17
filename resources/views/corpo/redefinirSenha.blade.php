@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/senha.css') }}">
 
 
 </head>
@@ -33,35 +34,32 @@
 	    		
 		        <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
 
-
 			    <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
 
-	
 				<a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
-
+				
 				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
 		
 			</div>
 
 	</div>	
 
-
-	
-			<div class="form-group" id="subcorpo">
+			<div  id="subcorpo">
 
 					<p align="center">Redefinir Senha</p>
 
-					<i>Insira seu endereço de e-mail e enviaremos um link para redefinição de senha.</i>
+					<div id="legenda">
+						<label>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</label>
+					</div>
 
-					<input class="form-inline inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
-
-					<button class="buttonredefinir" type="submit" > Enviar link </button>
+					
+					
+					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+					
+					<button class="buttonredefinir" type="submit" > Enviar </button>
+			
 
 			</div>
-
-
-	
-
 
   </div>
 
