@@ -14,11 +14,10 @@ class CreateSoftwareBsTable extends Migration
     public function up()
     {
         Schema::create('software_bs', function (Blueprint $table) {
-            $table->integer('controle', 7);
-            $table->integer('versao');
-            $table->integer('serie');
+            $table->increments('id');
             $table->integer('id_ClienteSoftware')->unsigned();
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente__softwares');
+            $table->integer('contrato');
+            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }
@@ -33,4 +32,3 @@ class CreateSoftwareBsTable extends Migration
         Schema::dropIfExists('software_bs');
     }
 }
-

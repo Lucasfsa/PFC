@@ -13,7 +13,7 @@ class CreateClienteSoftwaresTable extends Migration
      */
     public function up()
     {
-        Schema::create('cliente__softwares', function (Blueprint $table) {
+        Schema::create('cliente_softwares', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_Cliente')->unsigned();
             $table->integer('id_Software')->unsigned();
@@ -30,6 +30,6 @@ class CreateClienteSoftwaresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cliente__softwares');
+        Schema::dropIfExists('cliente_softwares');
     }
 }
