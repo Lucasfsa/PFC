@@ -12,10 +12,10 @@
 */
 
 //Página inicial do site
-Route::get('/', 'HomePageController@index'); 
+Route::get('/', 'HomePageController@index');
 
 //Página inicial pós login
-Route::get('/inicio', 'InicioController@index'); 
+Route::get('/inicio', 'InicioController@index');
 
 //Página de cadastro de cliente
 Route::get('/cadastrar-cliente', 'CadastroController@index');
@@ -26,7 +26,8 @@ Route::get('/pesquisar', 'PesquisaController@index');
 Route::POST('/resultado', 'PesquisaController@resultadosPesquisa');
 
 //Página de cadastro de funcionário
-Route::get('/cadastrar-usuario', 'FuncionarioController@index');
+Route::get('/cadastrar-usuario', 'FuncionarioController@create');
+Route::post('/cadastrar-usuario', 'FuncionarioController@store');
 
 //Página de atualização de dados
 Route::get('/atualizar', 'AtualizacaoController@index');

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  
+
   <title> Pesquisa </title>
 
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
@@ -13,16 +13,17 @@
 </head>
 
 <body>
-    
+
     @extends('layouts.escopo')
     @section('escopo')
     <div class="pr-5" id="corpo">
-          
+
          <div>
-                
+
               <div align="center">
-                  
-                  <p id="titlepesquisa">Pesquisa de Clientes</p>
+
+                    <p id="titlepesquisa">Pesquisa de Clientes</p>
+
 
               </div>
 
@@ -49,13 +50,13 @@
 
         {{-- <div class="dataTables_length bs-select" id="dtBasicExample_length">
             <label>
-                Show 
+                Show
                 <select name="dtBasicExample_length" aria-controls="dtBasicExample" class="custom-select custom-select-sm form-control form-control-sm">
                     <option value="10">10</option>
                     <option value="25">25</option>
                     <option value="50">50</option>
                     <option value="100">100</option>
-                </select> 
+                </select>
                 entries
             </label>
         </div> --}}
@@ -91,15 +92,15 @@
     </div>
 
 </div>
-             
+
         </div>
-              
+
     </div>
 
 
    @endsection
- 
-    
+
+
   </body>
-  
+
 </html>

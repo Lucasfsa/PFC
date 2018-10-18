@@ -15,7 +15,8 @@ class User extends Seeder
             'name' => 'Wan',
             'email' => 'wan@gmail.com',
             'password' => bcrypt('123456'),
-            'nivel_de_acesso'=> 1,
+            'admin' => true,
+            'remember_token' => str_random(10)
         ]
     );
     }

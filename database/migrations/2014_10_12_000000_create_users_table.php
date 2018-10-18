@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('nivel_de_acesso'); /* O valor será 1 para administrador e 2 para para usuário normal */
+            $table->boolean('admin')->default(false); /* O valor será 1 para administrador e 0 para para usuário normal */
             $table->rememberToken();
             $table->timestamps();
         });

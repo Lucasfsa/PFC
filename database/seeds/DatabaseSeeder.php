@@ -13,12 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(User::class);
-    	$this->call(Cliente::class);
-        $this->call(Software::class);
-    	$this->call(ClienteSoftware::class);
-        $this->call(ChaveDeAcesso::class);
-        $this->call(SoftwareA::class);
-        $this->call(SoftwareB::class);
-        $this->call(SoftwareC::class);
+    	// $this->call(Cliente::class);
+        // $this->call(Software::class);
+    	// $this->call(ClienteSoftware::class);
+        // $this->call(ChaveDeAcesso::class);
+        // $this->call(SoftwareA::class);
+        // $this->call(SoftwareB::class);
+        // $this->call(SoftwareC::class);
     }
 }

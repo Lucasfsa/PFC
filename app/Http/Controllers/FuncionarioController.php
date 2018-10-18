@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class FuncionarioController extends Controller
 {
@@ -13,7 +14,7 @@ class FuncionarioController extends Controller
      */
     public function index()
     {
-        return view('corpo/funcionario');
+        return view('corpo.funcionario');
     }
 
     /**
@@ -23,7 +24,7 @@ class FuncionarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('corpo.funcionario');
     }
 
     /**
@@ -34,7 +35,15 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $funcionario = new User();
+
+        $funcionario->name = $request->name;
+        $funcionario->email = $request->email;
+        $funcionario->password = bcrypt($request->password);
+        $funcionario->save();
+
+        return redirect('/cadastrar-usuario')->with('alert', 'Cadastro realizado com sucesso!');
+
     }
 
     /**
