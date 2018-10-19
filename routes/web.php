@@ -41,7 +41,7 @@ Route::get('/configurar/redefinir-nome', 'ConfiguracaoController@RedefinirNome')
 Route::get('/configurar/redefinir-email', 'ConfiguracaoController@RedefinirEmail');
 Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta');
 
-
+Route::get('esqueci-minha-senha', 'SenhaController@index');
 //Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 

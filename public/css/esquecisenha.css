@@ -1,0 +1,83 @@
+@font-face
+{
+    font-family: Comforta;
+    src: url(/font/Comforta.ttf);
+}
+
+.container{
+
+
+}
+.card{
+	background-color: rgb(255,255,255, .5);
+	border-radius: 3px;
+	width: 40%;
+	height: 60%;
+	font-family: Comforta;
+	color: #3c5baa;
+	margin-left: 30%;
+	margin-top: 7%;
+}
+.card-body{
+	margin-left: 6%;
+	margin-right: 8%;
+}
+
+#imgmenu{
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+    margin-bottom: -5%;
+}
+
+
+.inputredefinir{
+   
+    width: 95%;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-left: 3%;
+    margin-top: 5%;
+
+ 
+}
+
+.buttonredefinir{
+    background-color: white;
+    color: #3c5baa;
+    margin-top: 2%;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-left: 3%;
+    margin-bottom: 8%;
+ 
+}
+
+.buttonredefinir:hover{
+    background-color: #3c5baa;
+    color: white;
+}
+#legenda{
+    margin-top: 3%;
+    margin-left: 3%;
+ 
+}
+
+.card-body h3 {
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    font-size: 120%;
+ 
+ 
+}
+
+#legenda i{
+    font-family: Comforta;
+    color:#3c5baa;
+    font-style: normal;
+    margin-left: 3%;
+    padding: 2%;
+
+    
+}

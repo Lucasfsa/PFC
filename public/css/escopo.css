@@ -156,3 +156,8 @@ a i {
     font-style: normal;
 }
 
+
+.dropdown-item:hover{
+    background-color: #3c5baa;
+    color: white;
+}

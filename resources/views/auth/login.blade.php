@@ -83,7 +83,7 @@
                                     {{ __('Entrar') }}
                                 </button>
 
-                                <a class="btn btn-link" id="link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" id="link" href="{{ url('esqueci-minha-senha') }}">
                                     {{ __('Esqueceu sua senha?') }}
                                 </a>
                             </div>

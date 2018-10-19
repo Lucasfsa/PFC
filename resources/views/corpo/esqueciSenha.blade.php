@@ -4,7 +4,7 @@
 
 <head>
    
-    <title>Esqueci minha Senha</title>
+    <title>Esqueci minha senha</title>
 
     <meta charset="utf-8">
       
@@ -29,7 +29,7 @@
 @section('base')
 
 <div class="container">
-         
+          
             
             <div class="card">
                
@@ -37,6 +37,19 @@
                 
                 <div class="card-body"  >
                     
+                      <h3 align="center">Redefinir Senha</h3>
+
+                      <div id="legenda">
+                       
+                        <i>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</i>
+
+                      </div>
+
+                        <input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+                        
+                        <button class="buttonredefinir" type="submit" >Enviar</button>
+          
+
                  
                 </div>
             
@@ -48,6 +61,8 @@
 
 
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <script src="bootstrap/js/bootstrap.min.js"></script>   
 
 </html>
 

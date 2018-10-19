@@ -28,7 +28,7 @@
         @csrf
 
         <div class="input-group">
-            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="Procure o cliente e selecione-o para pode realizar alterações.">
+            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="Busque o cliente e selecione-o para pode realizar alterações.">
 
             <div id="formButton">
                 <button type="submit" class="btn">
