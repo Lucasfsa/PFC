@@ -7,6 +7,7 @@
     background-color: #bfbfbf; 
     margin-left: 25%;
     border-radius: 3px;
+    padding: 1%;
 }
 
 .inputredefinir{
@@ -15,9 +16,7 @@
     border-color: transparent;
     border-radius: 3px;
     margin-left: 3%;
-    margin-top: 3%;
-
- 
+   
 }
 
 .buttonredefinir{
@@ -28,8 +27,6 @@
     border-radius: 3px;
     margin-left: 3%;
 
-
- 
 }
 
 .buttonredefinir:hover{

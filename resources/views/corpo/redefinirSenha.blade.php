@@ -53,7 +53,6 @@
 					</div>
 
 					
-					
 					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
 					
 					<button class="buttonredefinir" type="submit" > Enviar </button>
