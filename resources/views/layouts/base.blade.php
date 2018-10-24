@@ -17,7 +17,7 @@
                <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 					<link rel="stylesheet" type="text/css" href="{{ asset('css/base.css') }}">
-
+ 
 </head>
 <body>
 
@@ -27,7 +27,7 @@
            
               <div class="container-fluid">
              
-                 <a id="item_nav" class="navbar-brand" href="{{ url('/') }}"> <span><i class=" 	glyphicon glyphicon-arrow-left"></i></span> </a>
+                 <a id="item_nav" class="navbar-brand" href="{{ url($destino) }}"> <span><i class=" 	glyphicon glyphicon-arrow-left"></i></span> </a>
 
                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">   
 

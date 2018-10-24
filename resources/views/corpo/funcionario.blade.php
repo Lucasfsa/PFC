@@ -21,10 +21,11 @@
  	  <div align="center">
 
         <p id="titlepesquisa">Cadastro de Usuários</p>
+        <div data-dismiss="alert" id="msg"> {{ Session::get('alert') }} </div>
 
      </div>
 
-     {{ Session::get('alert') }}
+    
 
       <form method="POST" action="/cadastrar-usuario" aria-label="{{ __('Cadastro-funcionario') }}">
               @csrf

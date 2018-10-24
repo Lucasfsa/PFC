@@ -24,7 +24,7 @@
 
 <body>
 
-@extends('layouts.base')
+@extends('layouts.base', ['destino'=>'/'])
 
 @section('base')
 

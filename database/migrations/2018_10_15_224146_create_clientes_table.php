@@ -19,7 +19,7 @@ class CreateClientesTable extends Migration
             $table->string('cnpj', 18)->nullable();
             $table->string('email')->nullable();
             $table->string('telefone', 14);
-            $table->integer('id_funcionario')->unsigned();
+            $table->integer('id_funcionario')->unsigned()->nullable();
             $table->foreign('id_funcionario')->references('id')->on('users');
             $table->timestamps();
         });
