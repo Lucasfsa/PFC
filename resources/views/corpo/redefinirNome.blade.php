@@ -3,7 +3,7 @@
 <head>
 	
 
-	<title>Redefinir Senha</title>
+	<title>Redefinir Nome</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
