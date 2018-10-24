@@ -90,7 +90,10 @@
                          </li>
                          @endif
 
-                         <li> <a class="botaomenu" href="/atualizar"><i>Atualizar Dados</i></a>
+                         <li> <a class="botaomenu" href="/inicio" ><i>Atualizar Dados</i></a>
+                         </li>
+
+                         <li> <a class="botaomenu" href="/inicio" ><i>Gerenciamento de Chave</i></a>
                          </li>
                      </ul>
 
