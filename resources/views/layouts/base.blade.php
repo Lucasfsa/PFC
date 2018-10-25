@@ -21,7 +21,7 @@
 </head>
 <body>
 
-	<nav>
+	<nav> 
 		
 		<nav class="navbar navbar-custom">
            
