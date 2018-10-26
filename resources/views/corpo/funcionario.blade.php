@@ -16,6 +16,19 @@
  @extends('layouts.escopo')
  @section('escopo')
 
+        @if(Session::get('alert')!=null)
+          
+          <script type="text/javascript">
+            
+            alert("Cadastro realizado com sucesso!");
+
+          </script>
+
+          {{Session::forget('alert')}}
+          
+        @endif
+
+
  <div id="corpo">
 
  	  <div align="center">

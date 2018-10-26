@@ -12,24 +12,37 @@
     <link rel="icon" href="{{ asset('imagem/icon.png') }}">
     
 
-
+    <script type="text/javascript">
+        function funcao1()
+        {
+        alert("Cadastro realizado com sucesso!");
+        }
+    </script>
 
   </head>
-  
+
   <body>  
 
         @extends('layouts.escopo')
         @section('escopo')
+
+        @if(Session::get('alert')!=null)
+          
+          <script type="text/javascript">
+            
+            alert("Cadastro realizado com sucesso!");
+
+          </script>
+
+          {{Session::forget('alert')}}
+          
+        @endif
 
         <div id="corpo">
          
             <div align="center">
               
               <p id="titlepesquisa">Cadastro de Clientes</p>
-
-                <div id="msg"> {{ Session::get('alert') }} </div>
-                
-
 
             </div>
 

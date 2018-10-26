@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\Cliente;
 Use DB;
+use Session;
 
 class CadastroController extends Controller{
 
@@ -12,6 +13,7 @@ class CadastroController extends Controller{
 
 
 	public function index(){
+		
 		return view('corpo/cadastro');
 	} 
 
@@ -22,8 +24,9 @@ class CadastroController extends Controller{
 		$cliente->cnpj = $request->input('cnpj');
 		$cliente->telefone = $request->input('telefone');
 		$cliente->save();
-			
-		return redirect('cadastrar-cliente')->with('alert', 'Cadastro realizado com sucesso!');		
+		
+		Session::put('alert','valor');
+		return redirect('cadastrar-cliente');		
 	}
 
 		
