@@ -43,6 +43,9 @@ Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta
 
 Route::get('esqueci-minha-senha', 'SenhaController@index');
 //Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/chave/pesquisar', 'ChavePesquisaController@index');
+Route::get('/chave/registrar', 'ChaveRegistroController@index');
 Auth::routes();
 
 
