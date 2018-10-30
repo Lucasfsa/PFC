@@ -32,6 +32,18 @@
         @csrf
 
         <div class="input-group">
+            <div class="input-group-btn search-panel">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span>Filtrar por</span>
+                    <span class="carret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="">Nome Fantasia</a></li>
+                    <li><a href="">Razão Social</a></li>
+                    <li><a href="">CNPJ</a></li>
+                    <li><a href="">Telefone</a></li>
+                </ul>
+            </div>
             <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
             <div id="formButton">
