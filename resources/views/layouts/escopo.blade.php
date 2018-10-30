@@ -93,7 +93,24 @@
                          <li> <a class="botaomenu" href="/inicio" ><i>Atualizar Dados</i></a>
                          </li>
 
-                         <li> <a class="botaomenu" href="/inicio" ><i>Gerenciamento de Chave</i></a>
+                         <li> 
+
+                            <div class="dropdown show">
+                             
+                              <a class="botaomenu titledrop dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Controle de Chaves </a>
+
+                              <div class="dropmenu dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="/chaves/pesquisar">Pesquisar Chave <i class="fas fa-search"></i></a>
+                                
+                                <a class="dropdown-item" href="/chaves/registrar">Registrar Chave <i class="fas fa-key"></i> </a>
+                               
+                              </div>
+
+                            </div>
+
+
                          </li>
                      </ul>
 

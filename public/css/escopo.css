@@ -82,7 +82,7 @@ body,html
 
 #sidebar ul p 
 {
-    color: #black;
+    color: black;
     padding: 10px;
 }
 
@@ -147,6 +147,7 @@ a, a:hover, a:focus
 {
 	background-color: #355197;
 	margin-top: 6px;
+    font-size: 75%;
 
 
 }
@@ -157,7 +158,30 @@ a i {
 }
 
 
-.dropdown-item:hover{
+.dropdown-item:hover
+{
     background-color: #3c5baa;
     color: white;
+}
+
+#sidebar .titledrop
+{
+    font-size: 105%;
+}
+
+#sidebar .dropdown-item{
+    color: black;
+    font-size: 95%;
+}
+
+#sidebar .dropdown-item:hover{
+    color: white;
+    background-color: #3c5baa;
+    font-size: 110%;
+}
+
+#sidebar .dropdown
+{
+    position: relative;
+    z-index: +1;
 }
