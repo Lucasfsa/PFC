@@ -14,7 +14,8 @@
 
 <body>
 
-    @extends('layouts.escopo')
+    @extends('layouts.escopo', ["current"=>"clientes"])
+
     @section('escopo')
     <div class="pr-5" id="corpo">
 
@@ -27,10 +28,22 @@
 
               </div>
 
-              <form id="searchForm" action="{{ url('resultado')}}" method="POST" class="pt-5 px-5">
+    <form id="searchForm" action="/pesquisar" method="POST" class="mt-4 px-5">
         @csrf
 
         <div class="input-group">
+            <div class="input-group-btn search-panel">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span>Filtrar por</span>
+                    <span class="carret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="">Nome Fantasia</a></li>
+                    <li><a href="">Razão Social</a></li>
+                    <li><a href="">CNPJ</a></li>
+                    <li><a href="">Telefone</a></li>
+                </ul>
+            </div>
             <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
             <div id="formButton">
@@ -43,42 +56,32 @@
 
     </form>
 
-    <div id="resultados" class="px-5">
+    <div id="resultados" class="px-5 m-5">
+
 
     @if(isset($details))
         <p>Resultados de pesquisa para <b> {{ $query }} </b> são: </p>
 
-        {{-- <div class="dataTables_length bs-select" id="dtBasicExample_length">
-            <label>
-                Show
-                <select name="dtBasicExample_length" aria-controls="dtBasicExample" class="custom-select custom-select-sm form-control form-control-sm">
-                    <option value="10">10</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                </select>
-                entries
-            </label>
-        </div> --}}
-
-        <table id="tabelaDados" class="table table-striped table-bordered" cellspacing="0">
+        <table id="tabelaDados" class="table table-hover table-bordered table-striped" cellspacing="0">
             <thead>
                 <tr>
-                    <th class="th-sm">Id<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">Razão Social<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">CNPJ<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">E-mail<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
-                    <th class="th-sm">Telefone<i class="fa fa-sort float-right m-1" aria-hidden="true"></i></th>
+                    <th scope="col">Nome Fantasia</th>
+                    <th scope="col">Razão Social</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Informações</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($details as $user)
+                @foreach ($details as $cli)
                     <tr>
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->rz_social }}</td>
-                        <td>{{ $user->cnpj }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->telefone }}</td>
+                        <td>{{ $cli->nome_fantasia }}</td>
+                        <td>{{ $cli->rz_social }}</td>
+                        <td>{{ $cli->cnpj }}</td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-primary">
+                                <span class="fas fa-info"></span>
+                            </button>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
@@ -87,6 +90,31 @@
     @elseif(isset($message))
         <p> {{ $message }} </p>
 
+    @else
+        <table id="tabelaDados" class="table table-hover table-bordered table-striped" cellspacing="0">
+            <thead>
+                <tr>
+                    <th scope="col">Nome Fantasia</th>
+                    <th scope="col">Razão Social</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Informações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($clientes as $c)
+                    <tr>
+                        <td>{{ $c->nome_fantasia }}</td>
+                        <td>{{ $c->rz_social }}</td>
+                        <td>{{ $c->cnpj }}</td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-primary">
+                                <span class="fas fa-info"></span>
+                            </button>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endif
 
     </div>

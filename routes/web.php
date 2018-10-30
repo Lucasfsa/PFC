@@ -18,12 +18,12 @@ Route::get('/', 'HomePageController@index');
 Route::get('/inicio', 'InicioController@index');
 
 //Página de cadastro de cliente
-Route::get('/cadastrar-cliente', 'CadastroController@index');
+Route::get('/cadastrar-cliente', 'ClienteController@create');
 Route::resource('cliente', 'CadastroController');
 
 //Página de pesquisa
-Route::get('/pesquisar', 'PesquisaController@index');
-Route::POST('/resultado', 'PesquisaController@resultadosPesquisa');
+Route::get('/pesquisar', 'ClienteController@index');
+Route::POST('/pesquisar', 'ClienteController@show');
 
 //Página de cadastro de funcionário
 Route::get('/cadastrar-usuario', 'FuncionarioController@create');

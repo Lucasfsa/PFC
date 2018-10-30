@@ -10,11 +10,10 @@ use App\Cliente;
 class PesquisaController extends Controller
 {
     public function index (){
-		
         return view('corpo/pesquisa');
     }
 
-   public function resultadosPesquisa()
+    public function resultadosPesquisa()
     {
         $busca = Input::get('busca');
         if($busca != ""){
