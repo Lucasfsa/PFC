@@ -15,7 +15,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::all();
+        $clientes = Cliente::orderBy('rz_social', 'asc')->get();
         return view('corpo.pesquisa', compact('clientes'));
     }
 
@@ -56,18 +56,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $busca = Input::get('busca');
-        if($busca != ""){
-            $cliente = Cliente::where('rz_social', 'LIKE', '%' . $busca . '%')
-                                    ->orWhere('cnpj', 'LIKE', '%' . $busca . '%')
-                                    ->orWhere('telefone', 'LIKE', '%' . $busca . '%')
-                                    ->get();
-            if(count($cliente) > 0)
-                return view('corpo.pesquisa')->withDetails($cliente)->withQuery($busca);
-        }
-        return view('corpo.pesquisa')->withMessage("Dados não existem!");
+        //
     }
 
     /**

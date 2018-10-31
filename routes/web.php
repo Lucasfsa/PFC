@@ -23,7 +23,6 @@ Route::resource('cliente', 'CadastroController');
 
 //Página de pesquisa
 Route::get('/pesquisar', 'ClienteController@index');
-Route::POST('/pesquisar', 'ClienteController@show');
 
 //Página de cadastro de funcionário
 Route::get('/cadastrar-usuario', 'FuncionarioController@create');

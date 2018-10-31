@@ -32,25 +32,10 @@
         @csrf
 
         <div class="input-group">
-            <div class="input-group-btn search-panel">
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    <span>Filtrar por</span>
-                    <span class="carret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="">Nome Fantasia</a></li>
-                    <li><a href="">Razão Social</a></li>
-                    <li><a href="">CNPJ</a></li>
-                    <li><a href="">Telefone</a></li>
-                </ul>
-            </div>
-            <input type="search" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
+            
+            <input type="search" id="myInput" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
-            <div id="formButton">
-                <button type="submit" class="btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+            
         </div>
 
 
@@ -58,10 +43,6 @@
 
     <div id="resultados" class="px-5 m-5">
 
-
-    @if(isset($details))
-        <p>Resultados de pesquisa para <b> {{ $query }} </b> são: </p>
-
         <table id="tabelaDados" class="table table-hover table-bordered table-striped" cellspacing="0">
             <thead>
                 <tr>
@@ -71,36 +52,7 @@
                     <th scope="col">Informações</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach ($details as $cli)
-                    <tr>
-                        <td>{{ $cli->nome_fantasia }}</td>
-                        <td>{{ $cli->rz_social }}</td>
-                        <td>{{ $cli->cnpj }}</td>
-                        <td class="text-center">
-                            <button class="btn btn-outline-primary">
-                                <span class="fas fa-info"></span>
-                            </button>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-    @elseif(isset($message))
-        <p> {{ $message }} </p>
-
-    @else
-        <table id="tabelaDados" class="table table-hover table-bordered table-striped" cellspacing="0">
-            <thead>
-                <tr>
-                    <th scope="col">Nome Fantasia</th>
-                    <th scope="col">Razão Social</th>
-                    <th scope="col">CNPJ</th>
-                    <th scope="col">Informações</th>
-                </tr>
-            </thead>
-            <tbody>
+            <tbody id="myTable">
                 @foreach ($clientes as $c)
                     <tr>
                         <td>{{ $c->nome_fantasia }}</td>
@@ -115,7 +67,6 @@
                 @endforeach
             </tbody>
         </table>
-    @endif
 
     </div>
 
@@ -125,6 +76,8 @@
 
     </div>
 
+    <script src="{{ asset('js/search.js') }}" defer></script>
+    <script src="vendor/datatables.mark.js/dist/datatables.mark.js"></script>
 
    @endsection
 
