@@ -25,3 +25,21 @@
     font-size:16px;
     color: #3c5baa;
 }
+
+#buttoncadastro{
+    background-color: white;
+    color: #3c5baa;
+    margin-top: 3.3%;
+
+}
+
+#buttoncadastro:hover{
+    background-color: #3c5baa;
+    color: white;
+}
+
+label{
+    color: #3c5baa;
+    font-family:Comforta;
+}
+
