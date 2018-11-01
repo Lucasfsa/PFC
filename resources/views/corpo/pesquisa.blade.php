@@ -43,9 +43,10 @@
 
     <div id="resultados" class="px-5 m-5">
 
-        <table id="tabelaDados" class="table table-hover table-bordered table-striped" cellspacing="0">
+        <table id="tabelaDados" class="table table-sm table-hover">
             <thead>
                 <tr>
+                    <th scope="col">#</th>
                     <th scope="col">Nome Fantasia</th>
                     <th scope="col">Razão Social</th>
                     <th scope="col">CNPJ</th>
@@ -55,6 +56,7 @@
             <tbody id="myTable">
                 @foreach ($clientes as $c)
                     <tr>
+                        <td class="ordem"></td>
                         <td>{{ $c->nome_fantasia }}</td>
                         <td>{{ $c->rz_social }}</td>
                         <td>{{ $c->cnpj }}</td>
@@ -67,8 +69,32 @@
                 @endforeach
             </tbody>
         </table>
+        
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="disabled">
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </div>
+
 
 </div>
 

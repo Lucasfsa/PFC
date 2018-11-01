@@ -78,14 +78,12 @@
     background-color: #3c5baa;
 }
 
-.highlight {
-    background-color: #3c5baa;
+table {
+    counter-reset: tableCount;
 }
 
-mark {
-    padding: 0;
-    background: red !important;
-  }
-
-  .findElement { background-color: yellow; }
+.ordem::before {
+    content: counter(tableCount);
+    counter-increment: tableCount;
+}
 
