@@ -28,12 +28,12 @@
 
               </div>
 
-    <form id="searchForm" action="/pesquisar" method="POST" class="mt-4 px-5">
+    <form id="searchForm" action="/pesquisar" method="POST" class="pt-5 px-5">
         @csrf
 
         <div class="input-group">
             
-            <input type="search" id="myInput" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
+            <input type="search" id="busca" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
 
             
         </div>
@@ -41,57 +41,37 @@
 
     </form>
 
-    <div id="resultados" class="px-5 m-5">
+    <div id="resultados" class="p-5 table-responsive-sm">
 
-        <table id="tabelaDados" class="table table-sm table-hover">
+        <table id="tabelaClientes" class="table table-sm table-hover mx-auto text-nowrap" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome Fantasia</th>
-                    <th scope="col">Razão Social</th>
-                    <th scope="col">CNPJ</th>
-                    <th scope="col">Informações</th>
+                    <th>#</th>
+                    <th>Nome Fantasia</th>
+                    <th>Razão Social</th>
+                    <th>CNPJ</th>
+                    <th>Segmentos</th>
+                    <th>Detalhes</th>
                 </tr>
             </thead>
-            <tbody id="myTable">
+
+            <tbody id="dadosClientes">
                 @foreach ($clientes as $c)
-                    <tr>
-                        <td class="ordem"></td>
-                        <td>{{ $c->nome_fantasia }}</td>
-                        <td>{{ $c->rz_social }}</td>
-                        <td>{{ $c->cnpj }}</td>
-                        <td class="text-center">
-                            <button class="btn btn-outline-primary">
-                                <span class="fas fa-info"></span>
-                            </button>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="ordem"></td>
+                    <td>{{ $c->nome_fantasia }}</td>
+                    <td>{{ $c->rz_social }}</td>
+                    <td>{{ $c->cnpj }}</td>
+                    <td>{{ $c->segmento_mercado }}</td>
+                    <td>
+                        <button class="btn btn-info btn-xs" data-title="info">
+                            <span class="fas fa-info"></span>
+                        </button>
+                    </td>
+                </tr>
                 @endforeach
             </tbody>
         </table>
-        
-        <nav>
-            <ul class="pagination justify-content-end">
-                <li class="disabled">
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Próximo</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
     </div>
 
@@ -103,8 +83,6 @@
     </div>
 
     <script src="{{ asset('js/search.js') }}" defer></script>
-    <script src="vendor/datatables.mark.js/dist/datatables.mark.js"></script>
-
    @endsection
 
 

@@ -38,16 +38,19 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $cliente = new Cliente();
-        // $cliente->nome_fantasia = $request->nome_fantasia;
-        $cliente->rz_social = $request->input('rz_social');
+        $cliente->nome_fantasia = $request->input('nomeFantasia');
+        $cliente->rz_social = $request->input('razaoSocial');
         $cliente->cnpj = $request->input('cnpj');
+        $cliente->segmento_mercado = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
-        // $cliente->id_funcionario = $cliente->user['id'];
+        
+        $id = \Auth::user()->id;
+        $cliente->id_funcionario = $id;
+
         $cliente->save();
 
-        Session::put('alert','valor');
-		return redirect('/cadastrar-cliente');
+        return redirect('/cadastrar-cliente')->with('alert', 'Cliente Cadastrado!');
     }
 
     /**

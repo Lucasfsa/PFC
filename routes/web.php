@@ -19,7 +19,7 @@ Route::get('/inicio', 'InicioController@index');
 
 //Página de cadastro de cliente
 Route::get('/cadastrar-cliente', 'ClienteController@create');
-Route::resource('cliente', 'CadastroController');
+Route::post('/cadastrar-cliente', 'ClienteController@store');
 
 //Página de pesquisa
 Route::get('/pesquisar', 'ClienteController@index');
