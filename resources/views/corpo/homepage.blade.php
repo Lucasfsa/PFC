@@ -21,29 +21,12 @@
           <div class="container">
             <div class="navbar-header">
 
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
-
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-
-              </button>
-
-
+              
                 <img class="img-responsive grow" id="logo" src="{{ asset('imagem/img001.png') }}">
+
+                <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+
            </div>
-
-            <div id="barra-navegacao" class="navbar-collapse collapse">
-
-              <ul class="nav navbar-nav navbar-right">
-
-                <li>
-                  <a href="http://www.dataautomacao.com.br">Data Automação</a>
-                </li>
-
-              </ul>
-
-            </div>
 
           </div>
         </nav>

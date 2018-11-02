@@ -21,6 +21,20 @@
              <p id="titlepesquisa">Pesquisar Chave</p>
           </div>
 
+          <form id="searchForm" action="/pesquisar" method="POST" class="mt-4 px-5">
+        @csrf
+
+        <div class="input-group">
+            
+            <input type="search" id="myInput" class="form-control mr-1 pesquisa" name="busca_chaves" role="search" placeholder="Busca de registros de chaves">
+
+            
+        </div>
+
+
+    </form>
+
+
 	</div>
 
 	@endsection
