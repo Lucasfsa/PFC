@@ -67,15 +67,22 @@
     justify-content: center;
 }
 
-#formButton > button {
+#formButton > button, td .btn:hover {
     margin: 0 auto;
     color: #3c5baa;
     background-color: #fff;
 }
-#formButton > button:hover {
+#formButton > button:hover, td .btn {
     margin: 0 auto;
     color: #fff;
     background-color: #3c5baa;
+}
+
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
 }
 
 table {
@@ -87,3 +94,15 @@ table {
     counter-increment: tableCount;
 }
 
+thead {
+    background-color: #3c5baa;
+    color: white;
+}
+
+td {
+    padding: 5px 18px !important;
+}
+
+.dataTables_length label, .dataTables_wrapper .dataTables_info, option, #tabelaClientes_filter label {
+    color: #3c5baa;
+}
