@@ -39,7 +39,7 @@
                               <i class="fa fa-check"></i>
                           </div>
                           <div class="col-xs-11">
-                              <strong>{{ session('alert') }}Cliente Cadastrado!</strong>
+                              <strong>{{ session('alert') }}</strong>
                           </div>
                           <button type="button" class="close vertical-align" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>

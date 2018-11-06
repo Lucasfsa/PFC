@@ -1,56 +1,37 @@
-<!DOCTYPE html>
+@section('pageTitle', 'Clientes')
 
-<html>
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pesquisa.css') }}">
+@endsection
 
-<head>
+@extends('layouts.escopo')
 
-  <title> Pesquisa </title>
+@section('escopo')
+<div class="pr-5" id="corpo">
 
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/pesquisa.css') }}">
-  <link rel="icon" href="{{ asset('imagem/icon.png') }}">
+    <div align="center">
+        <p id="titlepesquisa">Pesquisa de Clientes</p>
+    </div>
 
-</head>
+    <div id="resultados" class="px-5 pt-3 pb-5 table-responsive">
 
-<body>
-
-    @extends('layouts.escopo', ["current"=>"clientes"])
-
-    @section('escopo')
-    <div class="pr-5" id="corpo">
-
-         <div>
-
-              <div align="center">
-
-                    <p id="titlepesquisa">Pesquisa de Clientes</p>
-
-
-              </div>
-
-    <form id="searchForm" action="/pesquisar" method="POST" class="pt-5 px-5">
-        @csrf
-
-        <div class="input-group">
-            
-            <input type="search" id="busca" class="form-control mr-1 pesquisa" name="busca" role="search" placeholder="O que deseja buscar ?  Ex. cnpj, nome, telefone.">
-
-            
-        </div>
-
-
-    </form>
-
-    <div id="resultados" class="p-5 table-responsive-sm">
-
-        <table id="tabelaClientes" class="table table-sm table-hover mx-auto text-nowrap" cellspacing="0" width="100%">
+        <table id="tabelaClientes" class="table table-hover table-sm">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Nome Fantasia</th>
-                    <th>Razão Social</th>
-                    <th>CNPJ</th>
-                    <th>Segmentos</th>
+                    <th>Nome Fantasia
+                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                    </th>
+                    <th>Razão Social
+                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                    </th>
+                    <th>CNPJ
+                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                    </th>
+                    <th>Segmentos
+                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                    </th>
                     <th>Detalhes</th>
                 </tr>
             </thead>
@@ -59,12 +40,36 @@
                 @foreach ($clientes as $c)
                 <tr>
                     <td class="ordem"></td>
-                    <td>{{ $c->nome_fantasia }}</td>
-                    <td>{{ $c->rz_social }}</td>
-                    <td>{{ $c->cnpj }}</td>
-                    <td>{{ $c->segmento_mercado }}</td>
                     <td>
-                        <button class="btn btn-info btn-xs" data-title="info">
+                        @if ($c->nome_fantasia != null)
+                            {{ $c->nome_fantasia }}
+                        @else
+                            -
+                        @endif
+                    </td>
+                    <td>
+                        @if ($c->razao_social != null)
+                            {{ $c->razao_social }}
+                        @else
+                        -
+                        @endif
+                    </td>
+                    <td>
+                        @if ($c->cnpj != null)
+                        {{ $c->cnpj }}
+                        @else
+                        -
+                        @endif
+                    </td>
+                    <td>
+                        @if ($c->segmento_mercado != null)
+                            {{ $c->segmento_mercado }}
+                        @else
+                        -
+                        @endif
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-xs" data-title="info">
                             <span class="fas fa-info"></span>
                         </button>
                     </td>
@@ -75,17 +80,11 @@
 
     </div>
 
-
 </div>
 
-        </div>
+@endsection
 
-    </div>
-
-    <script src="{{ asset('js/search.js') }}" defer></script>
-   @endsection
-
-
-  </body>
-
-</html>
+@section('scripts')
+<script src="{{ asset('js/datatables.min.js') }}"></script>
+<script src="{{ asset('js/search.js') }}"></script>
+@endsection

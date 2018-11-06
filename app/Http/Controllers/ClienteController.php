@@ -15,7 +15,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('rz_social', 'asc')->get();
+        $clientes = Cliente::orderBy('nome_fantasia', 'asc')->get();
         return view('corpo.pesquisa', compact('clientes'));
     }
 
@@ -39,14 +39,14 @@ class ClienteController extends Controller
     {
         $cliente = new Cliente();
         $cliente->nome_fantasia = $request->input('nomeFantasia');
-        $cliente->rz_social = $request->input('razaoSocial');
+        $cliente->razao_social = $request->input('razaoSocial');
         $cliente->cnpj = $request->input('cnpj');
         $cliente->segmento_mercado = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
         
         $id = \Auth::user()->id;
-        $cliente->id_funcionario = $id;
+        $cliente->user_id = $id;
 
         $cliente->save();
 
