@@ -18,17 +18,24 @@
   <body>
 
         <nav class="navbar">
-          <div class="container">
-            <div class="navbar-header">
+          
+          <div class="container-fluid row">
+            
+                 
+                    <div class="col-md-6">
+                      
+                      <img  id="logo" src="{{ asset('imagem/img001.png') }}">
 
-              
-                <img class="img-responsive grow" id="logo" src="{{ asset('imagem/img001.png') }}">
+                    </div>
 
-                <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+                    <div class="col-md-6">
+                     
+                      <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
 
-           </div>
-
+                    </div>
+        
           </div>
+          
         </nav>
 
 

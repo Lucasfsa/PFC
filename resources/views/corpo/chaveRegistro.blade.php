@@ -38,6 +38,17 @@
                     <input placeholder="Digite o nome do cliente..." type="text" class="form-control" name="cliente" required>
                     <br>
 
+
+                    <label>Sistema</label>
+                        
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Selecione...</option>
+                        <option value="syspdv">SysPDV</option>
+                        <option value="ecletica">Eclética</option>
+                        <option value="acsn">ACSN</option>
+                    </select>
+                     
+                    <br>
                     <label>Observação</label>
                     <br>
                     <textarea class="form-control"></textarea>
@@ -45,7 +56,7 @@
                     <div >
                         <button id="buttoncadastro" type="submit" class="btn">
 
-                          Cadastrar  <i class="fas fa-user-plus"></i>
+                          Registrar  <i class="fas fa-check-circle"></i>
 
                         </button>
 

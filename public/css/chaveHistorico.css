@@ -25,3 +25,11 @@
     font-size:16px;
     color: #3c5baa;
 }
+.ordem::before {
+    content: counter(tableCount);
+    counter-increment: tableCount;
+}
+
+table {
+    counter-reset: tableCount;
+}

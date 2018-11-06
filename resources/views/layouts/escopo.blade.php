@@ -102,9 +102,9 @@
 
                               <div class="dropmenu dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 
-                                <a class="dropdown-item" href="/chave/pesquisar">Pesquisar Chave  <i class="fas fa-search"></i></a>
+                                <a class="dropdown-item" href="/chave/historico">Histórico de Chaves  <i class="fas fa-history"></i></a>
                                 
-                                <a class="dropdown-item" href="/chave/registrar">Registrar Chave  <i class="fas fa-key"></i> </a>
+                                <a class="dropdown-item" href="/chave/registrar">Registrar Chave  <i class="fas fa-file-medical"></i> </a>
                                
                               </div>
 

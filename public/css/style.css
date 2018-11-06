@@ -70,20 +70,24 @@ body{
 
 
 #logo{
-	width: 50%;
+	width: 150px;
 	background-color: transparent;
 	border:0px;
-	width: 170px;
-	height: 120px;
+	margin-left: 35%;
+	margin-top: 3%;
+	
+	
 }
 
 #logo2{
 
-	width: 80%;
+	width: 180px;
 	background-color: transparent;
 	border:0px;
-	width: 180px;
-	height: 70px;
+	margin-left: 38%;
+	margin-top: 3%;
+	
+	
 }
 
 .grow { transition: all .1s ease-in-out; 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ChavePesquisaController extends Controller
+class chaveHistoricoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ChavePesquisaController extends Controller
      */
     public function index()
     {
-        return view ('corpo/chavePesquisa');
+        return view ('corpo/chaveHistorico');
     }
 
     /**
