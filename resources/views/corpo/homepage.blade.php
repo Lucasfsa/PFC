@@ -19,21 +19,21 @@
 
         <nav class="navbar">
           
-          <div class="container-fluid row">
+          <div class="container-fluid">
             
-                 
-                    <div class="col-md-6">
-                      
-                      <img  id="logo" src="{{ asset('imagem/img001.png') }}">
+             <div class="navbar-left">
+               
+               <img  id="logo" src="{{ asset('imagem/img001.png') }}">
 
-                    </div>
+             </div>  
 
-                    <div class="col-md-6">
-                     
-                      <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+             <div class="navbar-right">
 
-                    </div>
-        
+               <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+
+            </div> 
+             
+                   
           </div>
           
         </nav>
