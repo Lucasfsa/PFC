@@ -24,6 +24,8 @@ Route::post('/cadastrar-cliente', 'ClienteController@store');
 //Página de pesquisa
 Route::get('/pesquisar', 'ClienteController@index');
 
+// Route::get('/cliente/detalhes/{id}', 'ClienteController@viewmodal');
+
 //Página de cadastro de funcionário
 Route::get('/cadastrar-usuario', 'FuncionarioController@create');
 Route::post('/cadastrar-usuario', 'FuncionarioController@store');

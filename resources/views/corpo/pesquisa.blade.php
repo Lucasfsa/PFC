@@ -69,7 +69,7 @@
                         @endif
                     </td>
                     <td class="text-center">
-                        <button class="btn btn-xs" data-title="info">
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#clienteInfo" data-target-id="{{ $c->id }}">
                             <span class="fas fa-info"></span>
                         </button>
                     </td>
@@ -82,9 +82,24 @@
 
 </div>
 
+@component('components.cliente-info')
+@endcomponent
+
 @endsection
 
 @section('scripts')
 <script src="{{ asset('js/datatables.min.js') }}"></script>
 <script src="{{ asset('js/search.js') }}"></script>
+
+{{-- <script>
+    $(document).ready(function(){
+        $("#clienteInfo").on("show.bs.modal", function(e) {
+            var id = $(e.relatedTarget).data('target-id');
+            $.get('/cliente/detalhes/' + id, function( data ) {
+                $(".modal-body").html(data);
+            });
+
+        });
+    });
+</script> --}}
 @endsection

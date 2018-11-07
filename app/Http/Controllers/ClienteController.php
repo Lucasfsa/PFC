@@ -44,7 +44,7 @@ class ClienteController extends Controller
         $cliente->segmento_mercado = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
-        
+
         $id = \Auth::user()->id;
         $cliente->user_id = $id;
 
@@ -63,6 +63,12 @@ class ClienteController extends Controller
     {
         //
     }
+
+    // public function viewmodal($id)
+    // {
+    //     $sd = DB::table('clientes')->where('id', '=', $id);
+    //     dd($sd);
+    // }
 
     /**
      * Show the form for editing the specified resource.
