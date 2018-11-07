@@ -66,8 +66,8 @@ class ClienteController extends Controller
 
     // public function viewmodal($id)
     // {
-    //     $sd = DB::table('clientes')->where('id', '=', $id);
-    //     dd($sd);
+    //     $sd = DB::table('clientes')->where('id', '=', $id)->first();
+    //     return view('components/cliente-info', compact('sd'));
     // }
 
     /**

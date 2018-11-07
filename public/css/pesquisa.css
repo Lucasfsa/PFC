@@ -106,3 +106,5 @@ td {
 .dataTables_length label, .dataTables_wrapper .dataTables_info, option, #tabelaClientes_filter label {
     color: #3c5baa;
 }
+
+body.modal-open div.modal-backdrop { z-index: -1; }

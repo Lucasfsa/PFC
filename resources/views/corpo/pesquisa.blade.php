@@ -38,6 +38,7 @@
 
             <tbody id="dadosClientes">
                 @foreach ($clientes as $c)
+    
                 <tr>
                     <td class="ordem"></td>
                     <td>
@@ -69,11 +70,36 @@
                         @endif
                     </td>
                     <td class="text-center">
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#clienteInfo" data-target-id="{{ $c->id }}">
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
                             <span class="fas fa-info"></span>
                         </button>
                     </td>
                 </tr>
+                
+
+                <div id="{{'clienteInfo'.$c->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="clienteInfoLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>{{ $c->nome_fantasia }}</h4>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Razão Social: {{ $c->razao_social }}</p>
+                                <p>CNPJ: {{ $c->cnpj }}</p>
+                                <p>Segmento: {{ $c->segmento_mercado }}</p>
+                                <p>Email: {{ $c->email }}</p>
+                                <p>Telefone: {{ $c->telefone }}</p>
+                                <p>Registrado por: {{ $c->user['name'] }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="window.location='/cadastrar-cliente'">Editar Informações</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
                 @endforeach
             </tbody>
         </table>
@@ -82,8 +108,20 @@
 
 </div>
 
-@component('components.cliente-info')
-@endcomponent
+{{-- @component('components.cliente-info')
+@endcomponent --}}
+
+{{-- <div id="clienteInfo" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>{{ $c->nome_fantasia }}</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div> --}}
 
 @endsection
 
