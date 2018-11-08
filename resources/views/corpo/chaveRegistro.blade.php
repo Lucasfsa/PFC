@@ -23,7 +23,7 @@
 
          <div>
          	
-         	<form action="" method=" ">
+         	<form action="/chave/registrar" method="POST">
          			
          		@csrf
                 <div class="form-group px-5 py-4">
@@ -51,7 +51,7 @@
                     <br>
                     <label>Observação</label>
                     <br>
-                    <textarea class="form-control"></textarea>
+                    <textarea class="form-control" type="text" name="observacao"></textarea>
 
                     <div >
                         <button id="buttoncadastro" type="submit" class="btn">

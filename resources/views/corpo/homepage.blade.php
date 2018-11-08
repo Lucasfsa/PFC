@@ -17,31 +17,36 @@
 
   <body>
 
+  
+
         <nav class="navbar">
           
-          <div class="container-fluid">
+          <div class="container row">
             
-             <div class="navbar-left">
-               
-               <img  id="logo" src="{{ asset('imagem/img001.png') }}">
+               <div class="col-md-6">
 
-             </div>  
+                    <img  id="logo" src="{{ asset('imagem/img001.png') }}">
+                  
+              </div> 
 
-             <div class="navbar-right">
-
-               <a href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
-
-            </div> 
+              <div class="col-md-6 nav-2">
+                
+                   <a class="navbar-brand" href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+        
+              </div>
              
                    
           </div>
           
         </nav>
+      
+           
 
-
-
-        <div  align="center" id="corpo" >
+        <div  align="center">
+        
+       
         <img   class="img-responsive" id="img01" src="{{ asset('imagem/logo.png') }}">
+
         </div>
 
       <div id="acess" align="center" >

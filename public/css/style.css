@@ -32,7 +32,8 @@ body{
 }
 #img01{
 	height: 100%;
-	margin-top: 95px;
+	margin-top: 10%;
+	
 }
 
 
@@ -70,27 +71,27 @@ body{
 
 
 #logo{
-	width: 150px;
+	width: 160px;
+	height: auto;
 	background-color: transparent;
-	border:0px;
-	margin-left: 35%;
-	margin-top: 3%;
-	
+	margin-left: 20%;
 	
 }
 
 #logo2{
 
 	width: 180px;
+	height: auto;
 	background-color: transparent;
 	border:0px;
-	margin-left: 38%;
-	margin-top: 3%;
-	
+	margin-left: 250%;
+
 	
 }
 
 .grow { transition: all .1s ease-in-out; 
 }
+
 .grow:hover { transform: scale(1.02);
  }
+

@@ -13,7 +13,7 @@ class ChaveRegistroController extends Controller
      */
     public function index()
     {
-        return view ('corpo/chaveRegistro');
+        
     }
 
     /**
@@ -23,7 +23,7 @@ class ChaveRegistroController extends Controller
      */
     public function create()
     {
-        //
+       return view ('corpo/chaveRegistro');
     }
 
     /**
@@ -34,7 +34,14 @@ class ChaveRegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $chave = new ChaveDeAcesso();
+        $chave->numero_chave = $request->input('chave');
+        $chave->observacao = $request->input('observacao');
+        
+
+
+        $id = \Auth::user()->id;
+        $chave->user_id = $id;
     }
 
     /**

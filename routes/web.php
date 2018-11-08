@@ -46,7 +46,10 @@ Route::get('esqueci-minha-senha', 'SenhaController@index');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/chave/historico', 'ChaveHistoricoController@index');
-Route::get('/chave/registrar', 'ChaveRegistroController@index');
+
+Route::get('/chave/registrar', 'ChaveRegistroController@create');
+Route::post('/chave/registrar', 'ChaveRegistroController@store');
+
 Auth::routes();
 
 
