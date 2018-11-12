@@ -23,17 +23,21 @@
           
           <div class="container row">
             
-               <div class="col-md-6">
+               <ul class="nav navbar-nav">
 
-                    <img  id="logo" src="{{ asset('imagem/img001.png') }}">
-                  
-              </div> 
+                   <li>
+                     <img  id="logo" src="{{ asset('imagem/img001.png') }}">
 
-              <div class="col-md-6 nav-2">
+                   </li> 
+              </ul> 
+
+              <ul class="nav navbar-nav navbar-right">
                 
+                  
                    <a class="navbar-brand" href="http://www.dataautomacao.com.br"> <img class="img-responsive grow" id="logo2" src="{{ asset('imagem/img002.png') }}"> </a>
+
         
-              </div>
+              </ul
              
                    
           </div>

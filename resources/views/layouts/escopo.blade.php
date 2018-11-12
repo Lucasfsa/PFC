@@ -89,8 +89,6 @@
                          </li>
                          @endif
 
-                         <li> <a class="botaomenu" href="/atualizar" ><i>Atualizar Dados</i></a>
-                         </li>
 
                          <li> 
 

@@ -1,11 +1,12 @@
 #corpo{
     width: 81%;
-    height: 100%;
+    height: 90%;
     background-color: #d9d9d9;
     margin-left: 18%;
     margin-right: 1%;
     position: fixed;
     margin-top: -24px;
+     overflow: auto;
 }
 
 #titlepesquisa{
@@ -39,10 +40,10 @@ label{
     background-color: #3c5baa;
     color: white;
 }
-#msg{
-    color: #009900;
-    background-color:#ccffcc;
-    border-radius: 3px;
-    width: 30%;
-    
+
+.alert { width: 250px; }
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }

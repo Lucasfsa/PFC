@@ -16,34 +16,37 @@
  @extends('layouts.escopo')
  @section('escopo')
 
-        @if(Session::get('alert')!=null)
-          
-          <script type="text/javascript">
-            
-            alert("Cadastro realizado com sucesso!");
-
-          </script>
-
-          {{Session::forget('alert')}}
-          
-        @endif
-
-
  <div id="corpo">
 
  	  <div align="center">
 
         <p id="titlepesquisa">Cadastro de Usuários</p>
-        <div data-dismiss="alert" id="msg"> {{ Session::get('alert') }} </div>
+       
+    </div>
 
-     </div>
-
-    
 
       <form method="POST" action="/cadastrar-usuario" aria-label="{{ __('Cadastro-funcionario') }}">
               @csrf
 
               <div id="area">
+
+                  @if (session('alert'))
+                  <div class="alert alert-success alert-dismissible fade show mx-auto" role="alert">
+                      <div class="row vertical-align">
+                          <div class="col-xs-1 mx-3 text-center vertical-align">
+                              <i class="fa fa-check"></i>
+                          </div>
+                          <div class="col-xs-11">
+                              <strong>{{ session('alert') }}</strong>
+                          </div>
+                          <button type="button" class="close vertical-align" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                  </div>
+                  @endif
+
+                  <br>
 
                  <div class="form-group px-5 py-4">
 

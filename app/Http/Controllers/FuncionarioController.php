@@ -42,7 +42,7 @@ class FuncionarioController extends Controller
         $funcionario->password = bcrypt($request->password);
         $funcionario->save();
 
-        return redirect('/cadastrar-usuario')->with('alert', 'Cadastro realizado com sucesso!');
+        return redirect('/cadastrar-usuario')->with('alert', 'Usuário Cadastrado!');
 
     }
 

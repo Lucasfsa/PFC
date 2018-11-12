@@ -32,7 +32,7 @@ body{
 }
 #img01{
 	height: 100%;
-	margin-top: 10%;
+	margin-top: 15%;
 	
 }
 
@@ -74,7 +74,9 @@ body{
 	width: 160px;
 	height: auto;
 	background-color: transparent;
-	margin-left: 20%;
+	margin-left: 5%;
+	margin-top: 5%;
+	
 	
 }
 
@@ -84,7 +86,8 @@ body{
 	height: auto;
 	background-color: transparent;
 	border:0px;
-	margin-left: 250%;
+	margin-left: 20%;
+	
 
 	
 }

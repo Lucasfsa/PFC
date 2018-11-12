@@ -31,7 +31,7 @@ Route::get('/cadastrar-usuario', 'FuncionarioController@create');
 Route::post('/cadastrar-usuario', 'FuncionarioController@store');
 
 //Página de atualização de dados
-Route::get('/atualizar', 'AtualizacaoController@index');
+//Route::get('/atualizar', 'AtualizacaoController@index');
 
 //Página de Configuração
 Route::get('/configurar', 'ConfiguracaoController@index');
