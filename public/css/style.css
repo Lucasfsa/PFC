@@ -1,100 +1,51 @@
-body{
-	width: 100%;
- 	height: 100%;
-	
-	background-image: url("/imagem/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 @font-face {
-	font-family: Quinone;
-   src: url(/font/Quinone.otf);
-}
-@font-face{
-	font-family: Comforta;
-	src: url(/font/Comforta.ttf);
-}
-#barra-navegacao ul li a{	
-	color: white;
-	font-size: 18px;
-	margin-top: 10px;
-	font-family: Quinone;
-	background-color: transparent;
-	
-	
-}
-#barra-navegacao ul li a:hover{
-	text-shadow: 2px 2px 2px #1b284b; 	
-	color: white;
-	background-color: transparent;
-	
-}
-#img01{
-	height: 100%;
-	margin-top: 15%;
-	
+    font-family: Quinone;
+    src: url(../font/Quinone.otf);
 }
 
-
-#text01{
-	color: white;
-
-}
-#one{
-	text-align: center;
-	color: white;
-	border-color: white;
-	background-color: transparent;
-	font-family: Quinone;
-	font-size: 17px;
-
-}
-#one:hover{
-	color: #4265bd;
-	background-color:white;	
-
-}
-.icon-bar {
- 	margin-top: 20px;
-  	background-color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#icon{
-	
-	color: white;
-}
-#janela{
-	margin-top: 130px;
-	font-family: Comforta;
+body, html {
+    width: 100%;
+    height: 100%;
 }
 
-
-#logo{
-	width: 160px;
-	height: auto;
-	background-color: transparent;
-	margin-left: 5%;
-	margin-top: 5%;
-	
-	
+body {
+    background: lightgrey;
+    background: url(../imagem/bg.jpg) no-repeat center center scroll;
+    background-size: cover;
+    color: #fff;
 }
 
-#logo2{
+.navbar-brand img#logoBc { width: 10vw; min-width: 75px; }
+.navbar-brand img#logoData { width: 13vw; min-width: 110px; }
 
-	width: 180px;
-	height: auto;
-	background-color: transparent;
-	border:0px;
-	margin-left: 20%;
-	
+.grow { transition: all .1s ease-in-out; }
+.grow:hover { transform: scale(1.02); }
 
-	
+#main {
+    display: flex;
+    height: 60vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.grow { transition: all .1s ease-in-out; 
+#content { font-family: Quinone; }
+
+#content > label { font-size: 4vw; }
+
+#content > button { font-size: 1.4vw; }
+#content > button:hover { color: #4265bd; }
+
+@media (max-width: 768px) {
+    #content > button { font-size: 12px; }
+    #content > label { font-size: 18pt; }
 }
-
-.grow:hover { transform: scale(1.02);
- }
-
+@media (max-width: 490px) {
+    #content > label { font-size: 14pt; }
+}
