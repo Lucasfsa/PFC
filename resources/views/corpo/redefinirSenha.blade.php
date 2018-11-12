@@ -1,68 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
+@section('pageTitle', 'Redefinir Senha -')
 
-	<title>Redefinir Senha</title>
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/senha.css') }}">
+@endsection
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/configuracao.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/senha.css') }}">
+@extends('layouts.escopo')
 
+@section('escopo')
 
-</head>
+<h3 class="text-center mt-4">Configurações</h3>
 
+<div id="buttonmenu" >
 
-<body>
- 
- @extends('layouts.escopo')
- @section('escopo')
-
- <div id="corpo">
-  	
-
-  	<div id="divtitle">
-              
-       <p align="center" id="titlepesquisa">Configurações</p>
-
+    <div class="menuedit" align="center" >
+        <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
+        <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
+        <a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
+        <a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>
     </div>
 
-    <div id="buttonmenu" >
+    <div  id="subcorpo">
+            <p align="center">Redefinir Senha</p>
 
-    		<div class="menuedit" align="center" >
-	    		
-		        <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
+            <div id="legenda">
+                <label>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</label>
+            </div>
 
-			    <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
+            <input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
 
-				<a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
-				
-				<a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>	
-		
-			</div>
+            <button class="buttonredefinir" type="submit" > Enviar </button>
+    </div>
 
-	</div>	
+</div>
 
-			<div  id="subcorpo">
-
-					<p align="center">Redefinir Senha</p>
-
-					<div id="legenda">
-						<label>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</label>
-					</div>
-
-					
-					<input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
-					
-					<button class="buttonredefinir" type="submit" > Enviar </button>
-			
-
-			</div>
-
-  </div>
-
- @endsection
-
-</body>
-</html>
+@endsection

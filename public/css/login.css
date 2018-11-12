@@ -4,10 +4,6 @@
     src: url(/font/Comforta.ttf);
 }
 
-.container{
-
-
-}
 .card{
 	background-color: rgb(255,255,255, .5);
 	border-radius: 3px;
@@ -33,7 +29,7 @@
 	margin-bottom: 4%;
 	border-radius: 1px;
 	background-color: white;
-	
+
 }
 
 #buttoncadastrar:hover{

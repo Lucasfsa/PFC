@@ -1,78 +1,9 @@
-#corpo{
-    width: 81%;
-    height: 90%;
-    background-color: #d9d9d9;
-    margin-left: 18%;
-    margin-right: 1%;
-    position: fixed;
-    margin-top: -24px;
-    overflow: auto;
-  
-}
-
-
-#titlepesquisa{
-    color: #3c5baa;
-    font-family:Comforta;
-    font-size:180%;
-    margin-top: 20px;
-
-
-}
-
-.fontfrontpage{
-    font-family:Quinone;
-    font-size:16px;
-    color: #3c5baa;
-}
-
-#subcorpo{
-    width: 30%;
-    height: 50%;
-    margin-left: 14%;
-    margin-top: 7%;
-    font-family: Comforta;
-
-}
-
-
-
-#buttonpesquisar{
-    background-color: white;
-    color:  #4265bd;
-    margin-left: 14%;
-    margin-top: 2%;
-    font-family: Comforta;
-    border-color: #cccccc;
-
-}
-
-#buttonpesquisar:hover{
-    background-color:#355197 ;
-    color: white;
-}
-
-.pesquisa{
-    width: 80%;
-    border-radius: 3px;
-    border-color: transparent;
-}
-
-.form-group { margin: 0 auto; }
-
-.form-group > label { font-weight: 700; }
-
-#formButton {
-    display: flex;
-    justify-content: center;
-}
-
-#formButton > button, td .btn:hover {
+td .btn:hover {
     margin: 0 auto;
     color: #3c5baa;
     background-color: #fff;
 }
-#formButton > button:hover, td .btn {
+td .btn {
     margin: 0 auto;
     color: #fff;
     background-color: #3c5baa;

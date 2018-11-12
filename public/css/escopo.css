@@ -1,6 +1,6 @@
 body,html
 {
-	background-color:#b3b3b3;   
+	background-color:lightgrey;
 }
 
                                         /*fontes usadas*/
@@ -23,70 +23,72 @@ body,html
 
 #cabecalho
 {
-    
+
     text-align: center;
     margin-top: 12px;
-            	
+
 }
 
 #imgcabecalho
 {
-    
+
     width: 150px;
     height: 110px;
 }
 
 
-                                           /* navbar */
+/* navbar */
 
-.navbar
-{
-	background-color:#3c5baa ;
-	border-radius: 1px;
-    margin-bottom: 1%;
+.navbar {
+    background: #3c5baa;
+    border-bottom: 10px solid #999999;
+    font-family: Quinone;
     font-size: 1.1em;
-
 }
 
+.nav-link:hover { text-shadow: 1px 1px 1px black; }
 
-.wrapper 
-{
+
+.wrapper {
     display: flex;
     width: 100%;
-    align-items: stretch;
-
 }
-                                             /* sidebar */
-#sidebar 
-{
-    width: 17%;
-    height: 100%;
-    background: #3c5baa;
-    color: white;
-    margin-bottom: 10px;
+
+/* sidebar */
+
+#sidebar {
+    width: 230px;
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #3c5baa;
+    border-right: 10px solid #999999;
+    font-family: Quinone;
+    transition: all 0.3s;
 }
 
-#sidebar .sidebar-header 
+#sidebar.active {
+    margin-left: -230px;
+}
+
+#sidebar .sidebar-header
 {
-   
-    background:#3c5baa;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 10px;
 }
 
-#sidebar ul.components
-{
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p 
+#sidebar ul p
 {
     color: black;
     padding: 10px;
 }
 
-#sidebar ul li a 
+#sidebar ul li a
 {
     padding: 10px;
     font-size: 1.15em;
@@ -95,16 +97,16 @@ body,html
     color: white;
 }
 
-#sidebar ul li a:hover 
+#sidebar ul li a:hover
 {
     color: #3c5baa;
     background:  white;
-    
+
 }
 
-p 
+p
 {
-   
+
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -112,7 +114,7 @@ p
 
 }
 
-a, a:hover, a:focus 
+a, a:hover, a:focus
 {
     color: inherit;
     text-decoration: none;
@@ -122,23 +124,53 @@ a, a:hover, a:focus
 
 #sidebarCollapse
 {
-	background-color: #3c5baa;
-	color: white;
-
+	background-color: #355197;
+    color: white;
 }
 
 #sidebarCollapse:hover
 {
-	background-color: #4265bd;
-	color: white;
+	background-color: #fff;
+	color: #3c5baa;
 
 }
 
-#imgheader
-{
-	width: 85%;
-	height: 80%;
-    margin-bottom: -20px;
+.line-color {
+    border-top-color: rgba(255, 255, 255, 0.2)
+}
+
+#content {
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #3c5baa;
+}
+
+#content.active {
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -230px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 230px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
 }
 
 

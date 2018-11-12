@@ -4,26 +4,6 @@
     src: url(/font/Comforta.ttf);
 }
 
-#corpo{
-    width: 81%;
-    height: 100%;
-    background-color: #d9d9d9;
-    margin-left: 18%;
-    margin-right: 1%;
-    position: fixed;
-    margin-top: -24px;
-  
-}
-
-#titlepesquisa{
-    color: #3c5baa;
-    font-family:Comforta;
-    font-size: 170%;
-    margin-top: 20px;
-    
-    margin-bottom: 3%;
-}
-
 #buttonmenu{
 	width: 100%;
 }
@@ -33,7 +13,7 @@
 	font-family: Comforta;
 	background-color: #bfbfbf;
     margin-left: 1%;
-	
+
 }
 
 .buttonstyle:hover{
@@ -41,18 +21,7 @@
 	background-color: #3c5baa
 }
 
-label{
-    font-family: Comforta;
-    color: #3c5baa;
-    
-
-}
 
 .menuedit{
     margin-top: 6%;
 }
-
-
-/* Redefinir Senha */
-
-/* Redefinir Nome */

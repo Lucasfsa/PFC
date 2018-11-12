@@ -1,77 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Registrar Chave</title>
+@section('pageTitle', 'Registrar Chave -')
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-  	<link rel="stylesheet" type="text/css" href="{{ asset('css/chaveRegistro.css') }}">
-  	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/chaveRegistro.css') }}">
+@endsection
 
-</head>
+@extends('layouts.escopo')
 
-<body>
+@section('escopo')
 
-	@extends('layouts.escopo')
-	@section('escopo')
+<h3 class="text-center mt-4">Registrar Chave</h3>
 
-	<div id="corpo">
-		 
-		 <div align="center">
-             <p id="titlepesquisa">Registrar Chave</p>
-          </div>
+<form action="/chave/registrar" method="POST">
+    @csrf
+    <div class="form-group px-5">
 
-         <div>
-         	
-         	<form action="/chave/registrar" method="POST">
-         			
-         		@csrf
-                <div class="form-group px-5 py-4">
+        <br>
 
-                    <br>
+        <label>Chave</label>
+        <input placeholder="Digite ou cole a chave gerada..." type="text" class="form-control" name="chave" required>
+        <br>
 
-                    <label>Chave</label>
-                    <input placeholder="Digite ou cole a chave gerada..." type="text" class="form-control" name="chave" required>
-                    <br>
+        <label>Cliente</label>
+        <input placeholder="Digite o nome do cliente..." type="text" class="form-control" name="cliente" required>
+        <br>
 
-                    <label>Cliente</label>
-                    <input placeholder="Digite o nome do cliente..." type="text" class="form-control" name="cliente" required>
-                    <br>
+        <label>Sistema</label>
 
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Selecione...</option>
+            <option value="syspdv">SysPDV</option>
+            <option value="ecletica">Eclética</option>
+            <option value="acsn">ACSN</option>
+        </select>
 
-                    <label>Sistema</label>
-                        
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Selecione...</option>
-                        <option value="syspdv">SysPDV</option>
-                        <option value="ecletica">Eclética</option>
-                        <option value="acsn">ACSN</option>
-                    </select>
-                     
-                    <br>
-                    <label>Observação</label>
-                    <br>
-                    <textarea class="form-control" type="text" name="observacao"></textarea>
+        <br>
+        <label>Observação</label>
+        <br>
+        <textarea class="form-control" type="text" name="observacao"></textarea>
 
-                    <div >
-                        <button id="buttoncadastro" type="submit" class="btn">
+        <button id="buttoncadastro" type="submit" class="btn">
+            Registrar <i class="fas fa-check-circle"></i>
+        </button>
 
-                          Registrar  <i class="fas fa-check-circle"></i>
+    </div>
+</form>
 
-                        </button>
-
-
-
-                    </div>
-
-                </div>
-
-         	</form>
-
-         </div>
-
-	</div>
-
-	@endsection
-</body>
-</html>
+@endsection
