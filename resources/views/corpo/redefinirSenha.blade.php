@@ -23,13 +23,26 @@
     <div  id="subcorpo">
             <p align="center">Redefinir Senha</p>
 
-            <div id="legenda">
-                <label>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</label>
-            </div>
+           <form method="POST">
 
-            <input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+            <div class="form-group">
+            <label>Senha atual</label>
+            <input class="form-control" type="password" name="senhaAntiga" required>
+            <br>
+
+            <label>Nova Senha</label>      
+            <input class="form-control" type="password" name="senhaAtual" required>
+            <br>
+
+            <label>Confirmar Senha</label>         
+            <input class="form-control" type="password" name="confirmarSenha" required>
+            <br>
 
             <button class="buttonredefinir" type="submit" > Enviar </button>
+            </div>
+
+            </form>
+
     </div>
 
 </div>
