@@ -39,7 +39,6 @@ Route::get('/configurar', 'ConfiguracaoController@index');
 //Página de Configuração - Redefinir Senha/Email/Nome/desativar conta
 Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha');
 Route::get('/configurar/redefinir-nome', 'ConfiguracaoController@RedefinirNome');
-Route::get('/configurar/redefinir-email', 'ConfiguracaoController@RedefinirEmail');
 Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta');
 
 Route::get('esqueci-minha-senha', 'SenhaController@index');

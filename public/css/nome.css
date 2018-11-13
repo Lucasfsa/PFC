@@ -1,4 +1,3 @@
-
 #subcorpo{
     
     margin-top: 8%;
@@ -7,7 +6,7 @@
     background-color: #bfbfbf; 
     margin-left: 25%;
     border-radius: 3px;
-    padding-bottom: 1%;
+    margin-bottom: 5%;
 }
 
 .inputredefinir{
@@ -27,7 +26,7 @@
     margin-top: 2%;
     border-color: transparent;
     border-radius: 3px;
-    margin-left: 3%;
+    margin-left: 5%;
 
 }
 
@@ -40,8 +39,8 @@
     font-family: Comforta;
     color:#3c5baa;
     font-style: normal;
-    margin-left: 3%;
-    padding: 2%;
+    margin-left: 5%;
+    
     
 }
 
@@ -54,12 +53,8 @@
  
 }
 
-#legenda{
-    margin-top: 3%;
-    margin-left: 3%;
- 
-}
 
-.buttonstyle{
-    margin-top: 2%;
+.form-control{
+    margin-left: 5%;
+    width: 90%;
 }

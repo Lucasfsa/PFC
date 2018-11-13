@@ -16,20 +16,27 @@
     <div class="menuedit" align="center" >
         <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
         <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
-        <a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
         <a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>
     </div>
 
     <div  id="subcorpo">
-        <p align="center">Redefinir Nome</p>
+        
+        <form method="POST" action="">
 
-        <div id="legenda">
-            <label>Insira um endereço de e-mail e será enviado um link para redefinição do seu nome.</label>
-        </div>
+            <p align="center">Redefinir Nome</p>
 
-        <input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
+            <div class="form-group">
 
-        <button class="buttonredefinir" type="submit" > Enviar </button>
+                <label>Digite o novo nome</label>
+                <input class="form-control" class="inputredefinir" type="text" name="novoNome" placeholder="Digite o seu novo nome...">
+
+                <br>
+
+                <button class="buttonredefinir" type="submit" > Confirmar </button>
+
+            </div>
+
+        </form>
     </div>
 
 </div>

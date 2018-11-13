@@ -16,30 +16,32 @@
     <div class="menuedit" align="center" >
         <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
         <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
-        <a class="btn buttonstyle" href="redefinir-email"> Redefinir E-mail </a>
         <a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>
     </div>
 
     <div  id="subcorpo">
-            <p align="center">Redefinir Senha</p>
+            
+        <p align="center">Redefinir Senha</p>
 
            <form method="POST">
 
-            <div class="form-group">
-            <label>Senha atual</label>
-            <input class="form-control" type="password" name="senhaAntiga" required>
-            <br>
+                <div class="form-group">
+                   
+                    <label>Senha atual</label>
+                    <input placeholder="Digite a senha atual..." class="form-control" type="password" name="senhaAntiga" required>
+                    <br>
 
-            <label>Nova Senha</label>      
-            <input class="form-control" type="password" name="senhaAtual" required>
-            <br>
+                    <label>Nova Senha</label>      
+                    <input placeholder="Digite a nova senha..." class="form-control" type="password" name="senhaAtual" required>
+                    <br>
 
-            <label>Confirmar Senha</label>         
-            <input class="form-control" type="password" name="confirmarSenha" required>
-            <br>
+                    <label>Confirmar Senha</label>         
+                    <input placeholder="Confirme a nova senha..." class="form-control" type="password" name="confirmarSenha" required>
+                    <br>
 
-            <button class="buttonredefinir" type="submit" > Enviar </button>
-            </div>
+                    <button class="buttonredefinir" type="submit" > Confirmar </button>
+
+                </div>
 
             </form>
 

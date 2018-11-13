@@ -27,10 +27,7 @@ class ConfiguracaoController extends Controller
         return view('corpo/redefinirNome');
     }
 
-    public function RedefinirEmail (){
-
-        return view('corpo/redefinirEmail');
-    }
+   
     public function DesativarConta (){
 
         return view('corpo/desativarConta');
