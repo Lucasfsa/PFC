@@ -15,11 +15,11 @@ class CreateSoftwareAsTable extends Migration
     {
         Schema::create('software_as', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_ClienteSoftware')->unsigned();
+            // $table->integer('id_ClienteSoftware')->unsigned();
             $table->integer('controle');
             $table->integer('versao');
             $table->integer('serie');
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
+            // $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }

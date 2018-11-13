@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Software extends Model
 {
-    //
+    protected $table = 'softwares';
+
+    public function cliente(){
+        return $this->hasOne('App\Cliente');
+    }
 }

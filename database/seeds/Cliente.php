@@ -16,7 +16,7 @@ class Cliente extends Seeder
 
 
         DB::table('clientes')->insert([
-        	'nome_fantasia'=>'Brito Pimentel',
+        	'razao_social'=>'Brito Pimentel',
             'cnpj' => '86902475000199',
             'email' => '',
             'telefone' => '',
@@ -26,7 +26,7 @@ class Cliente extends Seeder
     );
 	
 	DB::table('clientes')->insert([
-        	'nome_fantasia'=>'Reginaldo Barreto Santiago',
+        	'razao_social'=>'Reginaldo Barreto Santiago',
             'cnpj' => '26879525000128',
             'email' => '',
             'telefone' => '',
@@ -36,7 +36,7 @@ class Cliente extends Seeder
     );
 
 	DB::table('clientes')->insert([
-            'nome_fantasia'=>'Casa do Agricultor',
+            'razao_social'=>'Casa do Agricultor',
             'cnpj' => '04719693000128',
             'email' => '',
             'telefone' => '',
@@ -46,7 +46,7 @@ class Cliente extends Seeder
     );
 
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Cestão Supermercado',
+            'razao_social'=>'Cestão Supermercado',
             'cnpj' => '96799960000132',
             'email' => '',
             'telefone' => '',
@@ -55,7 +55,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Clarinha Confecções',
+            'razao_social'=>'Clarinha Confecções',
             'cnpj' => '04352461000184',
             'email' => '',
             'telefone' => '',
@@ -64,7 +64,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Casa Mata',
+            'razao_social'=>'Casa Mata',
             'cnpj' => '07434696000103',
             'email' => '',
             'telefone' => '',
@@ -73,7 +73,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Dsuco',
+            'razao_social'=>'Dsuco',
             'cnpj' => '23250291000171',
             'email' => '',
             'telefone' => '',
@@ -82,7 +82,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Fast Collor Boulevard',
+            'razao_social'=>'Fast Collor Boulevard',
             'cnpj' => '23843651000149',
             'email' => '',
             'telefone' => '',
@@ -91,7 +91,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Hiper Frutas',
+            'razao_social'=>'Hiper Frutas',
             'cnpj' => '24095324000119',
             'email' => '',
             'telefone' => '',
@@ -100,7 +100,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'J. Des. Leite Material de Construção',
+            'razao_social'=>'J. Des. Leite Material de Construção',
             'cnpj' => '08812167000169',
             'email' => '',
             'telefone' => '',
@@ -109,7 +109,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'O Bicho',
+            'razao_social'=>'O Bicho',
             'cnpj' => '08761479000190',
             'email' => '',
             'telefone' => '',
@@ -118,7 +118,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Rodrido Bastos Araujo',
+            'razao_social'=>'Rodrido Bastos Araujo',
             'cnpj' => '13520749000101',
             'email' => '',
             'telefone' => '',
@@ -127,7 +127,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Silterm',
+            'razao_social'=>'Silterm',
             'cnpj' => '12960601000125',
             'email' => '',
             'telefone' => '',
@@ -136,7 +136,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Sangue Bom Montagens',
+            'razao_social'=>'Sangue Bom Montagens',
             'cnpj' => '03372168000116',
             'email' => '',
             'telefone' => '',
@@ -145,7 +145,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Ultra Informatica',
+            'razao_social'=>'Ultra Informatica',
             'cnpj' => '05776490000136',
             'email' => '',
             'telefone' => '',
@@ -154,7 +154,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Vinan Agropecuaria',
+            'razao_social'=>'Vinan Agropecuaria',
             'cnpj' => '96703962000186',
             'email' => '',
             'telefone' => '',
@@ -163,7 +163,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Vida Saudavel Vale Ouro',
+            'razao_social'=>'Vida Saudavel Vale Ouro',
             'cnpj' => '11984469000129',
             'email' => '',
             'telefone' => '',
@@ -172,7 +172,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Mercadinho Vargas Itaberaba',
+            'razao_social'=>'Mercadinho Vargas Itaberaba',
             'cnpj' => '11124812000165',
             'email' => '',
             'telefone' => '',
@@ -181,7 +181,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Grife de Carne',
+            'razao_social'=>'Grife de Carne',
             'cnpj' => '03036987000192',
             'email' => '',
             'telefone' => '',
@@ -190,7 +190,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Flor da Chapada Delicatesen',
+            'razao_social'=>'Flor da Chapada Delicatesen',
             'cnpj' => '09350535000167',
             'email' => '',
             'telefone' => '',
@@ -199,7 +199,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Rocha Madereira',
+            'razao_social'=>'Rocha Madereira',
             'cnpj' => '40495111000130',
             'email' => '',
             'telefone' => '',
@@ -208,7 +208,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Restaurante Pai Thomaz',
+            'razao_social'=>'Restaurante Pai Thomaz',
             'cnpj' => '21749664000128',
             'email' => '',
             'telefone' => '',
@@ -217,7 +217,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Bruna Comercio',
+            'razao_social'=>'Bruna Comercio',
             'cnpj' => '03430798000108',
             'email' => '',
             'telefone' => '',
@@ -226,7 +226,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Novo Baixinho',
+            'razao_social'=>'Novo Baixinho',
             'cnpj' => '16740338000110',
             'email' => '',
             'telefone' => '',
@@ -235,7 +235,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Dom Café',
+            'razao_social'=>'Dom Café',
             'cnpj' => '07878735000161',
             'email' => '',
             'telefone' => '',
@@ -244,7 +244,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Emporio Batista',
+            'razao_social'=>'Emporio Batista',
             'cnpj' => '26602905000125',
             'email' => '',
             'telefone' => '',
@@ -253,7 +253,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Duponto Alimentos',
+            'razao_social'=>'Duponto Alimentos',
             'cnpj' => '09208341000121',
             'email' => '',
             'telefone' => '',
@@ -262,7 +262,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'J N Casa e Construção',
+            'razao_social'=>'J N Casa e Construção',
             'cnpj' => '24574474000105',
             'email' => '',
             'telefone' => '',
@@ -271,7 +271,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'LC Jesus Silva e CIA',
+            'razao_social'=>'LC Jesus Silva e CIA',
             'cnpj' => '40495111000130',
             'email' => '',
             'telefone' => '',
@@ -280,7 +280,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'O Barateiro',
+            'razao_social'=>'O Barateiro',
             'cnpj' => '04639505000151',
             'email' => '',
             'telefone' => '',
@@ -289,7 +289,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Nova Panilanches',
+            'razao_social'=>'Nova Panilanches',
             'cnpj' => '02154830000107',
             'email' => '',
             'telefone' => '',
@@ -298,7 +298,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Roma Supermercado',
+            'razao_social'=>'Roma Supermercado',
             'cnpj' => '15593868000110',
             'email' => '',
             'telefone' => '',
@@ -307,7 +307,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Moliveira Costa',
+            'razao_social'=>'Moliveira Costa',
             'cnpj' => '14514094000121',
             'email' => '',
             'telefone' => '',
@@ -317,7 +317,7 @@ class Cliente extends Seeder
     );
    
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Supermercado Iguatemi',
+            'razao_social'=>'Supermercado Iguatemi',
             'cnpj' => '12518511000189',
             'email' => '',
             'telefone' => '',
@@ -326,7 +326,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Sucesso Rrepresentações',
+            'razao_social'=>'Sucesso Rrepresentações',
             'cnpj' => '01441524000180',
             'email' => '',
             'telefone' => '',
@@ -335,7 +335,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Agencia de Bicicletas Quatro Irmãos',
+            'razao_social'=>'Agencia de Bicicletas Quatro Irmãos',
             'cnpj' => '03247750000150',
             'email' => '',
             'telefone' => '',
@@ -344,7 +344,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'RMD Empreendimentos Turisticos e Hotel',
+            'razao_social'=>'RMD Empreendimentos Turisticos e Hotel',
             'cnpj' => '21749664000128',
             'email' => '',
             'telefone' => '',
@@ -353,7 +353,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Pousada Convento do Carmo',
+            'razao_social'=>'Pousada Convento do Carmo',
             'cnpj' => '05257529000109',
             'email' => '',
             'telefone' => '',
@@ -362,7 +362,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Pão Center Getulio',
+            'razao_social'=>'Pão Center Getulio',
             'cnpj' => '26484862000120',
             'email' => '',
             'telefone' => '',
@@ -371,7 +371,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Pão Center Maria Quiteria',
+            'razao_social'=>'Pão Center Maria Quiteria',
             'cnpj' => '24875255000166',
             'email' => '',
             'telefone' => '',
@@ -380,7 +380,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Pão Center Tomba',
+            'razao_social'=>'Pão Center Tomba',
             'cnpj' => '27644529000102',
             'email' => '',
             'telefone' => '',
@@ -389,7 +389,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Skina de Carne Getulio Açouge',
+            'razao_social'=>'Skina de Carne Getulio Açouge',
             'cnpj' => '04719503000172',
             'email' => '',
             'telefone' => '',
@@ -398,7 +398,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Skina Carne Fraga Maia',
+            'razao_social'=>'Skina Carne Fraga Maia',
             'cnpj' => '05325680870',
             'email' => '',
             'telefone' => '',
@@ -407,7 +407,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Skina João Durval',
+            'razao_social'=>'Skina João Durval',
             'cnpj' => '10140261000160',
             'email' => '',
             'telefone' => '',
@@ -416,7 +416,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Massa Beer',
+            'razao_social'=>'Massa Beer',
             'cnpj' => '14220041000106',
             'email' => '',
             'telefone' => '',
@@ -425,7 +425,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Kairós Papa 23',
+            'razao_social'=>'Kairós Papa 23',
             'cnpj' => '06957157000196',
             'email' => '',
             'telefone' => '',
@@ -434,7 +434,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Kairós Getulio',
+            'razao_social'=>'Kairós Getulio',
             'cnpj' => '16401069000167',
             'email' => '',
             'telefone' => '',
@@ -443,7 +443,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Grife de Carne',
+            'razao_social'=>'Grife de Carne',
             'cnpj' => '03036987000192',
             'email' => '',
             'telefone' => '',
@@ -456,7 +456,7 @@ class Cliente extends Seeder
 
 
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Bem me Quer',
+            'razao_social'=>'Bem me Quer',
             'cnpj' => '04543023000101',
             'email' => '',
             'telefone' => '',
@@ -465,7 +465,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Capela Eletromoveis',
+            'razao_social'=>'Capela Eletromoveis',
             'cnpj' => '?',
             'email' => '',
             'telefone' => '',
@@ -474,7 +474,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'Germiniano Bispo Ferreira',
+            'razao_social'=>'Germiniano Bispo Ferreira',
             'cnpj' => '?',
             'email' => '',
             'telefone' => '',
@@ -483,7 +483,7 @@ class Cliente extends Seeder
         ]
     );
    DB::table('clientes')->insert([
-            'nome_fantasia'=>'J Neto Confecções',
+            'razao_social'=>'J Neto Confecções',
             'cnpj' => '?',
             'email' => '',
             'telefone' => '',
@@ -495,7 +495,7 @@ class Cliente extends Seeder
     
 
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Boteco 156',
+            'razao_social'=>'Boteco 156',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -504,7 +504,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Casa do Pão de Queijo',
+            'razao_social'=>'Casa do Pão de Queijo',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -513,7 +513,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Gauchão Delivery',
+            'razao_social'=>'Gauchão Delivery',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -522,7 +522,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Rancho Catarinense',
+            'razao_social'=>'Rancho Catarinense',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -531,7 +531,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Restaurante Alaska',
+            'razao_social'=>'Restaurante Alaska',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -540,7 +540,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Posto Puma',
+            'razao_social'=>'Posto Puma',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -549,7 +549,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Sorveteria Ki Delicia',
+            'razao_social'=>'Sorveteria Ki Delicia',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -558,7 +558,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Sorveteria Nestle',
+            'razao_social'=>'Sorveteria Nestle',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -567,7 +567,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Stop Nill Kalilandia',
+            'razao_social'=>'Stop Nill Kalilandia',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -576,7 +576,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Teriaki Millenium',
+            'razao_social'=>'Teriaki Millenium',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',
@@ -585,7 +585,7 @@ class Cliente extends Seeder
         ]
     );
     DB::table('clientes')->insert([
-            'nome_fantasia'=>'Tim Nibal',
+            'razao_social'=>'Tim Nibal',
             'cnpj' => '',
             'email' => '',
             'telefone' => '',

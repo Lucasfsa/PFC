@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
+use App\Software;
 
 class ClienteController extends Controller
 {
@@ -26,7 +27,8 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('corpo.cadastro');
+        $softs = Software::all();
+        return view('corpo/cadastro',compact('softs'));
     }
 
     /**
@@ -48,6 +50,8 @@ class ClienteController extends Controller
         $id = \Auth::user()->id;
         $cliente->user_id = $id;
 
+        $cliente->software_id = $request->input('software');
+
         $cliente->save();
 
         return redirect('/cadastrar-cliente')->with('alert', 'Cliente Cadastrado!');
@@ -63,12 +67,6 @@ class ClienteController extends Controller
     {
         //
     }
-
-    // public function viewmodal($id)
-    // {
-    //     $sd = DB::table('clientes')->where('id', '=', $id)->first();
-    //     return view('components/cliente-info', compact('sd'));
-    // }
 
     /**
      * Show the form for editing the specified resource.

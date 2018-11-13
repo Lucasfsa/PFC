@@ -11,17 +11,17 @@ class Software extends Seeder
      */
     public function run()
     {
-         DB::table('software')->insert([
+        DB::table('softwares')->insert([
             'nome_software' => 'SYSPDV',
         ]
     );
 
-        DB::table('software')->insert([
+        DB::table('softwares')->insert([
             'nome_software' => 'ACSN',
         ]
     );
 
-     DB::table('software')->insert([
+        DB::table('softwares')->insert([
             'nome_software' => 'ECLÉTICA',
         ]
     );

@@ -15,10 +15,10 @@ class CreateSoftwareCsTable extends Migration
     {
         Schema::create('software_cs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_ClienteSoftware')->unsigned();
+            // $table->integer('id_ClienteSoftware')->unsigned();
             $table->integer('codigo_rede');
             $table->string('codigo_loja');
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
+            // $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }

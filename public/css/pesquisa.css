@@ -1,9 +1,9 @@
-td .btn:hover {
+td .btn:hover, .modal-footer .btn:hover {
     margin: 0 auto;
     color: #3c5baa;
     background-color: #fff;
 }
-td .btn {
+td .btn, .modal-footer .btn {
     margin: 0 auto;
     color: #fff;
     background-color: #3c5baa;
@@ -38,4 +38,20 @@ td {
     color: #3c5baa;
 }
 
-body.modal-open div.modal-backdrop { z-index: -1; }
+.modal-header {
+    background-color: #3c5baa;
+    color: #fff;
+}
+
+.close {
+    color: #fff;
+}
+
+.close:focus {
+    outline: none;
+}
+
+.modal-body p {
+    color: #817d7d;
+}
+

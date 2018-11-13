@@ -40,12 +40,21 @@
         <input placeholder="Digite a Razão Social" type="text" class="form-control" name="razaoSocial" required>
         <br>
 
-        <label>Cnpj</label>
+        <label>CNPJ</label>
         <input placeholder="Digite o Cnpj" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );" required>
         <br>
 
         <label>Segmento</label>
         <input placeholder="Digite Segmento" type="text" class="form-control" name="segmento" required>
+        <br>
+
+        <label for="software">Software Adquirido</label>
+        <select name="software" class="form-control">
+        <option>---</option>
+            @foreach($softs as $s)
+                <option value="{{ $s->id }}" aria-required="true">{{ $s->nome_software }}</option>
+            @endforeach                
+        </select>
         <br>
 
         <label>E-mail</label>

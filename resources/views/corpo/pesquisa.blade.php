@@ -76,13 +76,14 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4>{{ $c->nome_fantasia }}</h4>
+                            <h4>{{ $c->razao_social }}</h4>
                             <button class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
                             <p>Razão Social: {{ $c->razao_social }}</p>
                             <p>CNPJ: {{ $c->cnpj }}</p>
                             <p>Segmento: {{ $c->segmento_mercado }}</p>
+                            <p>Sistema: {{ $c->software['nome_software'] }}</p><a href="">gerar chave >>></a>
                             <p>Email: {{ $c->email }}</p>
                             <p>Telefone: {{ $c->telefone }}</p>
                             <p>Registrado por: {{ $c->user['name'] }}</p>

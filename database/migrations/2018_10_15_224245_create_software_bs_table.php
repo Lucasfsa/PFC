@@ -15,9 +15,9 @@ class CreateSoftwareBsTable extends Migration
     {
         Schema::create('software_bs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_ClienteSoftware')->unsigned();
+            // $table->integer('id_ClienteSoftware')->unsigned();
             $table->integer('contrato');
-            $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
+            // $table->foreign('id_ClienteSoftware')->references('id')->on('cliente_softwares');
             $table->timestamps();
         });
     }
