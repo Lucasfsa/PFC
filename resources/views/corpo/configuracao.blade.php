@@ -14,7 +14,6 @@
     <div class="menuedit" align="center" >
         <a class="btn buttonstyle" href="configurar/redefinir-senha"> Redefinir Senha</a>
         <a class="btn buttonstyle" href="configurar/redefinir-nome"> Redefinir Nome </a>
-        <a class="btn buttonstyle" href="configurar/redefinir-email"> Redefinir E-mail </a>
         <a class="btn buttonstyle" href="configurar/desativar-conta"> Desativar Conta</a>
     </div>
 </div>
