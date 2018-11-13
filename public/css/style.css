@@ -21,8 +21,8 @@ body {
     color: #fff;
 }
 
-.navbar-brand img#logoBc { width: 10vw; min-width: 75px; }
-.navbar-brand img#logoData { width: 13vw; min-width: 110px; }
+.navbar-brand img#logoBc { width: 11vw; min-width: 75px; }
+.navbar-brand img#logoData { width: 14vw; min-width: 110px; }
 
 .grow { transition: all .1s ease-in-out; }
 .grow:hover { transform: scale(1.02); }

@@ -15,39 +15,36 @@
 Route::get('/', 'HomePageController@index');
 
 //Página inicial pós login
-Route::get('/inicio', 'InicioController@index');
+Route::get('/inicio', 'InicioController@index')->middleware('auth');
 
 //Página de cadastro de cliente
-Route::get('/cadastrar-cliente', 'ClienteController@create');
-Route::post('/cadastrar-cliente', 'ClienteController@store');
+Route::get('/cadastrar-cliente', 'ClienteController@create')->middleware('auth');
+Route::post('/cadastrar-cliente', 'ClienteController@store')->middleware('auth');
 
 //Página de pesquisa
-Route::get('/pesquisar', 'ClienteController@index');
-
-// Route::get('/cliente/detalhes/{id}', 'ClienteController@viewmodal');
+Route::get('/pesquisar', 'ClienteController@index')->middleware('auth');
 
 //Página de cadastro de funcionário
-Route::get('/cadastrar-usuario', 'FuncionarioController@create');
-Route::post('/cadastrar-usuario', 'FuncionarioController@store');
+Route::get('/cadastrar-usuario', 'FuncionarioController@create')->middleware('auth');
+Route::post('/cadastrar-usuario', 'FuncionarioController@store')->middleware('auth');
 
 //Página de atualização de dados
 //Route::get('/atualizar', 'AtualizacaoController@index');
 
 //Página de Configuração
-Route::get('/configurar', 'ConfiguracaoController@index');
+Route::get('/configurar', 'ConfiguracaoController@index')->middleware('auth')->middleware('auth');
 
 //Página de Configuração - Redefinir Senha/Email/Nome/desativar conta
-Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha');
-Route::get('/configurar/redefinir-nome', 'ConfiguracaoController@RedefinirNome');
-Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta');
+Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha')->middleware('auth');
+Route::get('/configurar/redefinir-nome', 'ConfiguracaoController@RedefinirNome')->middleware('auth');
+Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta')->middleware('auth');
 
 Route::get('esqueci-minha-senha', 'SenhaController@index');
-//Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/chave/historico', 'ChaveHistoricoController@index');
+Route::get('/chave/historico', 'ChaveHistoricoController@index')->middleware('auth');
 
-Route::get('/chave/registrar', 'ChaveRegistroController@create');
-Route::post('/chave/registrar', 'ChaveRegistroController@store');
+Route::get('/chave/registrar', 'ChaveRegistroController@create')->middleware('auth');
+Route::post('/chave/registrar', 'ChaveRegistroController@store')->middleware('auth');
 
 Auth::routes();
 
