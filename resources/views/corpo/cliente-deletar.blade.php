@@ -1,4 +1,4 @@
-@section('pageTitle', 'Clientes -')
+@section('pageTitle', 'Registros Removidos -')
 
 @section('styles')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}">
@@ -9,7 +9,7 @@
 
 @section('escopo')
 
-<h3 class="text-center mt-4">Clientes</h3>
+<h3 class="text-center mt-4">Registros Removidos</h3>
 
 <div id="resultados" class="px-5 py-3 table-responsive">
 
@@ -30,6 +30,8 @@
                     <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                 </th>
                 <th class="text-center">Detalhes</th>
+                <th class="text-center">Restaurar</th>
+                <th class="text-center">Apagar</th>
             </tr>
         </thead>
 
@@ -70,6 +72,16 @@
                         <span class="fas fa-info"></span>
                     </button>
                 </td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#restaurarCliente">
+                        <span class="fas fa-undo-alt"></span>
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#apagarPermanente">
+                        <span class="fas fa-trash"></span>
+                    </button>
+                </td>
             </tr>
 
             <div id="{{'clienteInfo'.$c->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="clienteInfoLabel" aria-hidden="true">
@@ -88,8 +100,39 @@
                             <p>Telefone: {{ $c->telefone }}</p>
                             <p>Registrado por: {{ $c->user['name'] }}</p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onclick="window.location='/cliente/{{ $c->id }}/alterar-dados'">Editar Informações</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="restaurarCliente" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content text-center">
+                        <div class="modal-header d-flex justify-content-center danger text-light">
+                            <h4>{{ $c->razao_social }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esta ação recupera o registro e suas demais informações.</p>
+                        </div>
+                        <div class="modal-footer flex-center">
+                            <a href="/cliente/{{ $c->id }}/restaurar" class="btn">Restaurar</a>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="apagarPermanente" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content text-center">
+                        <div class="modal-header d-flex justify-content-center danger text-light">
+                            <h4>{{ $c->razao_social }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esta ação deleta permanentemente o registro e suas demais informações.</p>
+                        </div>
+                        <div class="modal-footer flex-center">
+                            <a href="/cliente/{{ $c->id }}/deletar" class="btn">Deletar</a>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancelar</button>
                         </div>
                     </div>
                 </div>

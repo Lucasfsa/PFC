@@ -1,8 +1,6 @@
 #buttoncadastro{
     background-color: white;
     color: #3c5baa;
-    margin-top: 3.3%;
-
 }
 
 #buttoncadastro:hover{
@@ -15,4 +13,40 @@
 .vertical-align {
     display: flex;
     align-items: center;
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.danger {
+    background: #f15e5e;
+    color: #fff;
+}
+
+.btn.danger:hover {
+    background: #ee3535;
+    color: #fff;
+}
+
+.secondary {
+    background: #c1c1c1;
+    color: #fff !important;
+}
+
+.btn.secondary:hover {
+    background: #a8a8a8;
+    color: #fff;
 }

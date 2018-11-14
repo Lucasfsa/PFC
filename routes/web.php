@@ -20,6 +20,12 @@ Route::get('/inicio', 'InicioController@index')->middleware('auth');
 //Página de cadastro de cliente
 Route::get('/cadastrar-cliente', 'ClienteController@create')->middleware('auth');
 Route::post('/cadastrar-cliente', 'ClienteController@store')->middleware('auth');
+Route::get('/cliente/{id}/alterar-dados', 'ClienteController@edit')->middleware('auth');
+Route::post('/cliente/{id}/alterar-dados', 'ClienteController@update')->middleware('auth');
+Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
+Route::get('/clientes/deletados', 'ClienteController@indexWithTrashed')->middleware('auth');
+Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
+Route::get('/cliente/{id}/deletar', 'ClienteController@delete')->middleware('auth');
 
 //Página de pesquisa
 Route::get('/pesquisar', 'ClienteController@index')->middleware('auth');

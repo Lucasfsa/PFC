@@ -16,7 +16,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('nome_fantasia', 'asc')->get();
+        $clientes = Cliente::orderBy('razao_social', 'asc')->get();
         return view('corpo.pesquisa', compact('clientes'));
     }
 
@@ -76,7 +76,9 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $softs = Software::all();
+        $c = Cliente::find($id);
+        return view("corpo/cliente-editar", compact('softs', 'c'));
     }
 
     /**
@@ -88,7 +90,19 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cliente = Cliente::find($id);
+        $cliente->nome_fantasia = $request->input('nomeFantasia');
+        $cliente->razao_social = $request->input('razaoSocial');
+        $cliente->cnpj = $request->input('cnpj');
+        $cliente->segmento_mercado = $request->input('segmento');
+        $cliente->email = $request->input('email');
+        $cliente->telefone = $request->input('telefone');
+
+        $cliente->software_id = $request->input('software');
+
+        $cliente->save();
+
+        return redirect('/pesquisar');
     }
 
     /**
@@ -99,6 +113,25 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        $cliente->delete();
+        return redirect('/pesquisar');
+    }
+
+    public function indexWithTrashed(){
+        $clientes = Cliente::onlyTrashed()->get();
+        return view('corpo/cliente-deletar', compact('clientes'));
+    }
+
+    public function restore($id){
+        $cliente = Cliente::onlyTrashed()->find($id);
+        $cliente->restore();
+        return redirect('/pesquisar');
+    }
+
+    public function delete($id){
+        $cliente = Cliente::onlyTrashed()->find($id);
+        $cliente->forceDelete();
+        return redirect('/pesquisar');
     }
 }
