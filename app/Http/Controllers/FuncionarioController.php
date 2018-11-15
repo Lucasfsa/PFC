@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class FuncionarioController extends Controller
 {
@@ -63,9 +64,18 @@ class FuncionarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+     public function editSenha($id)
     {
-        //
+        $funcionario= User::find($id);
+
+         return view("redefinirSenha", compact('funcionario'));
+    }
+
+    public function editNome($id)
+    {
+        $funcionario= User::find(auth()->user()->id);
+        
+         return view("redefinirNome", compact('funcionario'));
     }
 
     /**
@@ -75,9 +85,54 @@ class FuncionarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateSenha(Request $request)
     {
-        //
+        $funcionario = User::find(auth()->user()->id);
+       
+        
+        $request->validate([
+
+            'password'=>'required|confirmed',
+
+        ]);
+
+        $senhaAntiga = $funcionario->password;
+
+        if (Hash::check($request->input('senhaAntiga'), $senhaAntiga)) {
+
+            if ( ! $request->input('password') == '') {// verifica se a senha foi alterada
+                $funcionario->password = bcrypt($request->input('password')); // muda a senha do seu usuario já criptografada pela função bcrypt
+            }
+        }
+        else{
+            echo "diferente";
+        }
+
+            /*if(bcrypt($senhaAntiga) === bcrypt($request->input('senhaAntiga'))){
+                echo "vish2";
+                if ( ! $request->input('password') == '') {// verifica se a senha foi alterada
+                $funcionario->password = bcrypt($request->input('password')); // muda a senha do seu usuario já criptografada pela função bcrypt
+            }
+            else{
+                echo "vish";
+            }
+        }
+        
+        */
+
+        $funcionario->save(); // salva o usuario alterado =)
+
+            //Flash::message('Atualizado com sucesso!');
+        return redirect('/inicio'); // redireciona pra rota que você achar melhor =)
+
+    }
+
+    public function updateNome(Request $request)
+    {
+        $funcionario = User::find(auth()->user()->id);
+        $funcionario->name = $request->input('nomeFunc');
+        $funcionario->save();
+        return redirect('/inicio'); 
     }
 
     /**
@@ -86,8 +141,12 @@ class FuncionarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $funcionario= User::find(auth()->user()->id);
+
+        $funcionario->delete();
+
+        return redirect('/');
     }
 }

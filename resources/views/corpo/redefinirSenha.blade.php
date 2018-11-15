@@ -23,20 +23,22 @@
             
         <p align="center">Redefinir Senha</p>
 
-           <form method="POST">
+           <form action=  "/configurar/redefinir-senha/" method="POST">
+                        @csrf
 
                 <div class="form-group">
+
                    
                     <label>Senha atual</label>
                     <input placeholder="Digite a senha atual..." class="form-control" type="password" name="senhaAntiga" required>
                     <br>
 
                     <label>Nova Senha</label>      
-                    <input placeholder="Digite a nova senha..." class="form-control" type="password" name="senhaAtual" required>
+                    <input placeholder="Digite a nova senha..." id="password" class="form-control" type="password" name="password" required>
                     <br>
 
                     <label>Confirmar Senha</label>         
-                    <input placeholder="Confirme a nova senha..." class="form-control" type="password" name="confirmarSenha" required>
+                    <input placeholder="Confirme a nova senha..." id= "password_confirmation" class="form-control" type="password" name= "password_confirmation" required>
                     <br>
 
                     <button class="buttonredefinir" type="submit" > Confirmar </button>

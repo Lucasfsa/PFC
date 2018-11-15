@@ -18,5 +18,13 @@ class Usuario extends Seeder
             'admin' => true,
             'remember_token' => str_random(10)
         ]);
+
+         DB::table('users')->insert([
+            'name' => 'Wan',
+            'email' => 'natyamaral.mercia@gmail.com',
+            'password' => bcrypt('123456'),
+            'admin' => true,
+            'remember_token' => str_random(10)
+        ]);
     }
 }
