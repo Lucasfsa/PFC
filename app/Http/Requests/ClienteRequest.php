@@ -24,21 +24,21 @@ class ClienteRequest extends FormRequest
     public function rules()
     {
         return [
-            'nomeFantasia' => 'required',
-            'razaoSocial' => 'required|unique:clientes',
-            'cnpj' => 'required|min:14|unique:clientes',
+            'nome_fantasia' => 'required',
+            'razao_social' => 'required|unique:clientes',
+            'cnpj' => 'required|min:18|unique:clientes',
             'software' => 'required',
             'email' => 'required|email',
-            'telefone' => 'required|min:11',
+            'telefone' => 'required|min:14',
         ];
     }
 
     public function messages()
     {
         return [
-            'nomeFantasia.required' => 'O campo Nome Fantasia é obrigatório.',
-            'razaoSocial.required' => 'O campo Razão Social é obrigatório.',
-            'razaoSocial.unique' => 'Esta Razão Social já está registrada.',
+            'nome_fantasia.required' => 'O campo Nome Fantasia é obrigatório.',
+            'razao_social.required' => 'O campo Razão Social é obrigatório.',
+            'razao_social.unique' => 'Esta Razão Social já está registrada.',
             'cnpj.required' => 'O campo CNPJ é obrigatório.',
             'cnpj.unique' => 'Este CNPJ já está registrado.',
             'cnpj.min' => 'O CNPJ tem 14 números.',
@@ -46,7 +46,7 @@ class ClienteRequest extends FormRequest
             'email.required' => 'O campo email é obrigatório.',
             'email.email' => 'O E-mail informado não é válido.',
             'telefone.required' => 'O campo Telefone é obrigatório.',
-            'telefone.min' => 'O telefone tem 11 digitos.',
+            'telefone.min' => 'O Telefone tem 11 digitos.',
         ];
     }
 }

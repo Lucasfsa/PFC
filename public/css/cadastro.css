@@ -30,8 +30,8 @@ div.block-content {
 }
 
 .form-button:hover {
-    color: #fff;
     background: #3c5baa;
+    color: #fff;
 }
 
 .msg {

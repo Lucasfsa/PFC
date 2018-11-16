@@ -50,19 +50,19 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group {{ $errors->has('nomeFantasia') ? 'has-error' : '' }}">
-                                <label for="nomeFantasia"><strong>* Nome Fantasia</strong></label>
-                                <input placeholder="Nome Fantasia" type="text" class="form-control" name="nomeFantasia" value="{{ old('nomeFantasia') }}">
-                                <span class="text-danger">{{ $errors->first('nomeFantasia') }}</span>
+                            <div class="form-group {{ $errors->has('nome_fantasia') ? 'has-error' : '' }}">
+                                <label for="nome_fantasia"><strong>* Nome Fantasia</strong></label>
+                                <input placeholder="Nome Fantasia" type="text" class="form-control" name="nome_fantasia" value="{{ old('nome_fantasia') }}">
+                                <span class="text-danger">{{ $errors->first('nome_fantasia') }}</span>
                             </div>
                         </div>
 
                         <div class="col-12">
                             <div class="form-row">
-                                <div class="form-group col-lg-8 col-md-8 col-sm-12 col-xs-12 {{ $errors->has('razaoSocial') ? 'has-error' : '' }}">
-                                    <label for="razaoSocial"><strong>* Razão Social</strong></label>
-                                    <input placeholder="Razão Social" type="text" class="form-control" name="razaoSocial" value="{{ old('razaoSocial') }}">
-                                    <span class="text-danger">{{ $errors->first('razaoSocial') }}</span>
+                                <div class="form-group col-lg-8 col-md-8 col-sm-12 col-xs-12 {{ $errors->has('razao_social') ? 'has-error' : '' }}">
+                                    <label for="razao_social"><strong>* Razão Social</strong></label>
+                                    <input placeholder="Razão Social" type="text" class="form-control" name="razao_social" value="{{ old('razao_social') }}">
+                                    <span class="text-danger">{{ $errors->first('razao_social') }}</span>
                                 </div>
 
                                 <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 {{ $errors->has('cnpj') ? 'has-error' : '' }}">

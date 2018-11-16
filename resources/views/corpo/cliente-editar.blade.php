@@ -1,4 +1,4 @@
-@section('pageTitle', 'Alterar Dados -')
+@section('pageTitle', 'Dados do Cliente -')
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
@@ -8,81 +8,126 @@
 
 @section('escopo')
 
-<h3 class="text-center mt-4">Alterar Dados do Cliente</h3>
+<div class="block-content">
+    <form action="/pesquisar" method="post" class="row">
+        @csrf
+        <div class="container-fluid cadastro mt-4">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="row">
 
-<form action="/pesquisar" method="post">
-    @csrf
-    <div class="form-group px-5">
-        <br>
-        <label>Nome Fantasia</label>
-        <input value="{{ $c->nome_fantasia }}" type="text" class="form-control" name="nomeFantasia">
-        <br>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="text-center page-title">Dados do Cliente</h2>
+                            <hr>
+                        </div>
 
-        <label>Razão Social</label>
-        <input value="{{ $c->razao_social }}" type="text" class="form-control" name="razaoSocial">
-        <br>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="sub-title my-4">Informações da Empresa</h5>
+                        </div>
 
-        <label>CNPJ</label>
-        <input value="{{ $c->cnpj }}" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );">
-        <br>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label for="nome_fantasia"><strong>Nome Fantasia</strong></label>
+                                <input value="{{ $c->nome_fantasia }}" type="text" class="form-control" name="nome_fantasia">
+                            </div>
+                        </div>
 
-        <label>Segmento</label>
-        <input value="{{ $c->segmento_mercado }}" type="text" class="form-control" name="segmento">
-        <br>
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                    <label for="razao_social"><strong>Razão Social</strong></label>
+                                    <input value="{{ $c->razao_social }}" type="text" class="form-control" name="razao_social">
+                                </div>
 
-        <label for="software">Software Adquirido</label>
-        <select name="software" class="form-control">
-            @if ($c->software_id == null)
-                <option selected></option>
-                @foreach ($softs as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
-                @endforeach
-            @else
-                @foreach($softs as $s)
-                    @if ($s->id == $c->software_id)
-                        <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
-                    @else
-                        <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
-                    @endif
-                @endforeach
-            @endif
-        </select>
-        <br>
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <label for="cnpj"><strong>CNPJ</strong></label>
+                                    <input value="{{ $c->cnpj }}" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );">
+                                </div>
+                            </div>
+                        </div>
 
-        <label>E-mail</label>
-        <input value="{{ $c->email }}" type="email" class="form-control" name="email">
-        <br>
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="segmento"><strong>Segmento de Mercado</strong></label>
+                                    <input value="{{ $c->segmento }}" type="text" class="form-control" name="segmento">
+                                </div>
 
-        <label>Telefone</label>
-        <input value="{{ $c->telefone }}" type="text" class="form-control" name="telefone" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
-        <br>
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 ml-auto">
+                                    <label for="software"><strong>Software Contratado</strong></label>
+                                    <select name="software" class="form-control">
+                                        @if ($c->software_id == null)
+                                            <option disabled selected>Selecione</option>
+                                            @foreach($softs as $s)
+                                            <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
+                                            @endforeach
+                                        @else
+                                            @foreach($softs as $s)
+                                                @if ($s->id == $c->software_id)
+                                                    <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
+                                                @else
+                                                    <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
+                                                @endif
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                    <span class="text-danger">{{ $errors->first('software') }}</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
 
-        <button id="buttoncadastro" type="submit" class="btn">
-            Alterar Dados
-        </button>
-        &nbsp;
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDelete">
-            Remover Cadastro
-        </button>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="sub-title mb-4">Contato</h5>
+                        </div>
 
-        <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content text-center">
-                    <div class="modal-header d-flex justify-content-center danger text-light">
-                        <h4>Você tem certeza?</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Você realmente deseja excluir esse registro?</p>
-                    </div>
-                    <div class="modal-footer flex-center">
-                        <a href="/cliente/{{$c->id}}/remover" class="btn danger">Confirmar</a>
-                        <a type="button" class="btn secondary" data-dismiss="modal" >Cancelar</a>
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="email"><strong>* E-mail</strong></label>
+                                    <input value="{{ $c->email }}" type="email" class="form-control" name="email">
+                                </div>
+
+                                <div class="form-group col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="telefone"><strong>* Telefone</strong></label>
+                                    <input value="{{ $c->telefone }}" type="text" class="form-control" name="telefone" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn my-3 form-button">
+                                Alterar Dados
+                            </button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmRemove">
+                                Remover Cadastro
+                            </button>
+                        </div>
+
+                        <div class="modal fade" id="modalConfirmRemove" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content text-center">
+                                    <div class="modal-header d-flex justify-content-center danger text-light">
+                                        <h4>Você tem certeza?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Você realmente deseja excluir esse registro?</p>
+                                    </div>
+                                    <div class="modal-footer flex-center">
+                                        <a href="/cliente/{{$c->id}}/remover" class="btn danger">Confirmar</a>
+                                        <a type="button" class="btn secondary" data-dismiss="modal" >Cancelar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
 @endsection
 

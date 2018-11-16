@@ -41,8 +41,8 @@ class ClienteController extends Controller
     public function store(ClienteRequest $request)
     {
         $cliente = new Cliente();
-        $cliente->nome_fantasia = $request->input('nomeFantasia');
-        $cliente->razao_social = $request->input('razaoSocial');
+        $cliente->nome_fantasia = $request->input('nome_fantasia');
+        $cliente->razao_social = $request->input('razao_social');
         $cliente->cnpj = $request->input('cnpj');
         $cliente->segmento_mercado = $request->input('segmento');
         $cliente->email = $request->input('email');
@@ -92,8 +92,8 @@ class ClienteController extends Controller
     public function update(Request $request, $id)
     {
         $cliente = Cliente::find($id);
-        $cliente->nome_fantasia = $request->input('nomeFantasia');
-        $cliente->razao_social = $request->input('razaoSocial');
+        $cliente->nome_fantasia = $request->input('nome_fantasia');
+        $cliente->razao_social = $request->input('razao_social');
         $cliente->cnpj = $request->input('cnpj');
         $cliente->segmento_mercado = $request->input('segmento');
         $cliente->email = $request->input('email');

@@ -1,16 +1,19 @@
-td .btn:hover, .modal-footer .btn:hover {
+td .btn:hover {
     margin: 0 auto;
+    background: #fff;
     color: #3c5baa;
-    background-color: #fff;
 }
 td .btn, .modal-footer .btn {
     margin: 0 auto;
+    background: #3c5baa;
     color: #fff;
-    background-color: #3c5baa;
+}
+.modal-footer .btn:hover {
+    background: #213975;
 }
 
 .btn-xs {
-    padding: 1px 5px;
+    padding: 1px 7px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
@@ -55,3 +58,40 @@ td {
     color: #817d7d;
 }
 
+div.block-content {
+    margin: 0 36px;
+}
+
+@media (max-width: 992px){
+    div.block-content {
+        margin: 0 20px;
+    }
+}
+
+.page-title {
+    color: #3c5baa;
+}
+
+div.dataTables_wrapper input {
+    width: 250px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+div.dataTables_wrapper input:focus {
+    border-color: #3c5baa;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(60, 91, 170);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(60, 91, 170);
+}
