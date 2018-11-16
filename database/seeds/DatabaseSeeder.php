@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         //  $this->call(SoftwareA::class);
         //  $this->call(SoftwareB::class);
         //  $this->call(SoftwareC::class);
+        //  $this->call(ClienteSoftwaresTableSeeder::class);
     }
 }

@@ -83,7 +83,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 ml-auto {{ $errors->has('software') ? 'has-error' : '' }}">
                                     <label for="software"><strong>* Software Contratado</strong></label>
                                     <select name="software" class="form-control">
-                                        <option disabled selected>Please select...</option>
+                                        <option disabled selected>Selecione</option>
                                         @foreach($softs as $s)
                                         <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
                                         @endforeach
