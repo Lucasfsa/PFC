@@ -9,7 +9,7 @@
 @section('escopo')
 
 <div class="block-content">
-    <form action="/pesquisar" method="post" class="row">
+    <form action="/cliente/{{ $c->id }}/alterar-dados" method="post" class="row">
         @csrf
         <div class="container-fluid cadastro mt-4">
             <div class="row">
@@ -84,12 +84,12 @@
                         <div class="col-12">
                             <div class="form-row">
                                 <div class="form-group col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                                    <label for="email"><strong>* E-mail</strong></label>
+                                    <label for="email"><strong>E-mail</strong></label>
                                     <input value="{{ $c->email }}" type="email" class="form-control" name="email">
                                 </div>
 
                                 <div class="form-group col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                                    <label for="telefone"><strong>* Telefone</strong></label>
+                                    <label for="telefone"><strong>Telefone</strong></label>
                                     <input value="{{ $c->telefone }}" type="text" class="form-control" name="telefone" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
                                 </div>
                             </div>
@@ -108,15 +108,15 @@
                         <div class="modal fade" id="modalConfirmRemove" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
                             <div class="modal-dialog modal-sm" role="document">
                                 <div class="modal-content text-center">
-                                    <div class="modal-header d-flex justify-content-center danger text-light">
+                                    <div class="modal-header d-flex justify-content-center modal-danger text-light">
                                         <h4>Você tem certeza?</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Você realmente deseja excluir esse registro?</p>
+                                        <p>Você realmente deseja remover esse registro?</p>
                                     </div>
                                     <div class="modal-footer flex-center">
-                                        <a href="/cliente/{{$c->id}}/remover" class="btn danger">Confirmar</a>
-                                        <a type="button" class="btn secondary" data-dismiss="modal" >Cancelar</a>
+                                        <a href="/cliente/{{$c->id}}/remover" class="btn btn-danger">Confirmar</a>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cancelar</button>
                                     </div>
                                 </div>
                             </div>

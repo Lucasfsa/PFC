@@ -18,7 +18,7 @@ class CreateClienteSoftwaresTable extends Migration
             $table->integer('id_Cliente')->unsigned();
             $table->integer('id_Software')->unsigned();
             $table->foreign('id_Cliente')->references('id')->on('clientes');
-            $table->foreign('id_Software')->references('id')->on('software');
+            $table->foreign('id_Software')->references('id')->on('softwares');
             $table->timestamps();
         });
     }

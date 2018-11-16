@@ -83,3 +83,24 @@ span.text-danger {
     font-size: 12px;
     font-weight: 700;
 }
+
+.modal-danger, .modal-footer .btn-danger {
+    background: #f15e5e;
+    color: #fff;
+    border: none;
+}
+
+.modal-footer .btn-secondary {
+    background: #c1c1c1;
+    border: none;
+}
+
+.modal-footer .btn-danger:hover, .modal-footer .btn-danger:focus {
+    background: #ee3535 !important;
+    color: #fff;
+}
+
+.modal-footer .btn-secondary:hover, .modal-footer .btn-secondary:focus {
+    background: #a8a8a8 !important;
+    color: #fff;
+}
