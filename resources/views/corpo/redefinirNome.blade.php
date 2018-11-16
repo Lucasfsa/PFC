@@ -21,21 +21,21 @@
 
     <div  id="subcorpo">
         
-        <form method="POST" action="">
+        <form method="POST" action=  "/configurar/redefinir-nome/">
+        @csrf
 
             <p align="center">Redefinir Nome</p>
 
             <div class="form-group">
 
                 <label>Digite o novo nome</label>
-                <input class="form-control" class="inputredefinir" type="text" name="novoNome" placeholder="Digite o seu novo nome...">
+                <input class="form-control" value = "{{auth()->user()->name}}" class="inputredefinir" type="text" name="nomeFunc" placeholder="Digite o seu novo nome...">
 
                 <br>
 
                 <button class="buttonredefinir" type="submit" > Confirmar </button>
 
             </div>
-
         </form>
     </div>
 

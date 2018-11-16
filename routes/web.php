@@ -39,6 +39,12 @@ Route::post('/cadastrar-usuario', 'FuncionarioController@store')->middleware('au
 
 //Página de Configuração
 Route::get('/configurar', 'ConfiguracaoController@index')->middleware('auth')->middleware('auth');
+Route::get('/configurar', 'ConfiguracaoController@index');
+Route::get('/configurar/redefinir-senha/', 'FuncionarioController@editSenha');
+Route::post('/configurar/redefinir-senha/','FuncionarioController@updateSenha');
+Route::get('/configurar/redefinir-nome/', 'FuncionarioController@editNome');
+Route::post('/configurar/redefinir-nome/','FuncionarioController@updateNome');
+Route::get('/configurar/desativar-funcionario', 'FuncionarioController@destroy'); 
 
 //Página de Configuração - Redefinir Senha/Email/Nome/desativar conta
 Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha')->middleware('auth');
