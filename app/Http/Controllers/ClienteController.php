@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ClienteRequest;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
 use App\Software;
@@ -37,7 +38,7 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClienteRequest $request)
     {
         $cliente = new Cliente();
         $cliente->nome_fantasia = $request->input('nomeFantasia');

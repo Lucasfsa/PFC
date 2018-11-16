@@ -8,68 +8,125 @@
 
 @section('escopo')
 
-<h3 class="text-center mt-4">Cadastro de Clientes</h3>
+<div class="block-content">
+    <form action="/cadastrar-cliente" method="post" class="row">
+        @csrf
+        <div class="container-fluid cadastro mt-4">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="row">
 
-<form action="/cadastrar-cliente" method="post">
-    @csrf
-    <div class="form-group px-5">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="text-center page-title">Cadastro de Clientes</h2>
+                            <hr>
+                        </div>
 
-        @if (session('alert'))
-        <div class="alert alert-success alert-dismissible fade show mx-auto" role="alert">
-            <div class="row vertical-align">
-                <div class="col-xs-1 mx-3 text-center vertical-align">
-                    <i class="fa fa-check"></i>
+                        @if (session('alert'))
+                        <div class="alert col-md-4 mx-auto mb-0">
+                            <div class="msg msg-success text-success">
+                                <i class="fa fa-check"></i>
+                                <strong>{{ session('alert') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        @endif
+
+                        @if (count($errors))
+                        <div class="alert col-md-4 mx-auto mb-0">
+                            <div class="msg msg-warning msg-warning-text">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                <strong>Existem erros nos campos.</strong>
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        @endif
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="sub-title my-4">Informações da Empresa</h5>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group {{ $errors->has('nomeFantasia') ? 'has-error' : '' }}">
+                                <label for="nomeFantasia"><strong>* Nome Fantasia</strong></label>
+                                <input placeholder="Nome Fantasia" type="text" class="form-control" name="nomeFantasia" value="{{ old('nomeFantasia') }}">
+                                <span class="text-danger">{{ $errors->first('nomeFantasia') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-8 col-md-8 col-sm-12 col-xs-12 {{ $errors->has('razaoSocial') ? 'has-error' : '' }}">
+                                    <label for="razaoSocial"><strong>* Razão Social</strong></label>
+                                    <input placeholder="Razão Social" type="text" class="form-control" name="razaoSocial" value="{{ old('razaoSocial') }}">
+                                    <span class="text-danger">{{ $errors->first('razaoSocial') }}</span>
+                                </div>
+
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 {{ $errors->has('cnpj') ? 'has-error' : '' }}">
+                                    <label for="cnpj"><strong>* CNPJ</strong></label>
+                                    <input placeholder="CNPJ" type="text" class="form-control" name="cnpj" value="{{ old('cnpj') }}" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );">
+                                    <span class="text-danger">{{ $errors->first('cnpj') }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="segmento"><strong>Segmento de Mercado</strong></label>
+                                    <input placeholder="Segmento" type="text" class="form-control" name="segmento" value="{{ old('segmento') }}">
+                                </div>
+
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 ml-auto {{ $errors->has('software') ? 'has-error' : '' }}">
+                                    <label for="software"><strong>* Software Contratado</strong></label>
+                                    <select name="software" class="form-control">
+                                        <option disabled selected>Please select...</option>
+                                        @foreach($softs as $s)
+                                        <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
+                                        @endforeach
+                                    </select>
+                                    <span class="text-danger">{{ $errors->first('software') }}</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="sub-title mb-4">Contato</h5>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-row">
+                                <div class="form-group col-lg-8 col-md-12 col-sm-12 col-xs-12 {{ $errors->has('email') ? 'has-error' : '' }}">
+                                    <label for="email"><strong>* E-mail</strong></label>
+                                    <input placeholder="E-mail" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                                </div>
+
+                                <div class="form-group col-lg-4 col-md-6 col-sm-6 col-xs-6 {{ $errors->has('telefone') ? 'has-error' : '' }}">
+                                    <label for="telefone"><strong>* Telefone</strong></label>
+                                    <input placeholder="Telefone" type="text" class="form-control" name="telefone" value="{{ old('telefone') }}" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
+                                    <span class="text-danger">{{ $errors->first('telefone') }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn my-3 form-button">
+                                Cadastrar
+                                <i class="fas fa-user-plus"></i>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="col-xs-11">
-                    <strong>{{ session('alert') }}</strong>
-                </div>
-                <button type="button" class="close vertical-align" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
         </div>
-        @endif
-
-        <br>
-
-        <label>Nome Fantasia</label>
-        <input placeholder="Digite a Nome Fantasia" type="text" class="form-control" name="nomeFantasia" required>
-        <br>
-
-        <label>Razão Social</label>
-        <input placeholder="Digite a Razão Social" type="text" class="form-control" name="razaoSocial" required>
-        <br>
-
-        <label>CNPJ</label>
-        <input placeholder="Digite o Cnpj" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );" required>
-        <br>
-
-        <label>Segmento</label>
-        <input placeholder="Digite Segmento" type="text" class="form-control" name="segmento" required>
-        <br>
-
-        <label for="software">Software Adquirido</label>
-        <select name="software" class="form-control">
-        <option>---</option>
-            @foreach($softs as $s)
-                <option value="{{ $s->id }}" aria-required="true">{{ $s->nome_software }}</option>
-            @endforeach                
-        </select>
-        <br>
-
-        <label>E-mail</label>
-        <input placeholder="Digite o E-mail" type="email" class="form-control" name="email" required>
-        <br>
-
-        <label>Telefone</label>
-        <input placeholder="Digite o telefone..." type="text" class="form-control" name="telefone" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
-
-        <button id="buttoncadastro" type="submit" class="btn">
-            Cadastrar
-            <i class="fas fa-user-plus"></i>
-        </button>
-    </div>
-</form>
+    </form>
+</div>
 
 @endsection
 
