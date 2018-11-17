@@ -75,7 +75,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
+                                        <button type="button" class="btn btn-bc btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
                                             <span class="fas fa-info"></span>
                                         </button>
                                     </td>
@@ -98,7 +98,7 @@
                                                 <p>Registrado por: {{ $c->user['name'] }}</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn" onclick="window.location='/cliente/{{ $c->id }}/alterar-dados'">Editar Informações</button>
+                                                <button type="button" class="btn btn-bc" onclick="window.location='/cliente/{{ $c->id }}/alterar-dados'">Editar Informações</button>
                                             </div>
                                         </div>
                                     </div>

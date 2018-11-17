@@ -1,14 +1,14 @@
-td .btn:hover {
+td .btn-bc:hover {
     margin: 0 auto;
     background: #fff;
     color: #3c5baa;
 }
-td .btn, .modal-footer .btn {
+td .btn-bc, .modal-footer .btn-bc {
     margin: 0 auto;
     background: #3c5baa;
     color: #fff;
 }
-.modal-footer .btn:hover {
+.modal-footer .btn-bc:hover {
     background: #213975;
 }
 
@@ -17,6 +17,27 @@ td .btn, .modal-footer .btn {
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
+}
+
+.modal-danger, .modal-footer .btn-danger {
+    background: #f15e5e !important;
+    color: #fff;
+    border: none;
+}
+
+.modal-footer .btn-secondary {
+    background: #c1c1c1;
+    border: none;
+}
+
+.modal-footer .btn-danger:hover, .modal-footer .btn-danger:focus {
+    background: #ee3535 !important;
+    color: #fff;
+}
+
+.modal-footer .btn-secondary:hover, .modal-footer .btn-secondary:focus {
+    background: #a8a8a8 !important;
+    color: #fff;
 }
 
 table {
@@ -54,8 +75,12 @@ td {
     outline: none;
 }
 
-.modal-body p {
-    color: #817d7d;
+.modal-body p, .confirmPassLabel {
+    color: #817d7d !important;
+}
+
+.confirmPassLabel {
+    font-size: 10px;
 }
 
 div.block-content {
