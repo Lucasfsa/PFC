@@ -83,7 +83,7 @@
                     <br>
 
                     <label>Confirmar Senha</label>         
-                    <input placeholder="Confirme a nova senha..." id= "password_confirmation" class="form-control" type="password" name= "password_confirmation" required>
+                    <input placeholder="Confirme a nova senha..." id= "password_confirmation" class="form-control" type="password" name= "password_confirmation" required onkeyup="checkPass();>
                     <br>
 
                     <button class="buttonredefinir" type="submit" > Confirmar </button>
@@ -96,6 +96,46 @@
 
 </div>
 
+<script>function checkPass()
+{
+    //Store the password field objects into variables ...
+    var senha1 = document.getElementById('password');
+    var senha2= document.getElementById('password_confirmation');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(senha1.value == senha2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        senha2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Senhas conferem!"
+    }
+    else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        senha2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Senhas Não Conferem!"
+    }
+}  
+</script>
 
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 @endsection
