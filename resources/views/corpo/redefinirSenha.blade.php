@@ -23,6 +23,51 @@
             
         <p align="center">Redefinir Senha</p>
 
+         @if (session('alertsucess'))
+            
+            <div class="alert alert-success col-md-4 mx-auto mb-0">
+               
+                <strong>{{ session('alertsucess') }}</strong>
+                        
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+            </div>
+
+        @endif
+
+
+         @if (session('alerterror'))
+            
+            <div class="alert alert-danger col-md-4 mx-auto mb-0">
+               
+                <strong>{{ session('alerterror') }}</strong>
+                        
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+            </div>
+            
+        @endif
+
+        @if ($errors->any())
+             
+             <div class="alert alert-danger">
+                
+                <ul>
+                        @foreach ($errors->all() as $error)
+
+                            <li>{{ $error }}</li>
+
+                        @endforeach
+                </ul>
+
+            </div>
+        @endif
+
+
            <form action=  "/configurar/redefinir-senha/" method="POST">
                         @csrf
 
@@ -50,5 +95,7 @@
     </div>
 
 </div>
+
+
 
 @endsection

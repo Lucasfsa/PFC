@@ -88,7 +88,6 @@ class FuncionarioController extends Controller
     public function updateSenha(Request $request)
     {
         $funcionario = User::find(auth()->user()->id);
-       
         
         $request->validate([
 
@@ -100,12 +99,19 @@ class FuncionarioController extends Controller
 
         if (Hash::check($request->input('senhaAntiga'), $senhaAntiga)) {
 
-            if ( ! $request->input('password') == '') {// verifica se a senha foi alterada
-                $funcionario->password = bcrypt($request->input('password')); // muda a senha do seu usuario já criptografada pela função bcrypt
+            if ( ! $request->input('password') == '') {
+
+                    $funcionario->password = bcrypt($request->input('password')); 
+                    $funcionario->save();
+        
+                    return redirect('/configurar/redefinir-senha')->with('alertsucess', 'Senha Alterada!');
             }
         }
+
         else{
-            echo "diferente";
+           
+        return redirect('/configurar/redefinir-senha')->with('alerterror', 'Senha atual errada!');
+
         }
 
             /*if(bcrypt($senhaAntiga) === bcrypt($request->input('senhaAntiga'))){
@@ -120,11 +126,7 @@ class FuncionarioController extends Controller
         
         */
 
-        $funcionario->save(); // salva o usuario alterado =)
-
-            //Flash::message('Atualizado com sucesso!');
-        return redirect('/inicio'); // redireciona pra rota que você achar melhor =)
-
+  
     }
 
     public function updateNome(Request $request)
@@ -132,7 +134,8 @@ class FuncionarioController extends Controller
         $funcionario = User::find(auth()->user()->id);
         $funcionario->name = $request->input('nomeFunc');
         $funcionario->save();
-        return redirect('/inicio'); 
+       
+        return redirect('/configurar/redefinir-nome')->with('alert', 'Nome Alterado!');
     }
 
     /**

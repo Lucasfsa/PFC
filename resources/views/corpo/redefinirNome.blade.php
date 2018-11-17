@@ -26,6 +26,18 @@
 
             <p align="center">Redefinir Nome</p>
 
+                @if (session('alert'))
+                <div class="alert col-md-4 mx-auto mb-0">
+                    <div class="msg msg-success text-success">
+                        <i class="fa fa-check"></i>
+                        <strong>{{ session('alert') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                @endif
+
             <div class="form-group">
 
                 <label>Digite o novo nome</label>
