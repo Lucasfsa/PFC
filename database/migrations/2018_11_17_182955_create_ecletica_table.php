@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSoftwaresTable extends Migration
+class CreateEcleticaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateSoftwaresTable extends Migration
      */
     public function up()
     {
-        Schema::create('softwares', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nome_software', 20);
+        Schema::create('ecletica', function (Blueprint $table) {
+            $table->integer('cliente_software_id')->unsigned();
+            $table->foreign('cliente_software_id')->references('id')->on('cliente_software');
+            $table->integer('cod_rede');
+            $table->string('cod_loja');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateSoftwaresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('softwares');
+        Schema::dropIfExists('ecletica');
     }
 }

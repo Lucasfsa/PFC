@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDeletedAt extends Migration
+class CreateAcsnTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDeletedAt extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('acsn', function (Blueprint $table) {
+            $table->integer('cliente_software_id')->unsigned();
+            $table->foreign('cliente_software_id')->references('id')->on('cliente_software');
+            $table->integer('contrato');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class CreateDeletedAt extends Migration
      */
     public function down()
     {
-        //Schema::dropIfExists('deleted_at');
+        Schema::dropIfExists('acsn');
     }
 }

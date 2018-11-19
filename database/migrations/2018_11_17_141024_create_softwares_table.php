@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateTableClientes extends Migration
+class CreateSoftwaresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class UpdateTableClientes extends Migration
      */
     public function up()
     {
-        Schema::table('clientes', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('softwares', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nome_software', 20);
+            $table->string('logo_software')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class UpdateTableClientes extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('softwares');
     }
 }

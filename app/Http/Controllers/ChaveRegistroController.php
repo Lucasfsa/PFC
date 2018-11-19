@@ -35,13 +35,14 @@ class ChaveRegistroController extends Controller
     public function store(Request $request)
     {
         $chave = new ChaveDeAcesso();
-        $chave->numero_chave = $request->input('chave');
+        $chave->cod_chave = $request->input('chave');
         $chave->observacao = $request->input('observacao');
         
-
-
         $id = \Auth::user()->id;
         $chave->user_id = $id;
+
+       // $chave->cliente_software_id 
+        
     }
 
     /**

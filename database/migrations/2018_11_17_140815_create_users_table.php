@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->boolean('admin')->default(false); /* O valor será 1 para administrador e 0 para para usuário normal */
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
