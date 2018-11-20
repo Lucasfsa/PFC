@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Cliente extends Model
 {
     protected $fillable = [
-        'nome_fantasia', 'razao_social', 'cnpj', 'segmento', 'email', 'telefone', 'software'
+        'nome_fantasia', 'razao_social', 'cnpj', 'segmento', 'email', 'telefone',
     ];
 
     use SoftDeletes;
@@ -19,6 +19,10 @@ class Cliente extends Model
     }
 
     public function software(){
-        return $this->belongsTo('App\Software', 'software_id');
+        return $this->hasOne('App\Software', 'software_id');
+    }
+
+    public function clienteSoftware(){
+        return $this->belongsTo('App\ClienteSoftware');
     }
 }

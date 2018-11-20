@@ -1,10 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
 body
 {
-	background-image: url("/imagem/bg-laravel.png");
-	background-repeat: no-repeat;
+	background: url(../imagem/bg-laravel.png) no-repeat center center scroll;
 	background-size: cover;
-	background-attachment: fixed;
 }
+
+#main {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 @font-face
 {
 
@@ -25,8 +43,6 @@ body
 	margin-top: 10%;
 	margin-bottom: -3%;
 }
-
-
 
 .titulo h2{
 	font-size: 190%;

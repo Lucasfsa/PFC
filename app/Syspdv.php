@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SoftwareB extends Model
+class Syspdv extends Model
 {
-    //
+    protected $table = 'syspdv';
 }

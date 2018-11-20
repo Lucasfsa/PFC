@@ -23,9 +23,7 @@
         </div>
     </nav>
 
-    <main class="py-4">
-        @yield('base')
-    </main>
+    @yield('base')
 
 	{{-- Scripts --}}
     <script src="{{ asset('js/app.js') }}"></script>

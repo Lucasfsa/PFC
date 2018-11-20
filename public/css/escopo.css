@@ -56,8 +56,16 @@ body,html
 
 /* sidebar */
 
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
 #sidebar {
-    width: 230px;
+    width: 250px;
     position: fixed;
     top: 0;
     left: 0;
@@ -66,11 +74,12 @@ body,html
     background: #3c5baa;
     border-right: 10px solid #999999;
     font-family: Quinone;
+    color: #fff;
     transition: all 0.3s;
 }
 
 #sidebar.active {
-    margin-left: -230px;
+    margin-left: -250px;
 }
 
 #sidebar .sidebar-header
@@ -84,17 +93,15 @@ body,html
 
 #sidebar ul p
 {
-    color: black;
+    color: #fff;
     padding: 10px;
 }
 
 #sidebar ul li a
 {
-    padding: 10px;
-    font-size: 1.15em;
-    display: block;
-    font-family: Quinone;
-    color: white;
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
 }
 
 #sidebar ul li a:hover
@@ -104,23 +111,29 @@ body,html
 
 }
 
-p
-{
-
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #355197;
 }
 
-a, a:hover, a:focus
-{
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #355197;
+}
 
 #sidebarCollapse
 {
@@ -140,7 +153,7 @@ a, a:hover, a:focus
 }
 
 #content {
-    width: calc(100% - 230px);
+    width: calc(100% - 250px);
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
@@ -157,7 +170,7 @@ a, a:hover, a:focus
 
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -230px;
+        margin-left: -250px;
     }
     #sidebar.active {
         margin-left: 0;
@@ -166,7 +179,7 @@ a, a:hover, a:focus
         width: 100%;
     }
     #content.active {
-        width: calc(100% - 230px);
+        width: calc(100% - 250px);
     }
     #sidebarCollapse span {
         display: none;
@@ -175,49 +188,24 @@ a, a:hover, a:focus
 
 
                                                  /* sidebar button */
-.botaomenu
-{
-	background-color: #355197;
-	margin-top: 6px;
-    font-size: 70%;
 
-}
-
-.botaomenu  i {
-    
-    font-style: normal;
-}
-
-.botaosubmenu {
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+    color: #fff;
     background-color: #355197;
-    font-size: 88%;
 }
 
-
-.dropdown-item:hover
-{
-    background-color: #3c5baa;
-    color: white;
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
 }
 
-#sidebar .titledrop
-{
-    font-size: 105%;
+ul ul a {
+    font-size: 1em !important;
+    padding-left: 30px !important;
+    background: #355197;
 }
 
-#sidebar .dropdown-item{
-    color: black;
-    font-size: 95%;
-}
-
-#sidebar .dropdown-item:hover{
-    color: white;
-    background-color: #3c5baa;
-    font-size: 110%;
-}
-
-#sidebar .dropdown
-{
+a[data-toggle="collapse"] {
     position: relative;
-    z-index: +1;
 }

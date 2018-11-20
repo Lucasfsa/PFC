@@ -12,23 +12,30 @@
 */
 
 //Página inicial do site
-Route::get('/', 'HomePageController@index');
+Route::get('/', 'IndexController@index');
+
+//Rota de Login
+Auth::routes();
 
 //Página inicial pós login
-Route::get('/inicio', 'InicioController@index')->middleware('auth');
+Route::get('/home', 'HomeController@index')->middleware('auth');
 
-//Página de cadastro de cliente
-Route::get('/cadastrar-cliente', 'ClienteController@create')->middleware('auth');
-Route::post('/cadastrar-cliente', 'ClienteController@store')->middleware('auth');
-Route::get('/cliente/{id}/alterar-dados', 'ClienteController@edit')->middleware('auth');
-Route::post('/cliente/{id}/alterar-dados', 'ClienteController@update')->middleware('auth');
+//Lista de Clientes
+Route::get('/clientes', 'ClienteController@index')->middleware('auth');
+
+//Cadastro de cliente
+Route::get('/cadastro/cliente', 'ClienteController@create')->middleware('auth');
+Route::post('/cadastro/cliente', 'ClienteController@store')->middleware('auth');
+
+//Editar Dados do Cliente
+Route::get('/cliente/{id}/dados', 'ClienteController@edit')->middleware('auth');
+Route::post('/cliente/{id}/dados', 'ClienteController@update')->middleware('auth');
+
+
 Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
 Route::get('/clientes/deletados', 'ClienteController@indexWithTrashed')->middleware('auth');
 Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
 Route::get('/cliente/{id}/deletar', 'ClienteController@delete')->middleware('auth');
-
-//Página de pesquisa
-Route::get('/pesquisar', 'ClienteController@index')->middleware('auth');
 
 //Página de cadastro de funcionário
 Route::get('/cadastrar-usuario', 'FuncionarioController@create')->middleware('auth');
@@ -44,7 +51,7 @@ Route::get('/configurar/redefinir-senha/', 'FuncionarioController@editSenha');
 Route::post('/configurar/redefinir-senha/','FuncionarioController@updateSenha');
 Route::get('/configurar/redefinir-nome/', 'FuncionarioController@editNome');
 Route::post('/configurar/redefinir-nome/','FuncionarioController@updateNome');
-Route::get('/configurar/desativar-funcionario', 'FuncionarioController@destroy'); 
+Route::get('/configurar/desativar-funcionario', 'FuncionarioController@destroy');
 
 //Página de Configuração - Redefinir Senha/Email/Nome/desativar conta
 Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha')->middleware('auth');
@@ -58,6 +65,6 @@ Route::get('/chave/historico', 'ChaveHistoricoController@index')->middleware('au
 Route::get('/chave/registrar', 'ChaveRegistroController@create')->middleware('auth');
 Route::post('/chave/registrar', 'ChaveRegistroController@store')->middleware('auth');
 
-Auth::routes();
+
 
 

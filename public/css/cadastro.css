@@ -18,12 +18,6 @@ div.block-content {
     font-weight: bold;
 }
 
-@media (max-width: 768px){
-    .cadastro div.ml-auto {
-        margin-left: 0 !important;
-    }
-}
-
 .form-button {
     background: #fff;
     color: #3c5baa;

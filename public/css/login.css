@@ -4,35 +4,32 @@
     src: url(/font/Comforta.ttf);
 }
 
-.card{
-	background-color: rgb(255,255,255, .5);
-	border-radius: 3px;
-	width: 40%;
-	height: 60%;
-	font-family: Comforta;
-	color: #3c5baa;
-	margin-left: 30%;
-	margin-top: 7%;
-}
-.card-body{
-	margin-left: 6%;
-	margin-right: 8%;
+.card {
+    background: rgba(255, 255, 255, .5);
 }
 
-#imgmenu{
-	width: 50%;
-	height: 50%;
-	margin-left: 25%;
+.card-header {
+    border: none;
 }
 
-#buttoncadastrar{
-	margin-bottom: 4%;
-	border-radius: 1px;
-	background-color: white;
-
+.login-card label {
+    color: #3c5baa;
 }
 
-#buttoncadastrar:hover{
-	background-color: #3c5baa;
-	color: white;
+.login-card .btn-login, .login-card .btn-link {
+    color: #3c5baa;
+    font-weight: 600;
+}
+
+.login-card .btn-login {
+    background: #fff;
+}
+
+.login-card .btn-login:hover {
+    background: #3c5baa;
+    color: #fff;
+}
+
+.login-card .btn-link:hover {
+    color: #244392;
 }

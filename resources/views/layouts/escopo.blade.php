@@ -27,27 +27,41 @@
 
             <ul class="list-unstyled components">
                 <li class="dropdown-divider line-color"></li>
-                <li>
-                    <a class="botaomenu" href="{{ url('/pesquisar') }}">
-                        <i>Pesquisar Cliente</i>
-                    </a>
+                <li class="active">
+                    <a href="#clienteSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Clientes</a>
+                    <ul class="collapse list-unstyled" id="clienteSubMenu">
+                        <li>
+                            <a href="{{ url('/clientes') }}">Lista de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/cadastro/cliente') }}">Cadastrar Cliente</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/clientes/removidos') }}">Clientes Removidos</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a class="botaomenu" href="/cadastrar-cliente"><i>Cadastrar Cliente</i></a></li>
                 @if (Auth::user()->is_admin())
-                    <li><a class="botaomenu" href="/cadastrar-usuario"><i>Cadastrar Usuário</i></a></li>
+                    <li>
+                        <a href="#usuarioSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuários</a>
+                        <ul class="collapse list-unstyled" id="usuarioSubMenu">
+                            <li>
+                                <a href="{{ url('/cadastro/usuario') }}">Cadastrar Usuário</a>
+                            </li>
+                        </ul>
+                    </li>
                 @endif
+
                 <li>
-                    <div>
-                        <a class="botaomenu collapsed" href="#collapseitem"  data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
-                            Controle de Chaves <i class="fas fa-angle-down"></i>
-
-                        </a>
-
-                        <div class="botaosubmenu collapse" id="collapseitem">
-                            <a  href="/chave/historico">Histórico de Chaves  <i class="fas fa-history"></i></a>
-                            <a  href="/chave/registrar">Registrar Chave  <i class="fas fa-file-medical"></i> </a>
-                        </div>
-                    </div>
+                    <a href="#chavesSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Controle de Chaves</a>
+                    <ul class="collapse list-unstyled" id="chavesSubMenu">
+                        <li>
+                            <a href="{{ url('/chave/historico') }}">Histórico de Chaves</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/chave/registrar') }}">Registrar Chave</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="dropdown-divider line-color"></li>
             </ul>

@@ -7,6 +7,10 @@ use App\Http\Requests\ClienteRequest;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
 use App\Software;
+use App\ClienteSoftware;
+use App\Syspdv;
+use App\Acsn;
+use App\Ecletica;
 
 class ClienteController extends Controller
 {
@@ -18,7 +22,7 @@ class ClienteController extends Controller
     public function index()
     {
         $clientes = Cliente::orderBy('razao_social', 'asc')->get();
-        return view('corpo.pesquisa', compact('clientes'));
+        return view('clientes.clientes-lista', compact('clientes'));
     }
 
     /**
@@ -29,7 +33,7 @@ class ClienteController extends Controller
     public function create()
     {
         $softs = Software::all();
-        return view('corpo/cadastro',compact('softs'));
+        return view('clientes.cliente-cadastro',compact('softs'));
     }
 
     /**
@@ -44,18 +48,49 @@ class ClienteController extends Controller
         $cliente->nome_fantasia = $request->input('nome_fantasia');
         $cliente->razao_social = $request->input('razao_social');
         $cliente->cnpj = $request->input('cnpj');
-        $cliente->segmento_mercado = $request->input('segmento');
+        $cliente->segmento = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
 
         $id = \Auth::user()->id;
         $cliente->user_id = $id;
 
-        $cliente->software_id = $request->input('software');
-
         $cliente->save();
 
-        return redirect('/cadastrar-cliente')->with('alert', 'Cliente Cadastrado!');
+        $cliente_software = new ClienteSoftware();
+        $cliente_software->cliente_id = $cliente->id;
+        $cliente_software->software_id = $request->input('software');
+
+        $cliente_software->save();
+
+        if($request->input('software') == 1){
+            $software = new Syspdv();
+            $software->cliente_software_id = $cliente_software->id;
+            $software->controle = $request->input('controle');
+            $software->versao = $request->input('versao');
+            $software->serie = $request->input('serie');
+
+            $software->save();
+        }
+
+        else if($request->input('software') == 2){
+            $software = new Acsn();
+            $software->cliente_software_id = $cliente_software->id;
+            $software->contrato = $request->input('contrato');
+
+            $software->save();
+        }
+
+        else if($request->input('software') == 3){
+            $software = new Ecletica();
+            $software->cliente_software_id = $cliente_software->id;
+            $software->cod_rede = $request->input('cod_rede');
+            $software->cod_loja = $request->input('cod_loja');
+
+            $software->save();
+        }
+
+        return redirect('/cadastro/cliente')->with('alert', 'Cliente Cadastrado!');
     }
 
     /**
@@ -79,7 +114,7 @@ class ClienteController extends Controller
     {
         $softs = Software::all();
         $c = Cliente::find($id);
-        return view("corpo/cliente-editar", compact('softs', 'c'));
+        return view('clientes.cliente-dados', compact('softs', 'c'));
     }
 
     /**
@@ -95,7 +130,7 @@ class ClienteController extends Controller
         $cliente->nome_fantasia = $request->input('nome_fantasia');
         $cliente->razao_social = $request->input('razao_social');
         $cliente->cnpj = $request->input('cnpj');
-        $cliente->segmento_mercado = $request->input('segmento');
+        $cliente->segmento = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
 
@@ -103,7 +138,7 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        return redirect('/pesquisar');
+        return redirect('/cliente/{id}/dados');
     }
 
     /**

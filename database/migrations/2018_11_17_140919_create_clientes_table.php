@@ -18,7 +18,7 @@ class CreateClientesTable extends Migration
             $table->string('nome_fantasia');
             $table->string('razao_social');
             $table->string('cnpj', 18);
-            $table->string('segmento');
+            $table->string('segmento')->nullable;
             $table->string('email');
             $table->string('telefone', 14);
             $table->integer('user_id')->unsigned();
