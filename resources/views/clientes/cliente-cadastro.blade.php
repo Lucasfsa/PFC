@@ -110,7 +110,7 @@
                             <div class="form-group {{ $errors->has('software') ? 'has-error' : '' }}">
                                 <label for="software"><strong>* Software</strong></label>
                                 <select id="software" name="software" class="form-control" value="{{ old('software') }}">
-                                    <option>Selecione</option>
+                                    <option disabled selected>Selecione</option>
                                     @foreach($softs as $s)
                                         <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
                                     @endforeach

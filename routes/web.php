@@ -20,6 +20,8 @@ Auth::routes();
 //Página inicial pós login
 Route::get('/home', 'HomeController@index')->middleware('auth');
 
+Route::get('/soft', 'SoftwareController@index')->middleware('auth');
+
 //Lista de Clientes
 Route::get('/clientes', 'ClienteController@index')->middleware('auth');
 
