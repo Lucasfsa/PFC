@@ -37,14 +37,15 @@
                     <li><a class="botaomenu" href="/cadastrar-usuario"><i>Cadastrar Usuário</i></a></li>
                 @endif
                 <li>
-                    <div class="dropdown show">
-                        <a class="botaomenu titledrop dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Controle de Chaves
+                    <div>
+                        <a class="botaomenu collapsed" href="#collapseitem"  data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
+                            Controle de Chaves <i class="fas fa-angle-down"></i>
+
                         </a>
 
-                        <div class="dropmenu dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="/chave/historico">Histórico de Chaves  <i class="fas fa-history"></i></a>
-                            <a class="dropdown-item" href="/chave/registrar">Registrar Chave  <i class="fas fa-file-medical"></i> </a>
+                        <div class="botaosubmenu collapse" id="collapseitem">
+                            <a  href="/chave/historico">Histórico de Chaves  <i class="fas fa-history"></i></a>
+                            <a  href="/chave/registrar">Registrar Chave  <i class="fas fa-file-medical"></i> </a>
                         </div>
                     </div>
                 </li>

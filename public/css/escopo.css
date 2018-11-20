@@ -179,14 +179,18 @@ a, a:hover, a:focus
 {
 	background-color: #355197;
 	margin-top: 6px;
-    font-size: 75%;
-
+    font-size: 70%;
 
 }
 
-a i {
-    font-size: 90%;
+.botaomenu  i {
+    
     font-style: normal;
+}
+
+.botaosubmenu {
+    background-color: #355197;
+    font-size: 88%;
 }
 
 

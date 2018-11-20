@@ -83,7 +83,7 @@
                     <br>
 
                     <label>Confirmar Senha</label>         
-                    <input placeholder="Confirme a nova senha..." id= "password_confirmation" class="form-control" type="password" name= "password_confirmation" required onkeyup="checkPass();>
+                    <input placeholder="Confirme a nova senha..." id= "password_confirmation" class="form-control" type="password" name= "password_confirmation" required onkeyup="checkPass();">
                     <br>
 
                     <button class="buttonredefinir" type="submit" > Confirmar </button>
