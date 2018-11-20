@@ -68,8 +68,8 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if ($c->segmento_mercado != null)
-                                            {{ $c->segmento_mercado }}
+                                        @if ($c->segmento != null)
+                                            {{ $c->segmento }}
                                         @else
                                         -
                                         @endif
@@ -91,8 +91,8 @@
                                             <div class="modal-body">
                                                 <p>Razão Social: {{ $c->razao_social }}</p>
                                                 <p>CNPJ: {{ $c->cnpj }}</p>
-                                                <p>Segmento: @if($c->segmento_mercado == null)N/A @else{{ $c->segmento_mercado }}@endif</p>
-                                                {{-- <p>Sistema Contratado: {{ $c->software['nome_software'] }}</p>@if($c->software['nome_software'] != null)<a href="">gerar chave >>></a>@endif --}}
+                                                <p>Segmento: {{ $c->segmento }}</p>
+                                                <p>Sistema Contratado: </p>
                                                 <p>Email: {{ $c->email }}</p>
                                                 <p>Telefone: {{ $c->telefone }}</p>
                                                 <p>Registrado por: {{ $c->user['name'] }}</p>

@@ -18,11 +18,11 @@ class Cliente extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
 
-    public function software(){
-        return $this->hasOne('App\Software', 'software_id');
+    public function clienteSoftware(){
+        return $this->hasMany('App\ClienteSoftware');
     }
 
-    public function clienteSoftware(){
-        return $this->belongsTo('App\ClienteSoftware');
+    public function software(){
+        return $this->hasOne('App\Software');
     }
 }
