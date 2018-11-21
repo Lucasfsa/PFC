@@ -8,7 +8,11 @@ class Software extends Model
 {
     protected $table = 'softwares';
 
+    public function clienteSoftware(){
+        return $this->belongsTo('App\ClienteSoftware');
+    }
+
     public function cliente(){
-        return $this->belongsToMany('App\Cliente');
+        return $this->belongsTo('App\Cliente');
     }
 }
