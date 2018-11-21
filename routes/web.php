@@ -35,13 +35,13 @@ Route::post('/cliente/{id}/dados', 'ClienteController@update')->middleware('auth
 
 
 Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
-Route::get('/clientes/deletados', 'ClienteController@indexWithTrashed')->middleware('auth');
+Route::get('/clientes/removidos', 'ClienteController@indexWithTrashed')->middleware('auth');
 Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
 Route::get('/cliente/{id}/deletar', 'ClienteController@delete')->middleware('auth');
 
 //Página de cadastro de funcionário
-Route::get('/cadastrar-usuario', 'FuncionarioController@create')->middleware('auth');
-Route::post('/cadastrar-usuario', 'FuncionarioController@store')->middleware('auth');
+Route::get('/cadastro/usuario', 'FuncionarioController@create')->middleware('auth');
+Route::post('/cadastro/usuario', 'FuncionarioController@store')->middleware('auth');
 
 //Página de atualização de dados
 //Route::get('/atualizar', 'AtualizacaoController@index');

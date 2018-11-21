@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Chave;
 
 class chaveHistoricoController extends Controller
 {
@@ -13,7 +14,8 @@ class chaveHistoricoController extends Controller
      */
     public function index()
     {
-        return view ('corpo/chaveHistorico');
+        $chaves = Chave::orderBy('created_at', 'asc')->get();
+        return view ('corpo/chaveHistorico', compact('chaves'));
     }
 
     /**

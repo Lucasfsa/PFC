@@ -1,74 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Histórico de Chaves</title>
+@section('pageTitle', 'Histórico de Chaves -')
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-  	<link rel="stylesheet" type="text/css" href="{{ asset('css/chaveHistorico.css') }}">
-  	<link rel="icon" href="{{ asset('imagem/icon.png') }}">
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pesquisa.css') }}">
+@endsection
 
-</head>
+@extends('layouts.escopo')
+@section('escopo')
 
-<body>
+<div class="block-content">
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="row">
 
-	@extends('layouts.escopo')
-	@section('escopo')
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+                            <h2 class="text-center page-title">Histórico de Chaves</h2>
+                            <hr>
+                        </div>
 
-	<div id="corpo">
-		 
-		 <div align="center">
-             <p id="titlepesquisa">Histórico de  Chaves</p>
-          </div>
+                        <div id="resultados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2 table-responsive">
 
-          <form id="searchForm" action="/historico" method="POST" class="mt-4 px-5">
-        @csrf
+                            <table id="tabelaClientes" class="table table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Chave
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+                                        <th>Cliente
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+                                        <th>Software
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+                                        <th>Usuário
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+                                        <th class="text-center">Data
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
 
-        <div class="input-group">
-            
-          <div id="resultados" class="p-5 table-responsive-sm">
+                                <tbody id="dadosClientes">
+                                    @foreach ($chaves as $c)
+                                    <tr>
+                                        <td class="ordem"></td>
+                                        <td>
+                                            @if ($c->cod_chave != null)
+                                                {{ $c->cod_chave }}
+                                            @else
+                                                -
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($c->cliente["razao_social"] != null)
+                                                {{ $c->cliente["razao_social"] }}
+                                            @else
+                                            -
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($c->software["nome_software"] != null)
+                                            {{ $c->software["nome_software"] }}
+                                            @else
+                                            -
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($c->user["name"] != null)
+                                                {{ $c->user["name"] }}
+                                            @else
+                                            -
+                                            @endif
+                                        </td>
+                                        <td class="text-center">
+                                                {{ $c->created_at->format('d M Y - H:i:s') }}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
 
-		        <table id="tabelaClientes" class="table table-sm table-hover mx-auto text-nowrap" cellspacing="0" width="100%">
-		            <thead>
-		                <tr>
-		                    
-		                    <th>Sistema</th>
-		                    <th>Usuário</th>
-		                    <th>Cliente</th>
-		                    <th>Chave</th>
-		                    <th>Data</th>
-		                </tr>
-		            </thead>
+                        </div>
 
-		            <tbody >
-		                @foreach ($clientes as $c)
-		                <tr>
-		                    <td class="ordem"></td>
-		                    <td>{{ $c-> }}</td>
-		                    <td>{{ $c-> }}</td>
-		                    <td>{{ $c-> }}</td>
-		                    <td>{{ $c-> }}</td>
-		                    <td>
-		                        <button class="btn btn-info btn-xs" data-title="info">
-		                            <span class="fas fa-info"></span>
-		                        </button>
-		                    </td>
-		                </tr>
-		                @endforeach
-		            </tbody>
-		        </table>
-
-    </div> 
-
-            
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
+@endsection
 
-    </form>
-
-
-	</div>
-
-	@endsection
-</body>
-</html>
+@section('scripts')
+<script src="{{ asset('js/datatables.min.js') }}"></script>
+<script src="{{ asset('js/search.js') }}"></script>
+@endsection

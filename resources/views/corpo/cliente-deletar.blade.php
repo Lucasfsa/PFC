@@ -35,15 +35,12 @@
                                     <th>CNPJ
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
-                                    <th>Segmentos
-                                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
-                                    </th>
                                     <th class="text-center">Detalhes</th>
                                     <th class="text-center">Restaurar</th>
                                     <th class="text-center">Deletar</th>
                                 </tr>
                             </thead>
-                    
+
                             <tbody id="dadosClientes">
                                 @foreach ($clientes as $c)
                                 <tr>
@@ -69,13 +66,6 @@
                                         -
                                         @endif
                                     </td>
-                                    <td>
-                                        @if ($c->segmento_mercado != null)
-                                            {{ $c->segmento_mercado }}
-                                        @else
-                                        -
-                                        @endif
-                                    </td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-bc btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
                                             <span class="fas fa-info"></span>
@@ -92,7 +82,7 @@
                                         </button>
                                     </td>
                                 </tr>
-                    
+
                                 <div id="{{'clienteInfo'.$c->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="clienteInfoLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -112,7 +102,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <div class="modal fade" id="restaurarCliente" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
                                     <div class="modal-dialog modal-sm" role="document">
                                         <div class="modal-content text-center">
@@ -129,7 +119,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <div class="modal fade" id="apagarPermanente" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true">
                                     <div class="modal-dialog modal-sm" role="document">
                                         <div class="modal-content text-center">
@@ -156,7 +146,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    
+
                     </div>
 
                 </div>

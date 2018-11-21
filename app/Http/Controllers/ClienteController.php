@@ -151,7 +151,7 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id);
         $cliente->delete();
-        return redirect('/pesquisar');
+        return redirect('/clientes/removidos');
     }
 
     public function indexWithTrashed(){
@@ -162,7 +162,7 @@ class ClienteController extends Controller
     public function restore($id){
         $cliente = Cliente::onlyTrashed()->find($id);
         $cliente->restore();
-        return redirect('/pesquisar');
+        return redirect('/clientes');
     }
 
     public function delete($id){

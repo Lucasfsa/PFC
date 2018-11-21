@@ -20,6 +20,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -31,6 +32,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -42,6 +44,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -53,6 +56,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -64,6 +68,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -75,6 +80,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -86,6 +92,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -97,6 +104,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -108,6 +116,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -119,6 +128,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -130,6 +140,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -141,6 +152,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -153,6 +165,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -164,6 +177,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -175,6 +189,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -186,6 +201,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -197,6 +213,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -208,6 +225,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -219,6 +237,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -230,6 +249,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -241,6 +261,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -252,6 +273,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -263,6 +285,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -274,6 +297,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -285,6 +309,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -296,6 +321,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -307,6 +333,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -318,6 +345,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -329,6 +357,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -340,6 +369,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -351,6 +381,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -362,6 +393,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -373,6 +405,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -384,6 +417,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -395,6 +429,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -406,6 +441,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -417,6 +453,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -428,6 +465,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -439,6 +477,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -450,6 +489,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -461,6 +501,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -472,6 +513,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -483,6 +525,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -494,6 +537,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -505,6 +549,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -516,6 +561,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -527,6 +573,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -538,6 +585,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 1,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -551,6 +599,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 2,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -562,6 +611,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 2,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -573,6 +623,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 2,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -584,6 +635,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 2,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -598,6 +650,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -609,6 +662,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -620,6 +674,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -631,6 +686,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -642,6 +698,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -653,6 +710,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -664,6 +722,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -675,6 +734,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -686,6 +746,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -697,6 +758,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -708,6 +770,7 @@ class ClientesTableSeeder extends Seeder
             'segmento' => '',
             'email' => '',
             'telefone' => '',
+            'software_id' => 3,
             'user_id' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
