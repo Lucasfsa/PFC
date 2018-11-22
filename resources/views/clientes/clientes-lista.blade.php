@@ -68,13 +68,8 @@
                                         @endif
                                     </td>
                                     <td>
-<<<<<<< HEAD
                                         @if ($c->software["nome_software"] != null)
                                             {{ $c->software["nome_software"] }}
-=======
-                                        @if ($c->segmento != null)
-                                            {{ $c->segmento }}
->>>>>>> 0d1b28203cd14699a37f308e63a3b169c0522689
                                         @else
                                         -
                                         @endif
