@@ -41,6 +41,7 @@
                         </li>
                     </ul>
                 </li>
+                <li class="dropdown-divider space"></li>
                 @if (Auth::user()->is_admin())
                     <li>
                         <a href="#usuarioSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuários</a>
@@ -50,8 +51,8 @@
                             </li>
                         </ul>
                     </li>
+                <li class="dropdown-divider space"></li>
                 @endif
-
                 <li>
                     <a href="#chavesSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Controle de Chaves</a>
                     <ul class="collapse list-unstyled" id="chavesSubMenu">

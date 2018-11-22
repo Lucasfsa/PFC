@@ -40,8 +40,8 @@ Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('
 Route::get('/cliente/{id}/deletar', 'ClienteController@delete')->middleware('auth');
 
 //Página de cadastro de funcionário
-Route::get('/cadastro/usuario', 'FuncionarioController@create')->middleware('auth');
-Route::post('/cadastro/usuario', 'FuncionarioController@store')->middleware('auth');
+Route::get('/cadastro/usuario', 'UserController@create')->middleware('auth');
+Route::post('/cadastro/usuario', 'UserController@store')->middleware('auth');
 
 //Página de atualização de dados
 //Route::get('/atualizar', 'AtualizacaoController@index');

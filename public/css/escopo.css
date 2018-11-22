@@ -152,6 +152,11 @@ ul ul a {
     border-top-color: rgba(255, 255, 255, 0.2)
 }
 
+.space {
+    border: none;
+    margin: 0.2rem 0;
+}
+
 #content {
     width: calc(100% - 250px);
     min-height: 100vh;
