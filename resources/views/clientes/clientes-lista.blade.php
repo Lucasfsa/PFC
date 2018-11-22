@@ -91,13 +91,8 @@
                                             <div class="modal-body">
                                                 <p>Razão Social: {{ $c->razao_social }}</p>
                                                 <p>CNPJ: {{ $c->cnpj }}</p>
-<<<<<<< HEAD
                                                 <p>Segmento: {{ $c->segmento_mercado }}</p>
                                                 <p>Sistema Contratado: {{ $c->software['nome_software'] }}</p>
-=======
-                                                <p>Segmento: {{ $c->segmento }}</p>
-                                                <p>Sistema Contratado: </p>
->>>>>>> 0d1b28203cd14699a37f308e63a3b169c0522689
                                                 <p>Email: {{ $c->email }}</p>
                                                 <p>Telefone: {{ $c->telefone }}</p>
                                                 <p>Registrado por: {{ $c->user['name'] }}</p>
