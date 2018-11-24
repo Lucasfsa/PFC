@@ -13,12 +13,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
         $this->call(ClientesTableSeeder::class);
+        $this->call(PessoaFTableSeeder::class);
         $this->call(PessoaJTableSeeder::class);
-        // $this->call(SoftwaresTableSeeder::class);
-        // $this->call(ClienteSoftwareTableSeeder::class);
-        // $this->call(SyspdvTableSeeder::class);
-        // $this->call(AcsnTableSeeder::class);
-        // $this->call(EcleticaTableSeeder::class);
-        // $this->call(ChavesTableSeeder::class);
+        $this->call(SyspdvTableSeeder::class);
+        $this->call(ClienteSyspdvTableSeeder::class);
+        $this->call(AcsnTableSeeder::class);
+        $this->call(ClienteAcsnTableSeeder::class);
+        $this->call(EcleticaTableSeeder::class);
+        $this->call(ClienteEcleticaTableSeeder::class);
     }
 }

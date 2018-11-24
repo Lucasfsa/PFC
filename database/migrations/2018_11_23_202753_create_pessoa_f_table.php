@@ -14,7 +14,7 @@ class CreatePessoaFTable extends Migration
     public function up()
     {
         Schema::create('pessoa_f', function (Blueprint $table) {
-            $table->string('cpf', 14)->unique();
+            $table->string('cpf', 14);
             $table->string('nome');
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');

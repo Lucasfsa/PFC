@@ -18,7 +18,7 @@ class CreateClienteEcleticaTable extends Migration
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->integer('ecletica_id')->unsigned();
             $table->foreign('ecletica_id')->references('id')->on('ecletica');
-            $table->integer('chave_id')->unsigned();
+            $table->integer('chave_id')->unsigned()->nullable();
             $table->foreign('chave_id')->references('id')->on('chaves');
             $table->primary(['cliente_id', 'ecletica_id']);
             $table->timestamps();

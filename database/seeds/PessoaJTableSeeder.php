@@ -167,23 +167,23 @@ class PessoaJTableSeeder extends Seeder
         DB::table('pessoa_j')->insert([
             'cnpj' => '09.350.535/0001-67',
             'nome_fantasia' => '',
-            'razao_social'=>'Flor da Chapada Delicatesen',
+            'razao_social'=> 'Flor da Chapada Delicatesen',
             'segmento' => '',
             'cliente_id' => 20,
         ]);
 
         DB::table('pessoa_j')->insert([
-            'cnpj' => '',
+            'cnpj' => '40.495.111/0001-30',
             'nome_fantasia' => '',
-            'razao_social'=>'Teriaki Millenium',
+            'razao_social'=> 'Rocha Madereira',
             'segmento' => '',
             'cliente_id' => 21,
         ]);
 
         DB::table('pessoa_j')->insert([
-            'cnpj' => '',
+            'cnpj' => '21.749.664/0001-28',
             'nome_fantasia' => '',
-            'razao_social'=>'Stop Nill Kalilandia',
+            'razao_social'=>'Restaurante Pai Thomaz',
             'segmento' => '',
             'cliente_id' => 22,
         ]);
@@ -349,14 +349,6 @@ class PessoaJTableSeeder extends Seeder
         ]);
 
         DB::table('pessoa_j')->insert([
-            'cnpj' => '',
-            'nome_fantasia' => '',
-            'razao_social'=>'Tim Nibal',
-            'segmento' => '',
-            'cliente_id' => 43,
-        ]);
-
-        DB::table('pessoa_j')->insert([
             'cnpj' => '10.140.261/0001-60',
             'nome_fantasia' => '',
             'razao_social'=>'Skina João Durval',
@@ -495,6 +487,30 @@ class PessoaJTableSeeder extends Seeder
             'razao_social'=>'Sorveteria Nestle',
             'segmento' => '',
             'cliente_id' => 60,
+        ]);
+
+        DB::table('pessoa_j')->insert([
+            'cnpj' => '',
+            'nome_fantasia' => '',
+            'razao_social'=> 'Stop Nill Kalilandia',
+            'segmento' => '',
+            'cliente_id' => 61,
+        ]);
+
+        DB::table('pessoa_j')->insert([
+            'cnpj' => '',
+            'nome_fantasia' => '',
+            'razao_social'=>'Teriaki Millenium',
+            'segmento' => '',
+            'cliente_id' => 62,
+        ]);
+
+        DB::table('pessoa_j')->insert([
+            'cnpj' => '',
+            'nome_fantasia' => '',
+            'razao_social'=>'Tim Nibal',
+            'segmento' => '',
+            'cliente_id' => 63,
         ]);
     }
 }

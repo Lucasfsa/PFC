@@ -18,7 +18,7 @@ class CreateClienteAcsnTable extends Migration
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->integer('acsn_id')->unsigned();
             $table->foreign('acsn_id')->references('id')->on('acsn');
-            $table->integer('chave_id')->unsigned();
+            $table->integer('chave_id')->unsigned()->nullable();
             $table->foreign('chave_id')->references('id')->on('chaves');
             $table->primary(['cliente_id', 'acsn_id']);
             $table->timestamps();

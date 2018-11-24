@@ -18,7 +18,7 @@ class CreateClienteSyspdvTable extends Migration
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->integer('syspdv_id')->unsigned();
             $table->foreign('syspdv_id')->references('id')->on('syspdv');
-            $table->integer('chave_id')->unsigned();
+            $table->integer('chave_id')->unsigned()->nullable();
             $table->foreign('chave_id')->references('id')->on('chaves');
             $table->primary(['cliente_id', 'syspdv_id']);
             $table->timestamps();
