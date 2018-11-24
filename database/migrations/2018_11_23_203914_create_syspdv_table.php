@@ -14,8 +14,7 @@ class CreateSyspdvTable extends Migration
     public function up()
     {
         Schema::create('syspdv', function (Blueprint $table) {
-            $table->integer('cliente_software_id')->unsigned();
-            $table->foreign('cliente_software_id')->references('id')->on('cliente_software');
+            $table->increments('id');
             $table->integer('controle');
             $table->integer('versao');
             $table->integer('serie');

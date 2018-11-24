@@ -14,8 +14,7 @@ class CreateEcleticaTable extends Migration
     public function up()
     {
         Schema::create('ecletica', function (Blueprint $table) {
-            $table->integer('cliente_software_id')->unsigned();
-            $table->foreign('cliente_software_id')->references('id')->on('cliente_software');
+            $table->increments('id');
             $table->integer('cod_rede');
             $table->string('cod_loja');
             $table->timestamps();

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSoftwaresTable extends Migration
+class CreatePessoaFTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSoftwaresTable extends Migration
      */
     public function up()
     {
-        Schema::create('softwares', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nome_software', 20);
-            $table->string('logo_software')->nullable();
-            $table->timestamps();
+        Schema::create('pessoa_f', function (Blueprint $table) {
+            $table->string('cpf', 14)->unique();
+            $table->string('nome');
+            $table->integer('cliente_id')->unsigned();
+            $table->foreign('cliente_id')->references('id')->on('clientes');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateSoftwaresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('softwares');
+        Schema::dropIfExists('pessoa_f');
     }
 }

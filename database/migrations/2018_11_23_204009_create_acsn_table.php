@@ -14,8 +14,7 @@ class CreateAcsnTable extends Migration
     public function up()
     {
         Schema::create('acsn', function (Blueprint $table) {
-            $table->integer('cliente_software_id')->unsigned();
-            $table->foreign('cliente_software_id')->references('id')->on('cliente_software');
+            $table->increments('id');
             $table->integer('contrato');
             $table->timestamps();
         });
