@@ -15,9 +15,6 @@ class CreatePessoaJTable extends Migration
     {
         Schema::create('pessoa_j', function (Blueprint $table) {
             $table->string('cnpj', 18);
-            $table->string('nome_fantasia');
-            $table->string('razao_social');
-            $table->string('segmento');
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
         });

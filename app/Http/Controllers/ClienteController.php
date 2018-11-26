@@ -21,7 +21,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('razao_social', 'asc')->get();
+        $clientes = Cliente::with('ecletica')->get();
         return view('clientes.clientes-lista', compact('clientes'));
     }
 

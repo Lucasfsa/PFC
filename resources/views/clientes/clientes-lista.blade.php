@@ -32,12 +32,12 @@
                                     <th>Razão Social
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
-                                    <th>CNPJ
+                                    <th>CPF / CNPJ
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
-                                    <th>Sistema
+                                    {{-- <th>Sistema
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
-                                    </th>
+                                    </th> --}}
                                     <th class="text-center">Detalhes</th>
                                 </tr>
                             </thead>
@@ -61,19 +61,19 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if ($c->cnpj != null)
-                                        {{ $c->cnpj }}
+                                        @if ($c->pessoa_j["cnpj"] != null)
+                                        {{ $c->pessoa_j["cnpj"] }}
                                         @else
                                         -
                                         @endif
                                     </td>
-                                    <td>
-                                        @if ($c->software["nome_software"] != null)
-                                            {{ $c->software["nome_software"] }}
+                                    {{-- <td>
+                                        @if ($c->sistema != null)
+                                            {{ $c->sistema }}
                                         @else
                                         -
                                         @endif
-                                    </td>
+                                    </td> --}}
                                     <td class="text-center">
                                         <button type="button" class="btn btn-bc btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
                                             <span class="fas fa-info"></span>
