@@ -49,11 +49,11 @@ Route::post('/cadastro/usuario', 'UserController@store')->middleware('auth');
 //Página de Configuração
 Route::get('/configurar', 'ConfiguracaoController@index')->middleware('auth')->middleware('auth');
 Route::get('/configurar', 'ConfiguracaoController@index');
-Route::get('/configurar/redefinir-senha/', 'FuncionarioController@editSenha');
-Route::post('/configurar/redefinir-senha/','FuncionarioController@updateSenha');
-Route::get('/configurar/redefinir-nome/', 'FuncionarioController@editNome');
-Route::post('/configurar/redefinir-nome/','FuncionarioController@updateNome');
-Route::get('/configurar/desativar-funcionario', 'FuncionarioController@destroy');
+Route::get('/configurar/redefinir-senha/', 'UserController@editSenha');
+Route::post('/configurar/redefinir-senha/','UserController@updateSenha');
+Route::get('/configurar/redefinir-nome/', 'UserController@editNome');
+Route::post('/configurar/redefinir-nome/','UserController@updateNome');
+Route::get('/configurar/desativar-funcionario', 'UserController@destroy');
 
 //Página de Configuração - Redefinir Senha/Email/Nome/desativar conta
 Route::get('/configurar/redefinir-senha', 'ConfiguracaoController@RedefinirSenha')->middleware('auth');
@@ -62,7 +62,7 @@ Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta
 
 Route::get('esqueci-minha-senha', 'SenhaController@index');
 
-Route::get('/chave/historico', 'ChaveHistoricoController@index')->middleware('auth');
+Route::get('/chave/historico', 'ChaveController@index')->middleware('auth');
 
 Route::get('/chave/registrar', 'ChaveRegistroController@create')->middleware('auth');
 Route::post('/chave/registrar', 'ChaveRegistroController@store')->middleware('auth');

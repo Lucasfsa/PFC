@@ -8,7 +8,7 @@ class Ecletica extends Model
 {
     protected $table = 'ecletica';
 
-    public function clientes(){
-        return $this->belongsToMany('App\Cliente', 'cliente_ecletica');
+    public function cliente(){
+        return $this->belongsToMany('App\Cliente', 'cliente_ecletica')->withPivot('chave_id');
     }
 }

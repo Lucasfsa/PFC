@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cliente;
+use App\Ecletica;
 
 class ChaveController extends Controller
 {
@@ -13,7 +15,8 @@ class ChaveController extends Controller
      */
     public function index()
     {
-        //
+        $clientes = Cliente::with('ecletica', 'cliente_ecletica')->get();
+        return view('chaves.chaves-historico', compact('clientes'));
     }
 
     /**

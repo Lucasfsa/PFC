@@ -27,6 +27,10 @@ class Cliente extends Model
     }
 
     public function ecletica(){
-        return $this->belongsToMany('App\Ecletica', 'cliente_ecletica');
+        return $this->belongsToMany('App\Ecletica', 'cliente_ecletica')->withPivot('chave_id');
+    }
+
+    public function cliente_ecletica(){
+        return $this->hasMany('App\ClienteEcletica');
     }
 }
