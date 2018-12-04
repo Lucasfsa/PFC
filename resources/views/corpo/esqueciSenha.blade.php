@@ -15,12 +15,12 @@
             <h3 align="center">Redefinir Senha</h3>
 
             <div id="legenda">
-                <i>Insira um endereço de e-mail e será enviado um link para redefinição da sua senha.</i>
+                <p>Insira o endereço de e-mail vinculado a sua conta e será enviado um link para redefinição de sua senha.</p>
             </div>
 
             <input class="inputredefinir" type="email" name="enviaremail" placeholder="Digite o seu endereço de e-mail...">
 
-            <button class="buttonredefinir" type="submit" >Enviar</button>
+            <button class="buttonredefinir" type="submit">Enviar</button>
         </div>
     </div>
 </div>

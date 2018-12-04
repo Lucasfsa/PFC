@@ -20,7 +20,7 @@
             <img src="{{ asset('imagem/img001.png') }}">
 
             <div class="titulo">
-                <h2>Seja bem-vindo {{ Auth::user()->name }}</h2>
+                <h2>Seja bem-vindo, {{ Auth::user()->name }}</h2>
             </div>
 
             <a class="btn" href="{{ url('/clientes') }}">
