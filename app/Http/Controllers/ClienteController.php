@@ -32,8 +32,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        $softs = Software::all();
-        return view('clientes.cliente-cadastro',compact('softs'));
+        return view('clientes.cliente-cadastro');
     }
 
     /**
@@ -90,7 +89,7 @@ class ClienteController extends Controller
             $software->save();
         }
 
-        return redirect('/cadastro/cliente')->with('alert', 'Cliente Cadastrado!');
+        return redirect('/clientes/cadastro')->with('alert', 'Cliente Cadastrado!');
     }
 
     /**

@@ -23,34 +23,39 @@ class ClienteRequest extends FormRequest
      */
     public function rules()
     {
-        
-        if($this->software == null){
-            $rules = ['software' => 'required'];
+
+        if($this->docOptions == "cnpj") {
+            $doc = ['cnpj' => 'required|min:18|unique:pessoa_j'];
+        } else {
+            $doc = ['cpf' => 'required|min:14|unique:pessoa_f'];
         }
-        else if ($this->software == 1) {
-            $rules = [
-                'controle' => 'required',
-                'versao' => 'required',
-                'serie' => 'required'
-            ];
-        }
-        else if($this->software == 2){
-            $rules = ['contrato' => 'required'];
-        }
-        else if($this->software == 3){
-            $rules = [
-                'cod_rede' => 'required',
-                'cod_loja' => 'required'
-            ];
-        }
+
+        // if($this->software == null){
+        //     $rules = ['software' => 'required'];
+        // }
+        // else if ($this->software == 1) {
+        //     $rules = [
+        //         'controle' => 'required',
+        //         'versao' => 'required',
+        //         'serie' => 'required'
+        //     ];
+        // }
+        // else if($this->software == 2){
+        //     $rules = ['contrato' => 'required'];
+        // }
+        // else if($this->software == 3){
+        //     $rules = [
+        //         'cod_rede' => 'required',
+        //         'cod_loja' => 'required'
+        //     ];
+        // }
 
         return [
             'nome_fantasia' => 'required',
             'razao_social' => 'required|unique:clientes',
-            'cnpj' => 'required|min:18|unique:clientes',
             'email' => 'required|email',
             'telefone' => 'required|min:14',
-        ]+$rules;
+        ]+$doc;
     }
 
     public function messages()

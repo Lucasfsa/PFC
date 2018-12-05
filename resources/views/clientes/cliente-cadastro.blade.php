@@ -9,7 +9,7 @@
 @section('escopo')
 
 <div class="block-content">
-    <form action="/cadastro/cliente" method="post" class="row">
+    <form action="/clientes/cadastro" method="post" class="row">
         @csrf
         <div class="container-fluid cadastro mt-4">
             <div class="row">
@@ -49,6 +49,40 @@
                             <h5 class="sub-title my-4">Informações da Empresa</h5>
                         </div>
 
+                        <div class="col-12 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="cpf" name="docOptions" value="cpf" checked>
+                                <label class="form-check-label" for="cpf">
+                                    <strong>CPF</strong>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="cnpj" name="docOptions" value="cnpj">
+                                <label class="form-check-label" for="cnpj">
+                                    <strong>CNPJ</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="cpf" class="col-12" style="display: none;">
+                            <div class="form-row">
+                                <div class="form-group col-lg-4 col-md-5 col-sm-6 col-xs-12 {{ $errors->has('cpf') ? 'has-error' : '' }}">
+                                    <label for="cpf"><strong>* CPF</strong></label>
+                                    <input placeholder="CPF" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}">
+                                    <span class="text-danger">{{ $errors->first('cpf') }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cnpj" class="col-12" style="display: none;">
+                            <div class="form-row">
+                                <div class="form-group col-lg-4 col-md-5 col-sm-6 col-xs-12 {{ $errors->has('cnpj') ? 'has-error' : '' }}">
+                                    <label for="cnpj"><strong>* CNPJ</strong></label>
+                                    <input placeholder="CNPJ" type="text" class="form-control" name="cnpj" value="{{ old('cnpj') }}">
+                                    <span class="text-danger">{{ $errors->first('cnpj') }}</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="form-group {{ $errors->has('nome_fantasia') ? 'has-error' : '' }}">
                                 <label for="nome_fantasia"><strong>* Nome Fantasia</strong></label>
@@ -65,11 +99,7 @@
                                     <span class="text-danger">{{ $errors->first('razao_social') }}</span>
                                 </div>
 
-                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6 {{ $errors->has('cnpj') ? 'has-error' : '' }}">
-                                    <label for="cnpj"><strong>* CNPJ</strong></label>
-                                    <input placeholder="CNPJ" type="text" class="form-control" name="cnpj" value="{{ old('cnpj') }}" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );" >
-                                    <span class="text-danger">{{ $errors->first('cnpj') }}</span>
-                                </div>
+
                             </div>
                         </div>
 
@@ -111,9 +141,9 @@
                                 <label for="software"><strong>* Software</strong></label>
                                 <select id="software" name="software" class="form-control" value="{{ old('software') }}">
                                     <option disabled selected>Selecione</option>
-                                    @foreach($softs as $s)
+                                    {{-- @foreach($softs as $s)
                                         <option value="{{ $s->id }}">{{ $s->nome_software }}</option>
-                                    @endforeach
+                                    @endforeach --}}
                                 </select>
                                 <span class="text-danger">{{ $errors->first('software') }}</span>
                             </div>
@@ -184,6 +214,6 @@
 @endsection
 
 @section('scripts')
-<script src="{{ asset('js/formatar-input.js') }}"></script>
 <script src="{{ asset('js/show.input.js') }}"></script>
+<script src="{{ asset('js/formatar-input.js') }}"></script>
 @endsection

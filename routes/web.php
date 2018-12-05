@@ -22,12 +22,18 @@ Route::get('/home', 'HomeController@index')->middleware('auth');
 
 Route::get('/soft', 'SoftwareController@index')->middleware('auth');
 
+Route::prefix('clientes')->group(function() {
+
+    Route::get('/cadastro', 'ClienteController@create')->middleware('auth');
+    Route::post('/cadastro', 'ClienteController@store')->middleware('auth');
+
+});
+
 //Lista de Clientes
 Route::get('/clientes', 'ClienteController@index')->middleware('auth');
 
 //Cadastro de cliente
-Route::get('/cadastro/cliente', 'ClienteController@create')->middleware('auth');
-Route::post('/cadastro/cliente', 'ClienteController@store')->middleware('auth');
+
 
 //Editar Dados do Cliente
 Route::get('/cliente/{id}/dados', 'ClienteController@edit')->middleware('auth');

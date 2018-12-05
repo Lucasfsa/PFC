@@ -34,7 +34,7 @@
                             <a href="{{ url('/clientes') }}">Lista de Clientes</a>
                         </li>
                         <li>
-                            <a href="{{ url('/cadastro/cliente') }}">Cadastrar Cliente</a>
+                            <a href="{{ url('/clientes/cadastro') }}">Cadastrar Cliente</a>
                         </li>
                         <li>
                             <a href="{{ url('/clientes/removidos') }}">Clientes Removidos</a>
