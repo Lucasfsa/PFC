@@ -33,7 +33,7 @@
     border-color: transparent;
     border-radius: 3px;
     margin-left: 3%;
-    margin-top: 5%;
+    margin-top: 3%;
 
 
 }
@@ -68,7 +68,7 @@
 
 }
 
-#legenda i{
+#legenda p{
     font-family: Comforta;
     color:#3c5baa;
     font-style: normal;
