@@ -1,9 +1,9 @@
-$("input[name=docOptions]").on("click", function() {
-    var valor = $("input[name=docOptions]:checked").val();
+$("input[name=opt]").on("click", function() {
+    var valor = $("input[name=opt]:checked").val();
 
     if(valor == "cpf"){
         $("div#cpf").show();
-        $("input[name=cpf]").prop('required',true);
+        // $("input[name=cpf]").prop('required',true);
     } else {
         $("div#cpf").hide();
         $("input[name=cpf]").val('');
@@ -12,7 +12,7 @@ $("input[name=docOptions]").on("click", function() {
 
     if(valor == "cnpj"){
         $("div#cnpj").show();
-        $("input[name=cnpj]").prop('required',true);
+        // $("input[name=cnpj]").prop('required',true);
     } else {
         $("div#cnpj").hide();
         $("input[name=cnpj]").val('');
@@ -27,9 +27,9 @@ $('#software').bind('change', function(event) {
     if(i == 1)
     {
         $('#syspdv').show();// By using this id you can show your content
-        $("input[name=controle]").prop('required',true);
-        $("input[name=versao]").prop('required',true);
-        $("input[name=serie]").prop('required',true);
+        // $("input[name=controle]").prop('required',true);
+        // $("input[name=versao]").prop('required',true);
+        // $("input[name=serie]").prop('required',true);
     }
     else
     {
@@ -45,7 +45,7 @@ $('#software').bind('change', function(event) {
     if(i == 2)
     {
         $('#acsn').show();// By using this id you can show your content
-        $("input[name=contrato]").prop('required',true);
+        // $("input[name=contrato]").prop('required',true);
     }
     else
     {
@@ -57,8 +57,8 @@ $('#software').bind('change', function(event) {
     if(i == 3)
     {
         $('#ecletica').show();// By using this id you can show your content
-        $("input[name=cod_rede]").prop('required',true);
-        $("input[name=cod_loja]").prop('required',true);
+        // $("input[name=cod_rede]").prop('required',true);
+        // $("input[name=cod_loja]").prop('required',true);
     }
     else
     {
@@ -67,5 +67,10 @@ $('#software').bind('change', function(event) {
         $("input[name=cod_rede]").prop('required',false);
         $("input[name=cod_loja]").val('');
         $("input[name=cod_loja]").prop('required',false);
+    }
+
+    if(i != null)
+    {
+        $('#add').show();
     }
 });

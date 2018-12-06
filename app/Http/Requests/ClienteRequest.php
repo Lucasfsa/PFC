@@ -24,54 +24,60 @@ class ClienteRequest extends FormRequest
     public function rules()
     {
 
-        if($this->docOptions == "cnpj") {
-            $doc = ['cnpj' => 'required|min:18|unique:pessoa_j'];
-        } else {
+        if($this->opt == "cpf") {
             $doc = ['cpf' => 'required|min:14|unique:pessoa_f'];
+        } else {
+            $doc = ['cnpj' => 'required|min:18|unique:pessoa_j'];
         }
 
-        // if($this->software == null){
-        //     $rules = ['software' => 'required'];
-        // }
-        // else if ($this->software == 1) {
-        //     $rules = [
-        //         'controle' => 'required',
-        //         'versao' => 'required',
-        //         'serie' => 'required'
-        //     ];
-        // }
-        // else if($this->software == 2){
-        //     $rules = ['contrato' => 'required'];
-        // }
-        // else if($this->software == 3){
-        //     $rules = [
-        //         'cod_rede' => 'required',
-        //         'cod_loja' => 'required'
-        //     ];
-        // }
+        if($this->software == null){
+            $rules = ['software' => 'required'];
+        }
+        else if ($this->software == 1) {
+            $rules = [
+                'controle' => 'required',
+                'versao' => 'required',
+                'serie' => 'required'
+            ];
+        }
+        else if($this->software == 2){
+            $rules = ['contrato' => 'required'];
+        }
+        else if($this->software == 3){
+            $rules = [
+                'cod_rede' => 'required',
+                'cod_loja' => 'required'
+            ];
+        }
 
         return [
-            'nome_fantasia' => 'required',
             'razao_social' => 'required|unique:clientes',
+            'nome_fantasia' => 'required',
             'email' => 'required|email',
             'telefone' => 'required|min:14',
-        ]+$doc;
+        ]+$doc+$rules;
     }
 
     public function messages()
     {
         return [
-            'nome_fantasia.required' => 'O campo Nome Fantasia é obrigatório.',
             'razao_social.required' => 'O campo Razão Social é obrigatório.',
             'razao_social.unique' => 'Esta Razão Social já está registrada.',
-            'cnpj.required' => 'O campo CNPJ é obrigatório.',
-            'cnpj.unique' => 'Este CNPJ já está registrado.',
-            'cnpj.min' => 'O CNPJ tem 14 números.',
-            'software.required' => 'Selecione um tipo de Software.',
+            'nome_fantasia.required' => 'O campo Nome Fantasia é obrigatório.',
             'email.required' => 'O campo E-mail é obrigatório.',
             'email.email' => 'O E-mail informado não é válido.',
             'telefone.required' => 'O campo Telefone é obrigatório.',
             'telefone.min' => 'O Telefone tem 11 digitos.',
+
+            'cpf.required' => 'O campo CPF é obrigatório.',
+            'cpf.unique' => 'Este CPF já está registrado.',
+            'cpf.min' => 'O CPF tem 11 números.',
+
+            'cnpj.required' => 'O campo CNPJ é obrigatório.',
+            'cnpj.unique' => 'Este CNPJ já está registrado.',
+            'cnpj.min' => 'O CNPJ tem 14 números.',
+
+            'software.required' => 'Selecione um tipo de Software.',
 
             'controle.required' => 'O campo Controle é obrigatório.',
             'versao.required' => 'O campo Versão é obrigatório.',
