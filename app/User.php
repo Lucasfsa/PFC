@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Notifications\ResetPassword;
 
 class User extends Authenticatable
 {
@@ -39,4 +40,10 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function sendPasswordResetNotification($token)
+{
+    
+    $this->notify(new ResetPassword($token));
+}
 }
