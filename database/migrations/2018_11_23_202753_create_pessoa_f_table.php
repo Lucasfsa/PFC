@@ -17,6 +17,7 @@ class CreatePessoaFTable extends Migration
             $table->string('cpf', 14);
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->timestamps();
         });
     }
 

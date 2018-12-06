@@ -50,12 +50,12 @@ class ClienteRequest extends FormRequest
             ];
         }
 
-        return [
+        return $doc+[
             'razao_social' => 'required|unique:clientes',
             'nome_fantasia' => 'required',
             'email' => 'required|email',
             'telefone' => 'required|min:14',
-        ]+$doc+$rules;
+        ]+$rules;
     }
 
     public function messages()

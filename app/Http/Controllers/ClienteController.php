@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ClienteRequest;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
-use App\Software;
-use App\ClienteSoftware;
+use App\PessoaJ;
+use App\PessoaF;
 use App\Syspdv;
 use App\Acsn;
 use App\Ecletica;
@@ -46,7 +46,6 @@ class ClienteController extends Controller
         $cliente = new Cliente();
         $cliente->nome_fantasia = $request->input('nome_fantasia');
         $cliente->razao_social = $request->input('razao_social');
-        $cliente->cnpj = $request->input('cnpj');
         $cliente->segmento = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
@@ -56,37 +55,46 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        $cliente_software = new ClienteSoftware();
-        $cliente_software->cliente_id = $cliente->id;
-        $cliente_software->software_id = $request->input('software');
+        if($request->opt == 'cnpj') {
+            $cnpj = new PessoaJ();
+            $cnpj->cnpj = $request->input('cnpj');
 
-        $cliente_software->save();
-
-        if($request->input('software') == 1){
-            $software = new Syspdv();
-            $software->cliente_software_id = $cliente_software->id;
-            $software->controle = $request->input('controle');
-            $software->versao = $request->input('versao');
-            $software->serie = $request->input('serie');
-
-            $software->save();
+            $cliente->pessoa_j()->save($cnpj);
         }
 
-        else if($request->input('software') == 2){
-            $software = new Acsn();
-            $software->cliente_software_id = $cliente_software->id;
-            $software->contrato = $request->input('contrato');
+        else if($request->opt == 'cpf') {
+            $cpf = new PessoaF();
+            $cpf->cpf = $request->input('cpf');
 
-            $software->save();
+            $cliente->pessoa_f()->save($cpf);
         }
 
-        else if($request->input('software') == 3){
-            $software = new Ecletica();
-            $software->cliente_software_id = $cliente_software->id;
-            $software->cod_rede = $request->input('cod_rede');
-            $software->cod_loja = $request->input('cod_loja');
 
-            $software->save();
+        if($request->input('software') == 1) {
+            $syspdv = new Syspdv();
+            $syspdv->controle = $request->input('controle');
+            $syspdv->versao = $request->input('versao');
+            $syspdv->serie = $request->input('serie');
+
+            $syspdv->save();
+            $cliente->syspdv()->sync($syspdv);
+        }
+
+        else if($request->input('software') == 2) {
+            $acsn = new Acsn();
+            $acsn->contrato = $request->input('contrato');
+
+            $acsn->save();
+            $cliente->acsn()->sync($acsn);
+        }
+
+        else if($request->input('software') == 3) {
+            $ecletica = new Ecletica();
+            $ecletica->cod_rede = $request->input('cod_rede');
+            $ecletica->cod_loja = $request->input('cod_loja');
+
+            $ecletica->save();
+            $cliente->ecletica()->sync($ecletica);
         }
 
         return redirect('/clientes/cadastro')->with('alert', 'Cliente Cadastrado!');

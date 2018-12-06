@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Cliente extends Model
 {
     protected $fillable = [
-        'nome_fantasia', 'razao_social', 'segmento', 'email', 'telefone',
+        'nome_fantasia', 'razao_social', 'segmento', 'email', 'telefone', 'user_id'
     ];
 
     use SoftDeletes;
@@ -18,19 +18,26 @@ class Cliente extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function pessoa_f(){
-        return $this->hasOne('App\PessoaF');
-    }
-
     public function pessoa_j(){
         return $this->hasOne('App\PessoaJ');
     }
 
-    public function ecletica(){
-        return $this->belongsToMany('App\Ecletica', 'cliente_ecletica')->withPivot('chave_id');
+    public function pessoa_f(){
+        return $this->hasOne('App\PessoaF');
     }
 
-    public function cliente_ecletica(){
-        return $this->hasMany('App\ClienteEcletica');
+    public function syspdv()
+    {
+        return $this->belongsToMany('App\Syspdv', 'cliente_syspdv', 'cliente_id', 'syspdv_id');
+    }
+
+    public function acsn()
+    {
+        return $this->belongsToMany('App\Acsn', 'cliente_acsn', 'cliente_id', 'acsn_id');
+    }
+
+    public function ecletica()
+    {
+        return $this->belongsToMany('App\Ecletica', 'cliente_ecletica', 'cliente_id', 'ecletica_id');
     }
 }

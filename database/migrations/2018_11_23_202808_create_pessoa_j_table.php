@@ -17,6 +17,7 @@ class CreatePessoaJTable extends Migration
             $table->string('cnpj', 18);
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->timestamps();
         });
     }
 
