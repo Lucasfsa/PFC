@@ -13,7 +13,7 @@ class SenhaController extends Controller
      */
     public function index()
     {
-        return view('corpo/esqueciSenha');
+        return view('auth.passwords.email');
     }
 
     /**
