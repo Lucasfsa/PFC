@@ -21,7 +21,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::with('ecletica')->get();
+        $clientes = Cliente::all();
         return view('clientes.clientes-lista', compact('clientes'));
     }
 
