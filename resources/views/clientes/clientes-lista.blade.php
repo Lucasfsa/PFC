@@ -35,9 +35,9 @@
                                     <th>CPF / CNPJ
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
-                                    {{-- <th>Sistema
+                                    <th>Segmento
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
-                                    </th> --}}
+                                    </th>
                                     <th class="text-center">Detalhes</th>
                                 </tr>
                             </thead>
@@ -57,23 +57,25 @@
                                         @if ($c->razao_social != null)
                                             {{ $c->razao_social }}
                                         @else
-                                        -
+                                            -
                                         @endif
                                     </td>
                                     <td>
                                         @if ($c->pessoa_j["cnpj"] != null)
-                                        {{ $c->pessoa_j["cnpj"] }}
+                                            {{ $c->pessoa_j["cnpj"] }}
+                                        @elseif ($c->pessoa_f["cpf"] != null)
+                                            {{ $c->pessoa_f["cpf"] }}
                                         @else
-                                        -
+                                            -
                                         @endif
                                     </td>
-                                    {{-- <td>
-                                        @if ($c->sistema != null)
-                                            {{ $c->sistema }}
+                                    <td>
+                                        @if ($c->segmento != null)
+                                            {{ $c->segmento }}
                                         @else
-                                        -
+                                            -
                                         @endif
-                                    </td> --}}
+                                    </td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-bc btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
                                             <span class="fas fa-info"></span>
@@ -90,11 +92,46 @@
                                             </div>
                                             <div class="modal-body">
                                                 <p>Razão Social: {{ $c->razao_social }}</p>
-                                                <p>CNPJ: {{ $c->cnpj }}</p>
-                                                <p>Segmento: {{ $c->segmento_mercado }}</p>
-                                                <p>Sistema Contratado: {{ $c->software['nome_software'] }}</p>
+                                                <p>CPF/CNPJ:
+                                                    @if($c->pessoa_j["cnpj"] != null)
+                                                        {{ $c->pessoa_j["cnpj"] }}
+                                                    @else
+                                                        {{ $c->pessoa_f["cpf"] }}
+                                                    @endif
+                                                </p>
+                                                <p>Segmento: {{ $c->segmento }}</p>
                                                 <p>Email: {{ $c->email }}</p>
                                                 <p>Telefone: {{ $c->telefone }}</p>
+                                                <ul class="list-unstyled components">
+
+                                                    <li>
+                                                        <a href="#sistemaSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sistema Contratado</a>
+                                                        <ul class="collapse list-unstyled" id="sistemaSubMenu">
+                                                            <li>
+                                                                @foreach ($c->syspdv as $s)
+                                                                    SYSPDV
+                                                                    <p>Controle: {{ $s->controle }}</p>
+                                                                    <p>Versão: {{ $s->versao }}</p>
+                                                                    <p>Série: {{ $s->serie }}</p>
+                                                                @endforeach
+                                                            </li>
+                                                            <li>
+                                                                @foreach ($c->acsn as $a)
+                                                                    ACSN
+                                                                    <p>Contrato: {{ $a->contrato }}</p>
+                                                                @endforeach
+                                                            </li>
+                                                            <li>
+                                                                @foreach ($c->ecletica as $e)
+                                                                    ECLÉTICA
+                                                                    <p>Código da Rede: {{ $e->cod_rede }}</p>
+                                                                    <p>Código da Loja: {{ $e->cod_loja }}</p>
+                                                                @endforeach
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
                                                 <p>Registrado por: {{ $c->user['name'] }}</p>
                                             </div>
                                             <div class="modal-footer">

@@ -12,7 +12,6 @@ class ClientesTableSeeder extends Seeder
      */
     public function run()
     {
-        /*=====================CLIENTES SYSPDV=========================*/
         DB::table('clientes')->insert([
             'nome_fantasia' => '',
             'razao_social'=>'Brito Pimentel',

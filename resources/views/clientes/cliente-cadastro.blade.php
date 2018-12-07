@@ -187,7 +187,7 @@
 
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12 {{ $errors->has('cod_loja') ? 'has-error' : '' }}">
                                     <label for="cod_loja"><strong>* Código da Loja</strong></label>
-                                    <input placeholder="Código da Loja" type="text" class="form-control" name="cod_loja" value="{{ old('cod_loja') }}" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
+                                    <input placeholder="Código da Loja" type="text" class="form-control" name="cod_loja" value="{{ old('cod_loja') }}">
                                     <span class="text-danger">{{ $errors->first('cod_loja') }}</span>
                                 </div>
                             </div>

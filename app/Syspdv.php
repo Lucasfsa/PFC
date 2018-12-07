@@ -12,6 +12,6 @@ class Syspdv extends Model
 
     public function cliente()
     {
-        return $this->belongsToMany('App\Cliente', 'cliente_syspdv', 'cliente_id', 'syspdv_id');
+        return $this->belongsToMany('App\Cliente', 'cliente_syspdv');
     }
 }
