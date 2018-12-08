@@ -119,9 +119,8 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        $softs = Software::all();
         $c = Cliente::find($id);
-        return view('clientes.cliente-dados', compact('softs', 'c'));
+        return view('clientes.cliente-dados', compact('c'));
     }
 
     /**
@@ -136,16 +135,13 @@ class ClienteController extends Controller
         $cliente = Cliente::find($id);
         $cliente->nome_fantasia = $request->input('nome_fantasia');
         $cliente->razao_social = $request->input('razao_social');
-        $cliente->cnpj = $request->input('cnpj');
         $cliente->segmento = $request->input('segmento');
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
 
-        $cliente->software_id = $request->input('software');
-
         $cliente->save();
 
-        return redirect('/cliente/{id}/dados');
+        return redirect('/clientes/{id}/dados');
     }
 
     /**

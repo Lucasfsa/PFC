@@ -135,7 +135,7 @@
                                                 <p>Registrado por: {{ $c->user['name'] }}</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-bc" onclick="window.location='/cliente/{{ $c->id }}/dados'">Editar Informações</button>
+                                                <button type="button" class="btn btn-bc" onclick="window.location='/clientes/{{ $c->id }}/dados'">Editar Informações</button>
                                             </div>
                                         </div>
                                     </div>
