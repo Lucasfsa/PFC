@@ -119,7 +119,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        $c = Cliente::find($id);
+        $c = Cliente::findOrFail($id);
         return view('clientes.cliente-dados', compact('c'));
     }
 
@@ -139,9 +139,14 @@ class ClienteController extends Controller
         $cliente->email = $request->input('email');
         $cliente->telefone = $request->input('telefone');
 
-        $cliente->save();
+        $cnpj = ['cnpj' => $request->input('cnpj')];
+        $cpf = ['cpf' => $request->input('cpf')];
 
-        return redirect('/clientes/{id}/dados');
+        $cliente->save();
+        $cliente->pessoa_j()->update($cnpj);
+        $cliente->pessoa_f()->update($cpf);
+
+        return redirect('/clientes/'.$id.'/dados')->with('alert', 'Dados Alterados!');
     }
 
     /**

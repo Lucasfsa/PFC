@@ -32,11 +32,11 @@ Route::prefix('clientes')->group(function() {
     Route::post('/cadastro', 'ClienteController@store')->middleware('auth');
 
     //Editar Dados do Cliente
+    Route::get('/{id}/dados', 'ClienteController@edit')->middleware('auth');
+    Route::post('/{id}/dados', 'ClienteController@update')->middleware('auth');
 
 });
 
-Route::get('/clientes/{id}/dados', 'ClienteController@edit')->middleware('auth');
-Route::post('/clientes/{id}/dados', 'ClienteController@update')->middleware('auth');
 
 
 

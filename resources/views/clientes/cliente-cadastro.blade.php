@@ -67,7 +67,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-4 col-md-5 col-sm-6 col-xs-12 {{ $errors->has('cpf') ? 'has-error' : '' }}">
                                     <label for="cpf"><strong>* CPF</strong></label>
-                                    <input placeholder="CPF" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" maxlength="18" onkeydown="javascript: fMasc( this, mCPF );">
+                                    <input placeholder="CPF" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );">
                                     <span class="text-danger">{{ $errors->first('cpf') }}</span>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
 @section('escopo')
 
 <div class="block-content">
-    <form action="/clientes/{{ $c->id }}/dados" method="post" class="row">
+    <form action="/clientes/{{ $c->id }}/dados" method="POST" class="row">
         @csrf
         <div class="container-fluid cadastro mt-4">
             <div class="row">
@@ -21,8 +21,32 @@
                             <hr>
                         </div>
 
+                        @if (session('alert'))
+                        <div class="alert col-md-4 mx-auto mb-0">
+                            <div class="msg msg-success text-success">
+                                <i class="fa fa-check"></i>
+                                <strong>{{ session('alert') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        @endif
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <h5 class="sub-title my-4">Informações da Empresa</h5>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                @if($c->pessoa_j == true)
+                                    <label for="cnpj"><strong>CNPJ</strong></label>
+                                    <input value="{{ $c->pessoa_j["cnpj"] }}" type="text" class="form-control" name="cnpj" maxlength="18" onkeydown="javascript: fMasc( this, mCNPJ );">
+                                @elseif($c->pessoa_f == true)
+                                    <label for="cpf"><strong>CPF</strong></label>
+                                    <input value="{{ $c->pessoa_f["cpf"] }}" type="text" class="form-control" name="cpf" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );">
+                                @endif
+                            </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
