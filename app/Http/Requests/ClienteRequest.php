@@ -30,24 +30,35 @@ class ClienteRequest extends FormRequest
             $doc = ['cnpj' => 'required|min:18|unique:pessoa_j'];
         }
 
-        if($this->software == null){
-            $rules = ['software' => 'required'];
-        }
-        else if ($this->software == 1) {
-            $rules = [
+        if ($this->syspdv == true) {
+            $s = [
                 'controle' => 'required',
                 'versao' => 'required',
                 'serie' => 'required'
             ];
+        } else {
+            $s = [];
         }
-        else if($this->software == 2){
-            $rules = ['contrato' => 'required'];
+
+        if($this->acsn == true){
+            $a = ['contrato' => 'required'];
+        } else {
+            $a = [];
         }
-        else if($this->software == 3){
-            $rules = [
+
+        if($this->ecletica == true){
+            $e = [
                 'cod_rede' => 'required',
                 'cod_loja' => 'required'
             ];
+        } else {
+            $e = [];
+        }
+
+        if ($this->syspdv == false && $this->acsn == false && $this->ecletica == false) {
+            $s = ['sistema' => 'required'];
+            $a = ['sistema' => 'required'];
+            $e = ['sistema' => 'required'];
         }
 
         return $doc+[
@@ -55,7 +66,7 @@ class ClienteRequest extends FormRequest
             'nome_fantasia' => 'required',
             'email' => 'required|email',
             'telefone' => 'required|min:14',
-        ]+$rules;
+        ]+$s+$a+$e;
     }
 
     public function messages()
@@ -77,7 +88,7 @@ class ClienteRequest extends FormRequest
             'cnpj.unique' => 'Este CNPJ já está registrado.',
             'cnpj.min' => 'O CNPJ tem 14 números.',
 
-            'software.required' => 'Selecione um tipo de Software.',
+            'sistema.required' => 'Selecione ao menos um Sistema.',
 
             'controle.required' => 'O campo Controle é obrigatório.',
             'versao.required' => 'O campo Versão é obrigatório.',

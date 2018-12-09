@@ -98,3 +98,14 @@ span.text-danger {
     background: #a8a8a8 !important;
     color: #fff;
 }
+
+.clickable{
+    cursor: pointer;
+}
+
+input.clickable[type="checkbox"] {
+    display: block;
+    position: absolute;
+    top: 14.2px;
+    right: 15px;
+}
