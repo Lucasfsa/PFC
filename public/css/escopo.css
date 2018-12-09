@@ -199,18 +199,8 @@ ul ul a {
     background-color: #355197;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
 ul ul a {
     font-size: 1em !important;
     padding-left: 30px !important;
     background: #355197;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
 }

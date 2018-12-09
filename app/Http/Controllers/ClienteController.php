@@ -70,7 +70,7 @@ class ClienteController extends Controller
         }
 
 
-        if($request->input('software') == 1) {
+        if($request->syspdv == true) {
             $syspdv = new Syspdv();
             $syspdv->controle = $request->input('controle');
             $syspdv->versao = $request->input('versao');
@@ -80,7 +80,7 @@ class ClienteController extends Controller
             $cliente->syspdv()->sync($syspdv);
         }
 
-        else if($request->input('software') == 2) {
+        if($request->acsn == true) {
             $acsn = new Acsn();
             $acsn->contrato = $request->input('contrato');
 
@@ -88,7 +88,7 @@ class ClienteController extends Controller
             $cliente->acsn()->sync($acsn);
         }
 
-        else if($request->input('software') == 3) {
+        if($request->ecletica == true) {
             $ecletica = new Ecletica();
             $ecletica->cod_rede = $request->input('cod_rede');
             $ecletica->cod_loja = $request->input('cod_loja');
