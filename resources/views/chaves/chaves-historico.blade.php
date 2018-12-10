@@ -41,35 +41,27 @@
 
                             <tbody id="dadosClientes">
                                 @foreach ($clientes as $c)
-                                <tr>
-                                    <td class="ordem"></td>
-                                    <td>
-                                        @if ($c->id == $c->cliente_ecletica["cliente_id"])
-                                            1
-                                        @else
+                                    <tr>
+                                        <td class="ordem"></td>
+                                        <td>
                                             2
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if ($c->razao_social != null)
-                                            {{ $c->razao_social }}
-                                        @else
-                                        -
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if ($c->pessoa_j["cnpj"] != null)
-                                        {{ $c->pessoa_j["cnpj"] }}
-                                        @else
-                                        -
-                                        @endif
-                                    </td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-bc btn-xs" data-toggle="modal" data-target="#{{'clienteInfo'.$c->id}}">
-                                            <span class="fas fa-info"></span>
-                                        </button>
-                                    </td>
-                                </tr>
+                                        </td>
+                                        <td>
+                                            @if ($c->nome_fantasia != null)
+                                                {{ $c->nome_fantasia }}
+                                            @elseif ($c->razao_social != null)
+                                                {{ $c->razao_social }}
+                                            @else
+                                                -
+                                            @endif
+                                        </td>
+                                        <td>
+                                            {{ $c->pivot->chave_id }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ $c->created_at->format('d M Y - H:i:s') }}
+                                        </td>
+                                    </tr>
 
                                 @endforeach
                             </tbody>

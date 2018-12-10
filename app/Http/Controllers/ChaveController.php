@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
-use App\Ecletica;
 
 class ChaveController extends Controller
 {
@@ -13,9 +12,9 @@ class ChaveController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function verificarChavesGeradas()
     {
-        $clientes = Cliente::with('ecletica', 'cliente_ecletica')->get();
+        $clientes = Cliente::all();
         return view('chaves.chaves-historico', compact('clientes'));
     }
 

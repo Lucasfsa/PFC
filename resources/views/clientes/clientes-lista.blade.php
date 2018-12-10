@@ -92,42 +92,47 @@
                                             </div>
                                             <div class="modal-body">
                                                 <p>Razão Social: {{ $c->razao_social }}</p>
-                                                <p>CPF/CNPJ:
-                                                    @if($c->pessoa_j["cnpj"] != null)
-                                                        {{ $c->pessoa_j["cnpj"] }}
-                                                    @else
-                                                        {{ $c->pessoa_f["cpf"] }}
-                                                    @endif
-                                                </p>
-                                                <p>Segmento: {{ $c->segmento }}</p>
-                                                <p>Email: {{ $c->email }}</p>
-                                                <p>Telefone: {{ $c->telefone }}</p>
+                                                <div class="row">
+                                                    <p class="col-md-6">CPF/CNPJ:
+                                                        @if($c->pessoa_j["cnpj"] != null)
+                                                            {{ $c->pessoa_j["cnpj"] }}
+                                                        @else
+                                                            {{ $c->pessoa_f["cpf"] }}
+                                                        @endif
+                                                    </p>
+                                                    <p class="col-md-6">Segmento: {{ $c->segmento }}</p>
+                                                </div>
+                                                <div class="row">
+                                                    <p class="col-sm-6">Email: {{ $c->email }}</p>
+                                                    <p class="col-sm-6">Telefone: {{ $c->telefone }}</p>
+                                                </div>
                                                 <ul class="list-unstyled components">
 
                                                     <li>
                                                         <a href="#sistemaSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sistema Contratado</a>
-                                                        <ul class="collapse list-unstyled" id="sistemaSubMenu">
-                                                            <li>
-                                                                @foreach ($c->syspdv as $s)
+                                                        <ul class="collapse list-unstyled row" id="sistemaSubMenu">
+                                                            <hr class="col-12">
+                                                            @foreach ($c->syspdv as $s)
+                                                                <li class="col-md-4 col-sm-6">
                                                                     SYSPDV
                                                                     <p>Controle: {{ $s->controle }}</p>
                                                                     <p>Versão: {{ $s->versao }}</p>
                                                                     <p>Série: {{ $s->serie }}</p>
-                                                                @endforeach
-                                                            </li>
-                                                            <li>
-                                                                @foreach ($c->acsn as $a)
+                                                                </li>
+                                                            @endforeach
+                                                            @foreach ($c->acsn as $a)
+                                                                <li class="col-md-4 col-sm-6">
                                                                     ACSN
                                                                     <p>Contrato: {{ $a->contrato }}</p>
-                                                                @endforeach
-                                                            </li>
-                                                            <li>
-                                                                @foreach ($c->ecletica as $e)
+                                                                </li>
+                                                            @endforeach
+                                                            @foreach ($c->ecletica as $e)
+                                                                <li class="col-md-4 col-sm-6">
                                                                     ECLÉTICA
                                                                     <p>Código da Rede: {{ $e->cod_rede }}</p>
                                                                     <p>Código da Loja: {{ $e->cod_loja }}</p>
-                                                                @endforeach
-                                                            </li>
+                                                                </li>
+                                                            @endforeach
                                                         </ul>
                                                     </li>
 

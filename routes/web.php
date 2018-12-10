@@ -37,11 +37,6 @@ Route::prefix('clientes')->group(function() {
 
 });
 
-
-
-
-
-
 Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
 Route::get('/clientes/removidos', 'ClienteController@indexWithTrashed')->middleware('auth');
 Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
@@ -70,7 +65,12 @@ Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta
 
 Route::get('esqueci-minha-senha', 'SenhaController@index');
 
-Route::get('/chave/historico', 'ChaveController@index')->middleware('auth');
+
+Route::prefix('chaves')->group(function() {
+
+    Route::get('/geradas', 'ChaveController@verificarChavesGeradas')->middleware('auth');
+
+});
 
 Route::get('/chave/registrar', 'ChaveRegistroController@create')->middleware('auth');
 Route::post('/chave/registrar', 'ChaveRegistroController@store')->middleware('auth');
