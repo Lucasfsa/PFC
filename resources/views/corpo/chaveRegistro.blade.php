@@ -10,6 +10,19 @@
 
 <h3 class="text-center mt-4">Registrar Chave</h3>
 
+
+                        @if (session('alert'))
+                        <div class="alert col-md-4 mx-auto mb-0">
+                            <div class="msg msg-success text-success">
+                                <i class="fa fa-check"></i>
+                                <strong>{{ session('alert') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        @endif
+
 <form action="/chave/registrar" method="POST">
     @csrf
     <div class="form-group px-5">
@@ -26,7 +39,7 @@
 
         <label>Sistema</label>
 
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select name="sistema" class="form-control" id="exampleFormControlSelect1">
             <option>Selecione...</option>
             <option value="syspdv">SysPDV</option>
             <option value="ecletica">Eclética</option>

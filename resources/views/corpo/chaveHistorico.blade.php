@@ -31,9 +31,13 @@
                                         <th>Cliente
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
-                                        <th>Software
+                                        <th>Sistema
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
+                                        <th>Observação
+                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+
                                         <th>Usuário
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
@@ -48,31 +52,41 @@
                                     <tr>
                                         <td class="ordem"></td>
                                         <td>
-                                            @if ($c->cod_chave != null)
+                                            @if ($c->cod_chave!= null)
                                                 {{ $c->cod_chave }}
+                                            @else
+                                                -
+                                            @endif
+                                            
+                                        </td>
+                                             
+                                        <td>
+                                            @if ($c->cliente!= null)
+                                                {{ $c->cliente }}
                                             @else
                                                 -
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($c->cliente["razao_social"] != null)
-                                                {{ $c->cliente["razao_social"] }}
+                                           @if ($c->sistema!= null)
+                                                {{ $c->sistema }}
                                             @else
-                                            -
+                                                -
+                                            @endif
+                                        </td>
+
+                                        <td>
+                                            @if ($c->observacao!= null)
+                                                {{ $c->observacao }}
+                                            @else
+                                                -
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($c->software["nome_software"] != null)
-                                            {{ $c->software["nome_software"] }}
+                                           @if ($c->user_id!= null)
+                                                {{ $c->user_id}}
                                             @else
-                                            -
-                                            @endif
-                                        </td>
-                                        <td>
-                                            @if ($c->user["name"] != null)
-                                                {{ $c->user["name"] }}
-                                            @else
-                                            -
+                                                -
                                             @endif
                                         </td>
                                         <td class="text-center">

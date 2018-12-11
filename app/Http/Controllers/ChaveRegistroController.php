@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ChaveDeAcesso;
 
 class ChaveRegistroController extends Controller
 {
@@ -36,12 +37,16 @@ class ChaveRegistroController extends Controller
     {
         $chave = new ChaveDeAcesso();
         $chave->cod_chave = $request->input('chave');
+        $chave->cliente = $request->input('cliente');
+        $chave->sistema = $request->input('sistema');
         $chave->observacao = $request->input('observacao');
         
         $id = \Auth::user()->id;
         $chave->user_id = $id;
 
-       // $chave->cliente_software_id 
+        $chave->save();
+
+        return redirect('chave/registrar')->with('alert', 'Chave Registrada!');
         
     }
 
