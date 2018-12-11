@@ -32,39 +32,102 @@
                                     <th>Cliente
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
+                                    <th>Gerador
+                                        <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                    </th>
+
                                     <th>Software
                                         <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                     </th>
-                                    <th class="text-center">Data</th>
+                                    <th >Data</th>
+
+                                    <th>Observação</th>
                                 </tr>
                             </thead>
 
-                            <tbody id="dadosClientes">
-                                @foreach ($clientes as $c)
+                           <tbody id="dadosClientes">
+                                
                                     <tr>
                                         <td class="ordem"></td>
+
                                         <td>
-                                            2
+                                            AHEK-UHJF-JEEF-OHPF
                                         </td>
+                                       
                                         <td>
-                                            @if ($c->nome_fantasia != null)
-                                                {{ $c->nome_fantasia }}
-                                            @elseif ($c->razao_social != null)
-                                                {{ $c->razao_social }}
-                                            @else
-                                                -
-                                            @endif
+                                           GBARBOSA
                                         </td>
+
                                         <td>
-                                            {{ $c->pivot->chave_id }}
+                                            Wanderson
                                         </td>
-                                        <td class="text-center">
-                                            {{ $c->created_at->format('d M Y - H:i:s') }}
+                                        
+                                        <td>
+                                           sysPDV
                                         </td>
+                                        
+                                        <td>
+                                            07/11/2018
+                                        </td>
+
+                                        <td></td>
+
+
                                     </tr>
 
-                                @endforeach
-                            </tbody>
+                                    <tr>
+                                        <td class="ordem"></td>
+
+                                        <td>
+                                           FIVO-TMFF-JEEF-OHPF
+                                        </td>
+                                       
+                                        <td>
+                                           Silva Comércio
+                                        </td>
+
+                                        <td>
+                                            Wanderson
+                                        </td>
+                                        
+                                        <td>
+                                           Eclética
+                                        </td>
+                                        
+                                        <td>
+                                            08/11/2018
+                                        </td>
+
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ordem"></td>
+
+                                        <td>
+                                           GKPH-TLHF-YPUH-OHPF
+                                        </td>
+                                       
+                                        <td>
+                                           Azevedo Comércio
+                                        </td>
+
+                                        <td>
+                                            Lucas
+                                        </td>
+                                        
+                                        <td>
+                                          ACSN
+                                        </td>
+                                        
+                                        <td>
+                                            08/11/2018
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                              
+                            </tbody> 
                         </table>
 
                     </div>

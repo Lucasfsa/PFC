@@ -15,7 +15,7 @@ class chaveHistoricoController extends Controller
     public function index()
     {
         $chaves = Chave::orderBy('created_at', 'asc')->get();
-        return view ('corpo/chaveHistorico', compact('chaves'));
+        return view ('chaves/chaves-historico', compact('chaves'));
     }
 
     /**

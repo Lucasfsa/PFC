@@ -66,11 +66,13 @@ Route::get('/configurar/desativar-conta', 'ConfiguracaoController@DesativarConta
 Route::get('esqueci-minha-senha', 'SenhaController@index');
 
 
-Route::prefix('chaves')->group(function() {
+/*Route::prefix('chaves')->group(function() {
 
     Route::get('/geradas', 'ChaveController@verificarChavesGeradas')->middleware('auth');
 
-});
+});*/
+
+Route::get('/chave/historico', 'ChaveHistoricoController@index');
 
 Route::get('/chave/registrar', 'ChaveRegistroController@create')->middleware('auth');
 Route::post('/chave/registrar', 'ChaveRegistroController@store')->middleware('auth');
