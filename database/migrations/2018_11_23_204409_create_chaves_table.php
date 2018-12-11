@@ -18,7 +18,7 @@ class CreateChavesTable extends Migration
             $table->string('cod_chave');
             $table->string('cliente');
             $table->string('sistema');
-            $table->string('observacao');
+            $table->string('observacao')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

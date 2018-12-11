@@ -8,4 +8,8 @@ class ChaveDeAcesso extends Model
 {
 	protected $table = "Chaves";
     protected $fillable = ['cod_chave', 'cliente', 'sistema', 'observacao', 'user_id'];
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

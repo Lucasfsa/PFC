@@ -84,7 +84,7 @@
                                         </td>
                                         <td>
                                            @if ($c->user_id!= null)
-                                                {{ $c->user_id}}
+                                                {{ $c->user['name']}}
                                             @else
                                                 -
                                             @endif
