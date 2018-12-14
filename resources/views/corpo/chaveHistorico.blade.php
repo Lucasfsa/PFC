@@ -26,22 +26,22 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Chave
-                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                            <i  aria-hidden="true"></i>
                                         </th>
                                         <th>Cliente
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
-                                        <th>Sistema
+                                        <th>Sistema 
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
                                         <th>Observação
-                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                            <i aria-hidden="true"></i>
                                         </th>
 
                                         <th>Usuário
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
-                                        <th class="text-center">Data
+                                        <th class="text-center">Data/Hora
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
                                     </tr>
