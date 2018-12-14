@@ -20,57 +20,59 @@
         
     </div>
 
-    <div  id="subcorpo">
-            
-        <p align="center">Redefinir Senha</p>
+    <div class="card" >  
+        
+        <div class="card-body">
+           
+            <h4 class="card-title" align="center">Redefinir Senha</h4>
 
-         @if (session('alertsucess'))
-            
-            <div class="alert alert-success col-md-4 mx-auto mb-0">
-               
-                <strong>{{ session('alertsucess') }}</strong>
+                 @if (session('alertsucess'))
+                    
+                    <div class="alert alert-success col-md-4 mx-auto mb-0">
+                       
+                        <strong>{{ session('alertsucess') }}</strong>
+                                
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                    </div>
+
+                @endif
+
+
+                 @if (session('alerterror'))
+                    
+                    <div class="alert alert-danger col-md-4 mx-auto mb-0">
+                       
+                        <strong>{{ session('alerterror') }}</strong>
+                                
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                    </div>
+                    
+                @endif
+
+                @if ($errors->any())
+                     
+                     <div class="alert alert-danger">
                         
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                        <ul>
+                                @foreach ($errors->all() as $error)
 
-            </div>
+                                    <li>{{ $error }}</li>
 
-        @endif
+                                @endforeach
+                        </ul>
 
-
-         @if (session('alerterror'))
-            
-            <div class="alert alert-danger col-md-4 mx-auto mb-0">
-               
-                <strong>{{ session('alerterror') }}</strong>
-                        
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-
-            </div>
-            
-        @endif
-
-        @if ($errors->any())
-             
-             <div class="alert alert-danger">
-                
-                <ul>
-                        @foreach ($errors->all() as $error)
-
-                            <li>{{ $error }}</li>
-
-                        @endforeach
-                </ul>
-
-            </div>
-        @endif
+                    </div>
+                @endif
 
 
-           <form action=  "/configurar/redefinir-senha/" method="POST">
-                        @csrf
+           <form action="/configurar/redefinir-senha/" method="POST">
+            @csrf
 
                 <div class="form-group">
 
@@ -93,8 +95,8 @@
 
             </form>
 
-    </div>
-
+        </div>
+    </div> 
 </div>
 
 <script>function checkPass()

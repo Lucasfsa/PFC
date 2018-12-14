@@ -20,12 +20,12 @@
         
     </div>
 
-    <div  id="subcorpo">
-        
+    <div class="card" >
+        <div class="card-body">
         <form method="POST" action=  "/configurar/redefinir-nome/">
         @csrf
 
-            <p align="center">Redefinir Nome</p>
+            <h4 class="card-title" align="center">Redefinir Nome</h4>
 
                 @if (session('alert'))
                 <div class="alert col-md-4 mx-auto mb-0">
@@ -48,9 +48,9 @@
 
                 <button class="buttonredefinir" type="submit" > Confirmar </button>
 
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
-
 </div>
 @endsection
