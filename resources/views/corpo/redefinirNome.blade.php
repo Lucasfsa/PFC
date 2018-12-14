@@ -14,9 +14,10 @@
 <div id="buttonmenu" >
 
     <div class="menuedit" align="center" >
+        <hr>
         <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
         <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
-        <a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>
+        
     </div>
 
     <div  id="subcorpo">
