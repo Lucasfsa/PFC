@@ -8,9 +8,13 @@ div.block-content {
     }
 }
 
-.page-title {
+.page-title, .btn-link {
     color: #3c5baa;
 }
+
+.btn-link { font-weight: 600; }
+
+.btn-link:hover { color: #244392; }
 
 .sub-title {
     color: #58595b;

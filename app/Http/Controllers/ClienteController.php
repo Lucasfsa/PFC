@@ -101,17 +101,6 @@ class ClienteController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -147,6 +136,26 @@ class ClienteController extends Controller
         $cliente->pessoa_f()->update($cpf);
 
         return redirect('/clientes/'.$id.'/dados')->with('alert', 'Dados Alterados!');
+    }
+
+    public function editSystemData($id)
+    {
+        $c = Cliente::findOrFail($id);
+        return view('clientes.cliente-sistema', compact('c'));
+    }
+
+    public function updateSystemData(Request $request, $id)
+    {
+        $acsn = Acsn::find($id);
+
+        $acsn = ['contrato' => $request->input('contrato')];
+
+        $acsn->save();
+
+
+
+
+        return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Dados Alterados!');
     }
 
     /**

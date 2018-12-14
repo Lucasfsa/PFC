@@ -90,6 +90,14 @@
                             </div>
                         </div>
 
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h5 class="sub-title mb-4">Sistema Contratado</h5>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a href="/clientes/{{ $c->id }}/dados/sistema" class="btn btn-link p-0">Clique para ver mais informações</a>
+                        </div>
+                        &nbsp;
                         <div class="col-12">
                             <button type="submit" class="btn my-3 form-button">
                                 Alterar Dados
