@@ -49,11 +49,14 @@
                                         <div class="card">
                                             <div class="card-header pl-2" role="tab" id="syspdv">
                                                 <h6 class="mb-0 ml-2">
-                                                    <strong>SYSPDV</strong>
+                                                    <a class="collapsed d-block" data-toggle="collapse" href="#syspdvDados" aria-expanded="false" aria-controls="syspdvDados" class="d-block">
+                                                        <strong>SYSPDV</strong>
+                                                        <i class="fa fa-chevron-down pull-right"></i>
+                                                    </a>
                                                 </h6>
                                             </div>
 
-                                            <div id="syspdvDados"class="px-3 py-2">
+                                            <div id="syspdvDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="syspdv">
                                                 <div class="form-group">
                                                     <label for="controle"><strong>Controle</strong></label>
                                                     <input value="{{ $s->controle }}" type="text" class="form-control" name="controle">
@@ -72,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link"><i class="fa fa-times"></i> Remover Sistema</a>
+                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
                                     </div>
                                 </div>
                             </div>
@@ -86,11 +89,14 @@
                                         <div class="card">
                                             <div class="card-header pl-2" role="tab" id="acsn">
                                                 <h6 class="mb-0 ml-2">
-                                                    <strong>ACSN</strong>
+                                                    <a class="collapsed d-block" data-toggle="collapse" href="#acsnDados" aria-expanded="false" aria-controls="acsnDados" class="d-block">
+                                                        <strong>ACSN</strong>
+                                                        <i class="fa fa-chevron-down pull-right"></i>
+                                                    </a>
                                                 </h6>
                                             </div>
 
-                                            <div id="acsnDados" class="px-3 py-2" role="tabpanel" aria-labelledby="acsn">
+                                            <div id="acsnDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="acsn">
                                                 <div class="form-group">
                                                     <label for="contrato"><strong>Contrato</strong></label>
                                                     <input value="{{ $a->contrato }}" type="text" class="form-control" name="contrato">
@@ -99,7 +105,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link"><i class="fa fa-times"></i> Remover Sistema</a>
+                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,11 +119,14 @@
                                         <div class="card">
                                             <div class="card-header pl-2" role="tab" id="ecletica">
                                                 <h6 class="mb-0 ml-2">
-                                                    <strong>ECLÉTICA</strong>
+                                                    <a class="collapsed d-block" data-toggle="collapse" href="#ecleticaDados" aria-expanded="false" aria-controls="ecleticaDados" class="d-block">
+                                                        <strong>ECLÉTICA</strong>
+                                                        <i class="fa fa-chevron-down pull-right"></i>
+                                                    </a>
                                                 </h6>
                                             </div>
 
-                                            <div id="ecleticaDados" class="px-3 py-2" role="tabpanel" aria-labelledby="ecletica">
+                                            <div id="ecleticaDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="ecletica">
                                                 <div class="form-group">
                                                     <label for="cod_rede"><strong>Código da Rede</strong></label>
                                                     <input value="{{ $e->cod_rede }}" type="text" class="form-control" name="cod_rede">
@@ -131,7 +140,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link"><i class="fa fa-times"></i> Remover Sistema</a>
+                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
                                     </div>
                                 </div>
                             </div>

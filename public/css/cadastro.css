@@ -113,3 +113,36 @@ input.clickable[type="checkbox"] {
     top: 14.2px;
     right: 15px;
 }
+
+.card-header .fa {
+    transition: .25s transform ease-in-out;
+}
+
+.card-header .collapsed .fa {
+    transform: rotate(90deg);
+}
+
+.card-header a[aria-expanded="true"] {
+    color: #3c5baa;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card-header a i {
+    display: block;
+    position: absolute;
+    top: 1.5px;
+    right: -5px;
+}
+
+.btn.remove {
+    position: absolute;
+    top: 10px;
+    left: -5px;
+}
+
+@media (max-width: 575px){
+    .btn.remove {
+        top: 0;
+        left: 15px;
+    }
+}
