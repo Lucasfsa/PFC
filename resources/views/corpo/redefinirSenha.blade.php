@@ -43,7 +43,7 @@
 
                  @if (session('alerterror'))
                     
-                    <div class="alert alert-danger col-md-4 mx-auto mb-0">
+                    <div class="alert alert-danger col-md-6 mx-auto mb-0">
                        
                         <strong>{{ session('alerterror') }}</strong>
                                 
@@ -57,15 +57,15 @@
 
                 @if ($errors->any())
                      
-                     <div class="alert alert-danger">
+                     <div class="alert alert-danger col-md-6 mx-auto mb-0">
                         
-                        <ul>
+                      
                                 @foreach ($errors->all() as $error)
 
-                                    <li>{{ $error }}</li>
+                                    <strong>Erro! As senhas não são iguais.</strong>
 
                                 @endforeach
-                        </ul>
+                      
 
                     </div>
                 @endif

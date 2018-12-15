@@ -28,7 +28,7 @@
             <h4 class="card-title" align="center">Redefinir Nome</h4>
 
                 @if (session('alert'))
-                <div class="alert col-md-4 mx-auto mb-0">
+                <div class="alert col-md-6 mx-auto mb-0">
                     <div class="msg msg-success text-success">
                         <i class="fa fa-check"></i>
                         <strong>{{ session('alert') }}</strong>
@@ -38,6 +38,8 @@
                     </div>
                 </div>
                 @endif
+
+                <br>
 
             <div class="form-group">
 

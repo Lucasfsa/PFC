@@ -17,7 +17,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
                             <h2 class="text-center page-title">Histórico de Chaves</h2>
                             <hr>
-                        </div>
+                        </div> 
 
                         <div id="resultados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2 table-responsive">
 
@@ -31,7 +31,7 @@
                                         <th>Cliente<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
 
-                                        <th>Sistema<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        <th>Sistema<i aria-hidden="true"></i>
                                         </th>
 
                                         <th>Observação<i aria-hidden="true"></i>
