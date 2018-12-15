@@ -11,6 +11,7 @@ use App\PessoaF;
 use App\Syspdv;
 use App\Acsn;
 use App\Ecletica;
+use Illuminate\Support\Facades\DB;
 
 class ClienteController extends Controller
 {
@@ -146,14 +147,37 @@ class ClienteController extends Controller
 
     public function updateSystemData(Request $request, $id)
     {
-        $acsn = Acsn::find($id);
+        $cliente = Cliente::find($id);
 
-        $acsn = ['contrato' => $request->input('contrato')];
+        $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
+        if($cliente_syspdv != null) {
+            $syspdv = Syspdv::findOrFail($cliente_syspdv ->syspdv_id);
 
-        $acsn->save();
+            $syspdv->controle = $request->input('controle');
+            $syspdv->versao = $request->input('versao');
+            $syspdv->serie = $request->input('serie');
 
+            $syspdv->save();
+        }
 
+        $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
+        if($cliente_acsn != null) {
+            $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
 
+            $acsn->contrato = $request->input('contrato');
+
+            $acsn->save();
+        }
+
+        $cliente_ecletica = DB::table('cliente_ecletica')->where('cliente_id',$cliente->id)->first();
+        if($cliente_ecletica != null) {
+            $ecletica = Ecletica::findOrFail($cliente_ecletica->ecletica_id);
+
+            $ecletica->cod_rede = $request->input('cod_rede');
+            $ecletica->cod_loja = $request->input('cod_loja');
+
+            $ecletica->save();
+        }
 
         return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Dados Alterados!');
     }
