@@ -25,22 +25,21 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Chave
-                                            <i  aria-hidden="true"></i>
-                                        </th>
-                                        <th>Cliente
-                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
-                                        </th>
-                                        <th>Sistema 
-                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
-                                        </th>
-                                        <th>Observação
-                                            <i aria-hidden="true"></i>
+                                        <th>Chave<i  aria-hidden="true"></i>
                                         </th>
 
-                                        <th>Usuário
-                                            <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        <th>Cliente<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
+
+                                        <th>Sistema<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+
+                                        <th>Observação<i aria-hidden="true"></i>
+                                        </th>
+
+                                        <th>Usuário<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
+                                        </th>
+
                                         <th class="text-center">Data/Hora
                                             <i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>

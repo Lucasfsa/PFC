@@ -14,17 +14,18 @@
 <div id="buttonmenu" >
 
     <div class="menuedit" align="center" >
+        <hr>
         <a class="btn buttonstyle" href="redefinir-senha"> Redefinir Senha</a>
         <a class="btn buttonstyle" href="redefinir-nome"> Redefinir Nome </a>
-        <a class="btn buttonstyle" href="desativar-conta"> Desativar Conta</a>
+        
     </div>
 
-    <div  id="subcorpo">
-        
+    <div class="card" >
+        <div class="card-body">
         <form method="POST" action=  "/configurar/redefinir-nome/">
         @csrf
 
-            <p align="center">Redefinir Nome</p>
+            <h4 class="card-title" align="center">Redefinir Nome</h4>
 
                 @if (session('alert'))
                 <div class="alert col-md-4 mx-auto mb-0">
@@ -47,9 +48,9 @@
 
                 <button class="buttonredefinir" type="submit" > Confirmar </button>
 
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
-
 </div>
 @endsection

@@ -4,15 +4,19 @@
     src: url(/font/Comforta.ttf);
 }
 
-#buttonmenu{
-	width: 100%;
+.card{
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 4%;
+	background-color: #bfbfbf;
+
 }
 
 .buttonstyle{
 	color:#3c5baa;
 	font-family: Comforta;
 	background-color: #bfbfbf;
-    margin-left: 1%;
+    font-size: 115%;
 
 }
 
@@ -21,7 +25,3 @@
 	background-color: #3c5baa
 }
 
-
-.menuedit{
-    margin-top: 6%;
-}

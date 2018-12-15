@@ -1,24 +1,4 @@
-#subcorpo{
-    
-    margin-top: 8%;
-    width: 50%;
-    height: 35%;
-    background-color: #bfbfbf; 
-    margin-left: 25%;
-    border-radius: 3px;
-    margin-bottom: 5%;
-}
 
-.inputredefinir{
-   
-    width: 95%;
-    border-color: transparent;
-    border-radius: 3px;
-    margin-left: 3%;
-    
-
- 
-}
 
 .buttonredefinir{
     background-color: white;
@@ -35,25 +15,6 @@
     color: white;
 }
 
-#subcorpo label{
-    font-family: Comforta;
-    color:#3c5baa;
-    font-style: normal;
-    margin-left: 5%;
-    
-    
-}
-
-#subcorpo p {
-    font-family: Comforta;
-    color:#3c5baa;
-    font-style: normal;
-    font-size: 120%;
-    padding: 2%;
- 
-}
-
-
 .form-control{
     margin-left: 5%;
     width: 90%;
@@ -61,4 +22,8 @@
 
 .alert{
     background-color: white;
+}
+
+.card label{
+    margin-left: 5%;
 }
