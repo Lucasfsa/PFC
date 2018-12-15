@@ -25,7 +25,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return view('users.usuarios-cadastro')->with('alert', 'Usuário Cadastrado!');
+       return redirect('cadastro/usuario')->with('alert', 'Usuário Cadastrado!');
     }
 
     public function editSenha($id)
