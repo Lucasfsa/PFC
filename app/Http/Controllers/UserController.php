@@ -62,22 +62,12 @@ class UserController extends Controller
                     return redirect('/configurar/redefinir-senha')->with('alertsucess', 'Senha Alterada!');
             }
         }
+        
          else{
 
-        return redirect('/configurar/redefinir-senha')->with('alerterror', 'Senha atual errada!');
+            return redirect('/configurar/redefinir-senha')->with('alerterror', 'Senha atual errada!');
          }
-             /*if(bcrypt($senhaAntiga) === bcrypt($request->input('senhaAntiga'))){
-                echo "vish2";
-                if ( ! $request->input('password') == '') {// verifica se a senha foi alterada
-                $funcionario->password = bcrypt($request->input('password')); // muda a senha do seu usuario já criptografada pela função bcrypt
-            }
-            else{
-                echo "vish";
-            }
-        }
-
-        */
-
+            
     }
      public function updateNome(Request $request)
     {
