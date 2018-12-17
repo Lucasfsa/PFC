@@ -19,3 +19,14 @@ $("input[name=opt]").on("click", function() {
         $("input[name=cnpj]").prop('required',false);
     }
 })
+
+function showSystem() {
+    document.getElementById('ac').style.display = "block";
+    document.getElementById('btnac').style.display = "none";
+}
+
+function hiddenSystem() {
+    document.getElementById('ac').style.display = "none";
+    document.getElementById('btnac').style.display = "block";
+    document.getElementById('removebtnac').style.display = "block";
+}

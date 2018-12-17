@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ClienteRequest;
+use App\Http\Requests\UpdateSystemRequest;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
 use App\PessoaJ;
@@ -22,7 +23,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::all();
+        $clientes = Cliente::get()->sortBy('razao_social');
         return view('clientes.clientes-lista', compact('clientes'));
     }
 
@@ -145,7 +146,7 @@ class ClienteController extends Controller
         return view('clientes.cliente-sistema', compact('c'));
     }
 
-    public function updateSystemData(Request $request, $id)
+    public function updateSystemData(Request $request, UpdateSystemRequest $us, $id)
     {
         $cliente = Cliente::find($id);
 
@@ -167,6 +168,12 @@ class ClienteController extends Controller
             $acsn->contrato = $request->input('contrato');
 
             $acsn->save();
+        } elseif ($us->input('acsn') == true) {
+            $acsn = new Acsn();
+            $acsn->contrato = $us->input('contrato');
+
+            $acsn->save();
+            $cliente->acsn()->sync($acsn);
         }
 
         $cliente_ecletica = DB::table('cliente_ecletica')->where('cliente_id',$cliente->id)->first();

@@ -42,111 +42,86 @@
                             <h5 class="sub-title mb-4">Sistema Contratado</h5>
                         </div>
 
-                        @foreach($c->syspdv as $s)
-                            <div class="col-12">
-                                <div class="row">
-                                    <div id="accordion1" role="tablist" class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="card">
-                                            <div class="card-header pl-2" role="tab" id="syspdv">
-                                                <h6 class="mb-0 ml-2">
-                                                    <a class="collapsed d-block" data-toggle="collapse" href="#syspdvDados" aria-expanded="false" aria-controls="syspdvDados" class="d-block">
-                                                        <strong>SYSPDV</strong>
-                                                        <i class="fa fa-chevron-down pull-right"></i>
-                                                    </a>
-                                                </h6>
+                        <div class="col-12">
+
+                            <div id="accordion" role="tablist" aria-multiselectable="true" class="row">
+
+                                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+                                    <div class="card">
+                                        <h6 class="card-header" role="tab" id="headingOne">
+                                            <a class="collapsed d-block" data-toggle="collapse" data-parent="#accordion" href="#collapseSyspdv" aria-expanded="false" aria-controls="collapseSyspdv">
+                                                <strong>SYSPDV</strong>
+                                                <i class="fa fa-chevron-down pull-right"></i>
+                                            </a>
+                                        </h6>
+
+                                        <div id="collapseSyspdv" class="collapse px-3 py-2" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="form-group">
+                                                <label for="controle"><strong>Controle</strong></label>
+                                                <input type="text" class="form-control" name="controle">
                                             </div>
 
-                                            <div id="syspdvDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="syspdv">
-                                                <div class="form-group">
-                                                    <label for="controle"><strong>Controle</strong></label>
-                                                    <input value="{{ $s->controle }}" type="text" class="form-control" name="controle">
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="versao"><strong>Versão</strong></label>
+                                                <input type="text" class="form-control" name="versao">
+                                            </div>
 
-                                                <div class="form-group">
-                                                    <label for="versao"><strong>Versão</strong></label>
-                                                    <input value="{{ $s->versao }}" type="text" class="form-control" name="versao">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="serie"><strong>Série</strong></label>
-                                                    <input value="{{ $s->serie }}" type="text" class="form-control" name="serie">
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="serie"><strong>Série</strong></label>
+                                                <input type="text" class="form-control" name="serie">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
-                                    </div>
                                 </div>
-                            </div>
-                            &nbsp;
-                        @endforeach
+                                &nbsp;
 
-                        @foreach($c->acsn as $a)
-                            <div class="col-12">
-                                <div class="row">
-                                    <div id="accordion2" role="tablist" class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="card">
-                                            <div class="card-header pl-2" role="tab" id="acsn">
-                                                <h6 class="mb-0 ml-2">
-                                                    <a class="collapsed d-block" data-toggle="collapse" href="#acsnDados" aria-expanded="false" aria-controls="acsnDados" class="d-block">
-                                                        <strong>ACSN</strong>
-                                                        <i class="fa fa-chevron-down pull-right"></i>
-                                                    </a>
-                                                </h6>
-                                            </div>
+                                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 mt-3">
+                                    <div class="card">
+                                        <h6 class="card-header" role="tab" id="headingTwo">
+                                            <a class="collapsed d-block" data-toggle="collapse" data-parent="#accordion" href="#collapseAcsn" aria-expanded="false" aria-controls="collapseAcsn">
+                                                <strong>ACSN</strong>
+                                                <i class="fa fa-chevron-down pull-right"></i>
+                                            </a>
+                                        </h6>
 
-                                            <div id="acsnDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="acsn">
-                                                <div class="form-group">
-                                                    <label for="contrato"><strong>Contrato</strong></label>
-                                                    <input value="{{ $a->contrato }}" type="text" class="form-control" name="contrato">
-                                                </div>
+                                        <div id="collapseAcsn" class="collapse px-3 py-2" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="form-group">
+                                                <label for="contrato"><strong>Contrato</strong></label>
+                                                <input type="text" class="form-control" name="contrato">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
-                                    </div>
+                                    <br>
                                 </div>
-                            </div>
-                            &nbsp;
-                        @endforeach
+                                &nbsp;
 
-                        @foreach($c->ecletica as $e)
-                            <div class="col-12">
-                                <div class="row">
-                                    <div id="accordion3" role="tablist" class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="card">
-                                            <div class="card-header pl-2" role="tab" id="ecletica">
-                                                <h6 class="mb-0 ml-2">
-                                                    <a class="collapsed d-block" data-toggle="collapse" href="#ecleticaDados" aria-expanded="false" aria-controls="ecleticaDados" class="d-block">
-                                                        <strong>ECLÉTICA</strong>
-                                                        <i class="fa fa-chevron-down pull-right"></i>
-                                                    </a>
-                                                </h6>
+                                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+                                    <div class="card">
+                                        <h6 class="card-header" role="tab" id="headingThree">
+                                            <a class="collapsed d-block" data-toggle="collapse" data-parent="#accordion" href="#collapseEcletica" aria-expanded="false" aria-controls="collapseEcletica">
+                                                <strong>ECLÉTICA</strong>
+                                                <i class="fa fa-chevron-down pull-right"></i>
+                                            </a>
+                                        </h6>
+
+                                        <div id="collapseEcletica" class="collapse px-3 py-2" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="form-group">
+                                                <label for="cod_rede"><strong>Código da Rede</strong></label>
+                                                <input type="text" class="form-control" name="cod_rede">
                                             </div>
 
-                                            <div id="ecleticaDados" class="px-3 py-2 collapse" role="tabpanel" aria-labelledby="ecletica">
-                                                <div class="form-group">
-                                                    <label for="cod_rede"><strong>Código da Rede</strong></label>
-                                                    <input value="{{ $e->cod_rede }}" type="text" class="form-control" name="cod_rede">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="cod_loja"><strong>Código da Loja</strong></label>
-                                                    <input value="{{ $e->cod_loja }}" type="text" class="form-control" name="cod_loja">
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="cod_loja"><strong>Código da Loja</strong></label>
+                                                <input type="text" class="form-control" name="cod_loja">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <a href="/clientes/{{ $c->id }}/dados" class="btn btn-link p-0 remove"><i class="fa fa-times"></i> Remover Sistema</a>
-                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
 
-                        &nbsp;
+                            </div>
+
+                        </div>
+
                         <div class="col-12">
                             <button type="submit" class="btn my-3 form-button">
                                 Alterar Dados
@@ -160,8 +135,12 @@
     </form>
 </div>
 
+@component('components.escolher-sistema', array('c' => $c))
+@endcomponent
+
 @endsection
 
 @section('scripts')
 <script src="{{ asset('js/formatar-input.js') }}"></script>
+<script src="{{ asset('js/show.input.js') }}"></script>
 @endsection
