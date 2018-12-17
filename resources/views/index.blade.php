@@ -29,7 +29,7 @@
         <div id="content" class="container-fluid">
             <label>Esteja sempre no controle.</label>
             <br>
-            <button type="button" class="btn btn-outline-light" onclick="window.location='{{ route('login') }}'">Login</button>
+            <button type="button" class="btn btn-outline-light" onclick="window.location='{{ route('login') }}'">Entrar</button>
         </div>
     </div>
 </body>
