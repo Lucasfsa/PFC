@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ClienteRequest;
-use App\Http\Requests\UpdateSystemRequest;
+use App\Http\Requests\UpdateSyspdvRequest;
+use App\Http\Requests\UpdateAcsnRequest;
+use App\Http\Requests\UpdateEcleticaRequest;
 use Illuminate\Support\Facades\Input;
 use App\Cliente;
 use App\PessoaJ;
@@ -146,31 +148,40 @@ class ClienteController extends Controller
         return view('clientes.cliente-sistema', compact('c'));
     }
 
-    public function updateSystemData(Request $request, UpdateSystemRequest $us, $id)
+    public function updateSystemData(Request $request, UpdateSyspdvRequest $us, UpdateAcsnRequest $ua, UpdateEcleticaRequest $ue, $id)
     {
         $cliente = Cliente::find($id);
 
         $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
         if($cliente_syspdv != null) {
-            $syspdv = Syspdv::findOrFail($cliente_syspdv ->syspdv_id);
+            $syspdv = Syspdv::findOrFail($cliente_syspdv->syspdv_id);
 
-            $syspdv->controle = $request->input('controle');
-            $syspdv->versao = $request->input('versao');
-            $syspdv->serie = $request->input('serie');
+            $syspdv->controle = $ua->input('controle');
+            $syspdv->versao = $ua->input('versao');
+            $syspdv->serie = $ua->input('serie');
 
             $syspdv->save();
+        } elseif ($request->showSyspdvCard == true) {
+            $syspdv = new Syspdv();
+
+            $syspdv->controle = $ua->input('controle');
+            $syspdv->versao = $ua->input('versao');
+            $syspdv->serie = $ua->input('serie');
+
+            $syspdv->save();
+            $cliente->syspdv()->sync($syspdv);
         }
 
         $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
         if($cliente_acsn != null) {
             $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
 
-            $acsn->contrato = $request->input('contrato');
+            $acsn->contrato = $ua->input('contrato');
 
             $acsn->save();
-        } elseif ($us->input('acsn') == true) {
+        } elseif ($request->showAcsnCard == true) {
             $acsn = new Acsn();
-            $acsn->contrato = $us->input('contrato');
+            $acsn->contrato = $ua->input('contrato');
 
             $acsn->save();
             $cliente->acsn()->sync($acsn);
@@ -180,10 +191,17 @@ class ClienteController extends Controller
         if($cliente_ecletica != null) {
             $ecletica = Ecletica::findOrFail($cliente_ecletica->ecletica_id);
 
-            $ecletica->cod_rede = $request->input('cod_rede');
-            $ecletica->cod_loja = $request->input('cod_loja');
+            $ecletica->cod_rede = $ue->input('cod_rede');
+            $ecletica->cod_loja = $ue->input('cod_loja');
 
             $ecletica->save();
+        } elseif ($cliente_ecletica == null) {
+            $ecletica = new Ecletica();
+            $ecletica->cod_rede = $ue->input('cod_rede');
+            $ecletica->cod_loja = $ue->input('cod_loja');
+
+            $ecletica->save();
+            $cliente->ecletica()->sync($ecletica);
         }
 
         return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Dados Alterados!');
@@ -193,10 +211,23 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id);
 
-        $cliente->acsn()->detach();
-        $cliente->acsn()->delete();
+        $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
+        if($cliente_syspdv != null) {
+            $syspdv = Syspdv::findOrFail($cliente_syspdv->syspdv_id);
+            $cliente->syspdv()->detach();
+            $cliente->syspdv()->delete();
+            $syspdv->delete();
+        }
 
-        return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Removido!');
+        $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
+        if($cliente_acsn != null) {
+            $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
+            $cliente->acsn()->detach();
+            $cliente->acsn()->delete();
+            $acsn->delete();
+        }
+
+        return redirect('/clientes/'.$id.'/dados/sistema');
     }
 
     /**
