@@ -127,7 +127,7 @@ input.clickable[type="checkbox"] {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.card-header a:hover { text-decoration: underline; }
+.card-header a:hover, div#modalSystems a:hover { text-decoration: underline; }
 
 .card-header a i {
     display: block;
@@ -156,3 +156,4 @@ input.clickable[type="checkbox"] {
     color: #fff;
     border: none;
 }
+

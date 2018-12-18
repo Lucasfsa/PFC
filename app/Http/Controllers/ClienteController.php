@@ -189,6 +189,16 @@ class ClienteController extends Controller
         return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Dados Alterados!');
     }
 
+    public function removerSistema($id)
+    {
+        $cliente = Cliente::find($id);
+
+        $cliente->acsn()->detach();
+        $cliente->acsn()->delete();
+
+        return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Removido!');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

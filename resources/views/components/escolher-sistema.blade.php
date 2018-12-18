@@ -2,20 +2,25 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content text-center">
             <div class="modal-header justify-content-center modal-bc">
-                <h4>Sistema</h4>
+                <h4>Adicionar Sistema</h4>
             </div>
             <div class="modal-body text-center">
-                <p>Selecione um dos sistemas abaixo:</p>
-                    @if($c->syspdv->count() <= 0)
-                        <a href="">SYSPDV</a>
-                        &nbsp;&nbsp;
-                    @endif
-                    @if($c->acsn->count() <= 0)
-                        <input type="button" id="btnac" name="btnac" onclick="showSystem()" value="ACSN" data-dismiss="modal">
-                    @endif
-                    @if($c->ecletica->count() <= 0)
-                        <a href="">Eclética</a>
-                    @endif
+                <p><strong>Sistemas disponíveis:<strong></p>
+                @if($c->syspdv->count() <= 0)
+                    <div class="col-12 my-2">
+                        <a onclick="showSyspdvCard()" data-dismiss="modal" class="btn btn-link">SYSPDV</a>
+                    </div>
+                @endif
+                @if($c->acsn->count() <= 0)
+                    <div class="col-12 my-2">
+                        <a onclick="showAcsnCard()" data-dismiss="modal" class="btn btn-link">ACSN</a>
+                    </div>
+                @endif
+                @if($c->ecletica->count() <= 0)
+                    <div class="col-12 my-2">
+                        <a onclick="showEcleticaCard()" data-dismiss="modal" class="btn btn-link">ECLÉTICA</a>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
