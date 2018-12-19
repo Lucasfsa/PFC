@@ -31,7 +31,7 @@
                                         <th>Cliente<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
 
-                                        <th>Sistema<i aria-hidden="true"></i>
+                                        <th>Sistema<i class="fa fa-sort float-right my-1" aria-hidden="true"></i>
                                         </th>
 
                                         <th>Observação<i aria-hidden="true"></i>
