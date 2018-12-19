@@ -265,18 +265,37 @@ class ClienteController extends Controller
 
     public function indexWithTrashed(){
         $clientes = Cliente::onlyTrashed()->get();
-        return view('corpo/cliente-deletar', compact('clientes'));
+        return view('clientes.clientes-removidos', compact('clientes'));
     }
 
     public function restore($id){
         $cliente = Cliente::onlyTrashed()->find($id);
         $cliente->restore();
-        return redirect('/clientes');
+        return redirect('/clientes/removidos')->with('alert', 'Restaurado');
     }
 
-    public function delete($id){
+    public function delete ($id){
+
+
         $cliente = Cliente::onlyTrashed()->find($id);
+        $cliente->syspdv()->detach();
+        $cliente->syspdv()->delete();
+
+        $cliente->acsn()->detach();
+        $cliente->acsn()->delete();
+
+        $cliente->ecletica()->detach();
+        $cliente->ecletica()->delete();
+
+        $cliente->pessoa_f()->delete();
+        $cliente->pessoa_j()->delete();
+
         $cliente->forceDelete();
-        return redirect('/pesquisar');
+
+        return redirect('/clientes/removidos')->with('alert', 'Registro Deletado');
+
+
+
+
     }
 }

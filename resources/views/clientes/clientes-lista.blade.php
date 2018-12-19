@@ -91,53 +91,54 @@
                                                 <button class="close" data-dismiss="modal">&times;</button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Razão Social: {{ $c->razao_social }}</p>
+                                                <p><b>Razão Social:</b> {{ $c->razao_social }}</p>
                                                 <div class="row">
-                                                    <p class="col-md-6">CPF/CNPJ:
+                                                    <p class="col-md-6"><b>CPF/CNPJ:</b>
                                                         @if($c->pessoa_j["cnpj"] != null)
                                                             {{ $c->pessoa_j["cnpj"] }}
                                                         @else
                                                             {{ $c->pessoa_f["cpf"] }}
                                                         @endif
                                                     </p>
-                                                    <p class="col-md-6">Segmento: {{ $c->segmento }}</p>
+                                                    <p class="col-md-6"><b>Segmento:</b> {{ $c->segmento }}</p>
                                                 </div>
                                                 <div class="row">
-                                                    <p class="col-sm-6">Email: {{ $c->email }}</p>
-                                                    <p class="col-sm-6">Telefone: {{ $c->telefone }}</p>
+                                                    <p class="col-sm-6"><b>Email:</b> {{ $c->email }}</p>
+                                                    <p class="col-sm-6"><b>Telefone:</b> {{ $c->telefone }}</p>
                                                 </div>
                                                 <ul class="list-unstyled components">
 
                                                     <li>
-                                                        <a href="#sistemaSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sistema Contratado</a>
+                                                        <a href="#sistemaSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle sistema-menu">Sistema Contratado</a>
                                                         <ul class="collapse list-unstyled row" id="sistemaSubMenu">
                                                             <hr class="col-12">
                                                             @foreach ($c->syspdv as $s)
                                                                 <li class="col-md-4 col-sm-6">
                                                                     SYSPDV
-                                                                    <p>Controle: {{ $s->controle }}</p>
-                                                                    <p>Versão: {{ $s->versao }}</p>
-                                                                    <p>Série: {{ $s->serie }}</p>
+                                                                    <p class="mt-3 mb-1"><b>Controle:</b> {{ $s->controle }}</p>
+                                                                    <p class="mb-1"><b>Versão:</b> {{ $s->versao }}</p>
+                                                                    <p class="mb-2"><b>Série:</b> {{ $s->serie }}</p>
                                                                 </li>
                                                             @endforeach
                                                             @foreach ($c->acsn as $a)
                                                                 <li class="col-md-4 col-sm-6">
                                                                     ACSN
-                                                                    <p>Contrato: {{ $a->contrato }}</p>
+                                                                    <p class="mt-3 mb-2"><b>Contrato:</b> {{ $a->contrato }}</p>
                                                                 </li>
                                                             @endforeach
                                                             @foreach ($c->ecletica as $e)
                                                                 <li class="col-md-4 col-sm-6">
                                                                     ECLÉTICA
-                                                                    <p>Código da Rede: {{ $e->cod_rede }}</p>
-                                                                    <p>Código da Loja: {{ $e->cod_loja }}</p>
+                                                                    <p class="mt-3 mb-1"><b>Código da Rede:</b> {{ $e->cod_rede }}</p>
+                                                                    <p class="mb-2"><b>Código da Loja:</b> {{ $e->cod_loja }}</p>
                                                                 </li>
                                                             @endforeach
+                                                            <hr class="col-12">
                                                         </ul>
                                                     </li>
 
                                                 </ul>
-                                                <p>Registrado por: {{ $c->user['name'] }}</p>
+                                                <p><b>Registrado por:</b> {{ $c->user['name'] }}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-bc" onclick="window.location='/clientes/{{ $c->id }}/dados'">Editar Informações</button>

@@ -40,14 +40,22 @@ Route::prefix('clientes')->group(function() {
 
     //Remover Sistema Contratado pelo Cliente
 
+    //Remover Registro do Cliente
+    Route::get('/{id}/remover', 'ClienteController@destroy')->middleware('auth');
+
+    //Tabela de Clientes Removidos
+    Route::get('/removidos', 'ClienteController@indexWithTrashed')->middleware('auth');
+
+    //Restaurar Cliente
+    Route::get('/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
+
 });
 
 Route::post('/clientes/{id}/dados/sistema', 'ClienteController@updateSystemData')->middleware('auth');
 Route::post('/clientes/{id}/dados/sistema/#', 'ClienteController@removerSistema')->middleware('auth');
 
-Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
-Route::get('/clientes/removidos', 'ClienteController@indexWithTrashed')->middleware('auth');
-Route::get('/cliente/{id}/restaurar', 'ClienteController@restore')->middleware('auth');
+
+
 Route::get('/cliente/{id}/deletar', 'ClienteController@delete')->middleware('auth');
 
 //Página de cadastro de funcionário

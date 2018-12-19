@@ -110,11 +110,11 @@
                                     <div class="modal-header d-flex justify-content-center modal-danger text-light">
                                         <h4>Você tem certeza?</h4>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body text-gray">
                                         <p>Você realmente deseja remover esse registro?</p>
                                     </div>
-                                    <div class="modal-footer flex-center">
-                                        <a href="/cliente/{{$c->id}}/remover" class="btn btn-danger">Confirmar</a>
+                                    <div class="modal-footer justify-content-center">
+                                        <a href="/clientes/{{ $c->id }}/remover" class="btn btn-danger">Confirmar</a>
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cancelar</button>
                                     </div>
                                 </div>
