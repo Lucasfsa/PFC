@@ -9,7 +9,7 @@
                 <p><strong>Deseja realmente remover?<strong></p>
             </div>
             <div class="modal-footer justify-content-center">
-                <form action="/clientes/{{ $c->id }}/dados/sistema" method="post">
+                <form action="/clientes/{{ $c->id }}/dados/sistema/#" method="post">
                     @csrf
                     <button type="submit" class="btn btn-danger">Remover</button>
                 </form>

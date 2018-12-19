@@ -28,7 +28,7 @@ class Cliente extends Model
 
     public function syspdv()
     {
-        return $this->belongsToMany('App\Syspdv', 'cliente_syspdv', 'cliente_id', 'syspdv_id')->withPivot('chave_id')->withTimestamps();
+        return $this->belongsToMany('App\Syspdv', 'cliente_syspdv', 'cliente_id', 'syspdv_id');
     }
 
     public function acsn()

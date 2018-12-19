@@ -130,7 +130,7 @@
                                                         <input type="text" class="form-control" name="contrato" value="{{ $a->contrato }}">
                                                     @endforeach
                                                 @else
-                                                    <input type="text" class="form-control" name="contrato">
+                                                    <input type="text" class="form-control" name="contrato" value="{{ old('contrato') }}">
                                                 @endif
                                                 <span class="text-danger">{{ $errors->first('contrato') }}</span>
                                             </div>
@@ -174,7 +174,7 @@
                                                         <input type="text" class="form-control" name="cod_rede" value="{{ $e->cod_rede }}">
                                                     @endforeach
                                                 @else
-                                                    <input type="text" class="form-control" name="cod_rede">
+                                                    <input type="text" class="form-control" name="cod_rede" value="{{ old('cod_rede') }}">
                                                 @endif
                                                 <span class="text-danger">{{ $errors->first('cod_rede') }}</span>
 
@@ -187,7 +187,7 @@
                                                         <input type="text" class="form-control" name="cod_loja" value="{{ $e->cod_loja }}">
                                                     @endforeach
                                                 @else
-                                                    <input type="text" class="form-control" name="cod_loja">
+                                                    <input type="text" class="form-control" name="cod_loja" value="{{ old('cod_loja') }}">
                                                 @endif
                                                 <span class="text-danger">{{ $errors->first('cod_loja') }}</span>
                                             </div>

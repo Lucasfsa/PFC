@@ -37,12 +37,13 @@ Route::prefix('clientes')->group(function() {
 
     //Editar Dados dos Sistemas Contratados pelo do Cliente
     Route::get('/{id}/dados/sistema', 'ClienteController@editSystemData')->middleware('auth');
-    Route::post('/{id}/dados/sistema', 'ClienteController@updateSystemData')->middleware('auth');
 
     //Remover Sistema Contratado pelo Cliente
-    Route::post('/{id}/dados/sistema', 'ClienteController@removerSistema')->middleware('auth');
 
 });
+
+Route::post('/clientes/{id}/dados/sistema', 'ClienteController@updateSystemData')->middleware('auth');
+Route::post('/clientes/{id}/dados/sistema/#', 'ClienteController@removerSistema')->middleware('auth');
 
 Route::get('/cliente/{id}/remover', 'ClienteController@destroy')->middleware('auth');
 Route::get('/clientes/removidos', 'ClienteController@indexWithTrashed')->middleware('auth');

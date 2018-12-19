@@ -152,82 +152,102 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id);
 
-        $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
-        if($cliente_syspdv != null) {
-            $syspdv = Syspdv::findOrFail($cliente_syspdv->syspdv_id);
+        if($request->showSyspdvCard == true) {
+            $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
+            if($cliente_syspdv != null){
+                $syspdv = Syspdv::find($cliente_syspdv->syspdv_id);
 
-            $syspdv->controle = $ua->input('controle');
-            $syspdv->versao = $ua->input('versao');
-            $syspdv->serie = $ua->input('serie');
+                $syspdv->controle = $us->input('controle');
+                $syspdv->versao = $us->input('versao');
+                $syspdv->serie = $us->input('serie');
 
-            $syspdv->save();
-        } elseif ($request->showSyspdvCard == true) {
-            $syspdv = new Syspdv();
+                $syspdv->save();
+            } else {
+                $syspdv = new Syspdv();
 
-            $syspdv->controle = $ua->input('controle');
-            $syspdv->versao = $ua->input('versao');
-            $syspdv->serie = $ua->input('serie');
+                $syspdv->controle = $us->input('controle');
+                $syspdv->versao = $us->input('versao');
+                $syspdv->serie = $us->input('serie');
 
-            $syspdv->save();
-            $cliente->syspdv()->sync($syspdv);
+                $syspdv->save();
+                $cliente->syspdv()->sync($syspdv);
+            }
         }
 
-        $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
-        if($cliente_acsn != null) {
-            $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
+        if($request->showAcsnCard == true) {
+            $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
+            if($cliente_acsn != null){
+                $acsn = Acsn::find($cliente_acsn->acsn_id);
+                $acsn->contrato = $ua->input('contrato');
 
-            $acsn->contrato = $ua->input('contrato');
+                $acsn->save();
+            } else {
+                $acsn = new Acsn();
+                $acsn->contrato = $ua->input('contrato');
 
-            $acsn->save();
-        } elseif ($request->showAcsnCard == true) {
-            $acsn = new Acsn();
-            $acsn->contrato = $ua->input('contrato');
-
-            $acsn->save();
-            $cliente->acsn()->sync($acsn);
+                $acsn->save();
+                $cliente->acsn()->sync($acsn);
+            }
         }
 
-        $cliente_ecletica = DB::table('cliente_ecletica')->where('cliente_id',$cliente->id)->first();
-        if($cliente_ecletica != null) {
-            $ecletica = Ecletica::findOrFail($cliente_ecletica->ecletica_id);
+        if($request->showEcleticaCard == true) {
+            $cliente_ecletica = DB::table('cliente_ecletica')->where('cliente_id',$cliente->id)->first();
+            if($cliente_ecletica != null){
+                $ecletica = Ecletica::find($cliente_ecletica->ecletica_id);
 
-            $ecletica->cod_rede = $ue->input('cod_rede');
-            $ecletica->cod_loja = $ue->input('cod_loja');
+                $ecletica->cod_rede = $ue->input('cod_rede');
+                $ecletica->cod_loja = $ue->input('cod_loja');
 
-            $ecletica->save();
-        } elseif ($cliente_ecletica == null) {
-            $ecletica = new Ecletica();
-            $ecletica->cod_rede = $ue->input('cod_rede');
-            $ecletica->cod_loja = $ue->input('cod_loja');
+                $ecletica->save();
+            } else {
+                $ecletica = new Ecletica();
 
-            $ecletica->save();
-            $cliente->ecletica()->sync($ecletica);
+                $ecletica->cod_rede = $ue->input('cod_rede');
+                $ecletica->cod_loja = $ue->input('cod_loja');
+
+                $ecletica->save();
+                $cliente->acsn()->sync($ecletica);
+            }
         }
 
         return redirect('/clientes/'.$id.'/dados/sistema')->with('alert', 'Dados Alterados!');
     }
 
-    public function removerSistema($id)
+    public function removerSistema(Request $request, $id)
     {
         $cliente = Cliente::find($id);
 
-        $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
-        if($cliente_syspdv != null) {
-            $syspdv = Syspdv::findOrFail($cliente_syspdv->syspdv_id);
-            $cliente->syspdv()->detach();
-            $cliente->syspdv()->delete();
-            $syspdv->delete();
+        if($request->showSyspdvCard == true) {
+            $cliente_syspdv = DB::table('cliente_syspdv')->where('cliente_id',$cliente->id)->first();
+            if($cliente_syspdv != null) {
+                $syspdv = Syspdv::findOrFail($cliente_syspdv->syspdv_id);
+                $cliente->syspdv()->detach();
+                $cliente->syspdv()->delete();
+                $syspdv->delete();
+            }
         }
 
-        $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
-        if($cliente_acsn != null) {
-            $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
-            $cliente->acsn()->detach();
-            $cliente->acsn()->delete();
-            $acsn->delete();
+        if($request->showAcsnCard == true) {
+            $cliente_acsn = DB::table('cliente_acsn')->where('cliente_id',$cliente->id)->first();
+            if($cliente_acsn != null) {
+                $acsn = Acsn::findOrFail($cliente_acsn->acsn_id);
+                $cliente->acsn()->detach();
+                $cliente->acsn()->delete();
+                $acsn->delete();
+            }
         }
 
-        return redirect('/clientes/'.$id.'/dados/sistema');
+        if($request->showEcleticaCard == true) {
+            $cliente_ecletica = DB::table('cliente_ecletica')->where('cliente_id',$cliente->id)->first();
+            if($cliente_ecletica != null) {
+                $ecletica = Ecletica::findOrFail($cliente_ecletica->ecletica_id);
+                $cliente->ecletica()->detach();
+                $cliente->ecletica()->delete();
+                $ecletica->delete();
+            }
+        }
+
+        return redirect('/clientes/'.$id.'/dados/sistema/#')->with('alert', 'Removido');
     }
 
     /**
